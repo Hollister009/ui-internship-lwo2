@@ -1,23 +1,23 @@
-// import { nextInLine } from './stand-in-line';
+import {nextInLine} from './stand-in-line';
 
-xdescribe('stand-in-line', () => {
-    test('nextInLine([], 1) should return 1', () => {
-        expect(nextInLine([], 1)).toBe(1);
-    });
+describe('stand-in-line', () => {
+  test('nextInLine([], 1) should return 1', () => {
+    expect(nextInLine([], 1)).toBe(1);
+  });
 
-    test('nextInLine([2], 1) should return 2', () => {
-        expect(nextInLine([2], 1)).toBe(2);
-    });
+  test('nextInLine([2], 1) should return 2', () => {
+    expect(nextInLine([2], 1)).toBe(2);
+  });
 
-    test('nextInLine([5, 6, 7, 8, 9], 1) should return 5', () => {
-        expect(nextInLine([5, 6, 7, 8, 9], 1)).toBe(5);
-    });
+  test('nextInLine([5, 6, 7, 8, 9], 1) should return 5', () => {
+    expect(nextInLine([5, 6, 7, 8, 9], 1)).toBe(5);
+  });
 
-    test('After nextInLine(testArr, 10), testArr[4] should return 10', () => {
-        const testArr = [1, 2, 3, 4, 5];
-        
-        nextInLine(testArr, 10);
-        
-        expect(testArr[4]).toBe(10);
-    });
+  test('After nextInLine(testArr, 10), testArr[4] should return 10', () => {
+    const testArr = [1, 2, 3, 4, 5];
+
+    nextInLine(testArr, 10);
+
+    expect(testArr[4]).toBe(10);
+  });
 });
