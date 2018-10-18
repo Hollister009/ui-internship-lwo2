@@ -1,6 +1,6 @@
-// import { rot13Encoder } from './rot13-encoder';
+import { rot13Encoder } from './rot13-encoder';
 
-xdescribe('rot13-encoder', () => {
+describe('rot13-encoder', () => {
     test('rot13Encoder("") should return a string', () => {
         expect(typeof rot13Encoder('')).toBe('string');
     });

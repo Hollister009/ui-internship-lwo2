@@ -1,6 +1,6 @@
-// import { checkLetters } from './check-letters';
+import { checkLetters } from './check-letters';
 
-xdescribe('check-letters', () => {
+describe('check-letters', () => {
     test('checkLetters(["hello", "hey"]) should return false', () => {
         expect(checkLetters(["hello", "hey"])).toBe(false);
     });
