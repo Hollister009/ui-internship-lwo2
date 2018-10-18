@@ -1,6 +1,6 @@
-// import { confirmEnding } from './confirm-ending';
+import { confirmEnding } from './confirm-ending';
 
-xdescribe('confirm-ending', () => {
+describe('confirm-ending', () => {
     test('confirmEnding("Bastian", "n") should return true', () => {
         expect(confirmEnding("Bastian", "n")).toBe(true);
     });

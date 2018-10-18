@@ -1,6 +1,6 @@
-// import { titleCase } from './title-case';
+import { titleCase } from './title-case';
 
-xdescribe('title-case', () => {
+describe('title-case', () => {
     test(`titleCase("I'm a little tea pot") should return a string`, () => {
         expect(typeof titleCase("I'm a little tea pot")).toBe('string');
     });
