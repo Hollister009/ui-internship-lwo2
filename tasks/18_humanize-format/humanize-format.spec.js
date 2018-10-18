@@ -1,6 +1,6 @@
-// import { humanizeFormat} from './humanize-format';
+import { humanizeFormat} from './humanize-format';
 
-xdescribe('humanize-format', () => {
+describe('humanize-format', () => {
     test('humanizeFormat() should return an empty string', () => {
         expect(humanizeFormat()).toBe('');
     });
