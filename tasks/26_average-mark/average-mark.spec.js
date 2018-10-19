@@ -1,6 +1,6 @@
-// import { getAverage } from './average-mark';
+import { getAverage } from './average-mark';
 
-xdescribe('average-mark', () => {
+describe('average-mark', () => {
     test(`getAverage([2,2,2,2]) should return 2`, () => {
         expect(getAverage([2,2,2,2])).toBe(2);
     });

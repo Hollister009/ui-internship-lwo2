@@ -1,6 +1,6 @@
-// import { getVowelCount } from './vowel-count';
+import { getVowelCount } from './vowel-count';
 
-xdescribe('vowel-count', () => {
+describe('vowel-count', () => {
     test(`getVowelCount("abracadabra") should return 5`, () => {
         expect(getVowelCount("abracadabra")).toBe(5);
     });

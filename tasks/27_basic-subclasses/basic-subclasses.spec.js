@@ -1,6 +1,6 @@
-// import { God, Human, Man, Woman } from './basic-subclasses';
+import { God, Human, Man, Woman } from './basic-subclasses';
 
-xdescribe('basic-subclasses', () => {
+describe('basic-subclasses', () => {
     const humans = God.create();
 
     test(`God should create two humans`, () => {
