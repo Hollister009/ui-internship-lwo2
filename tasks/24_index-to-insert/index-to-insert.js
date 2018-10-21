@@ -1,6 +1,7 @@
 export const getIndexToInsert = (array, element) => {
-  let modifiedArr = array.slice();
-  modifiedArr.push(element);
-  modifiedArr.sort((a, b) => a > b);
-  return modifiedArr.indexOf(element);
+  array = array.sort((a, b) => a > b);
+  for (let key in array) {
+    if (array[key] >= element) return parseInt(key, 10);
+  }
+  return array.length;
 };

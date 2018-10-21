@@ -1,7 +1,7 @@
 export const rot13Encoder = (string) => {
-  string = string.toUpperCase();
+  // string = string.toUpperCase();
   let codeStr = [];
-  const re = /[A-Z]/;
+  const re = /[a-zA-Z]/;
   const strLen = string.length;
   for (let i = 0; i < strLen; i++) {
     string[i].match(re) ?
