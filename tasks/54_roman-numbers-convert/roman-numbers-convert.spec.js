@@ -1,6 +1,6 @@
-// import { convertToRoman } from './roman-numbers-convert';
+import { convertToRoman } from './roman-numbers-convert';
 
-xdescribe('Roman numbers converter', () => {
+describe('Roman numbers converter', () => {
 
     test('convertToRoman(2) should return "II"', () => {
         expect(convertToRoman(2)).toBe("II");

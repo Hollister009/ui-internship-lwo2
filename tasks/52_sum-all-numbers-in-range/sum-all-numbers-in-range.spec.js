@@ -1,6 +1,6 @@
-// import { sumAll } from './sum-all-numbers-in-range';
+import { sumAll } from './sum-all-numbers-in-range';
 
-xdescribe('Summ all numbers in range', () => {
+describe('Summ all numbers in range', () => {
 
     test('sumAll([1, 4]) should return a number', () => {
         expect(typeof sumAll([1, 4])).toBe('number');
