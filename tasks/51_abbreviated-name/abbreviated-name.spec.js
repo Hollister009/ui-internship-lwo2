@@ -1,6 +1,6 @@
-// import { abbreviated } from './abbreviated-name';
+import { abbreviated } from './abbreviated-name';
 
-xdescribe('Abbreviated name', () => {
+describe('Abbreviated name', () => {
 
     test("abbreviated('Verbovyi') should be a string", () => {
         expect(typeof abbreviated('Verbovyi')).toBe('string');

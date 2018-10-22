@@ -1,7 +1,7 @@
-// import { convertHTML } from './convert-html-entities';
+import { convertHTML } from './convert-html-entities';
 
 
-xdescribe('Convert HTML entities', () => {
+describe('Convert HTML entities', () => {
 
     test('convertHTML("Dolce & Gabbana") should return Dolce &​amp; Gabbana', () => {
         expect(convertHTML("Dolce & Gabbana")).toBe('Dolce &amp; Gabbana');
