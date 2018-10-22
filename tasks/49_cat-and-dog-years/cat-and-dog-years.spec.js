@@ -1,6 +1,6 @@
-// import { humanYearsCatYearsDogYears } from './cat-and-dog-years';
+import { humanYearsCatYearsDogYears } from './cat-and-dog-years';
 
-xdescribe('Cats and Dogs years', () => {
+describe('Cats and Dogs years', () => {
 
     test("humanYearsCatYearsDogYears(1) shoud return [1, 15, 15]", () => {
         expect(JSON.stringify(humanYearsCatYearsDogYears(1))).toBe('[1,15,15]');

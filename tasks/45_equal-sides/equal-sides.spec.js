@@ -1,6 +1,6 @@
-// import { findEqualIndex } from './equal-sides';
+import { findEqualIndex } from './equal-sides';
 
-xdescribe('equal-sides', () => {
+describe('equal-sides', () => {
     test(`findEqualIndex([1, 2, 3, 4, 3, 2, 1]) should return 3`, () => {
         expect(findEqualIndex([1, 2, 3, 4, 3, 2, 1])).toBe(3);
     });

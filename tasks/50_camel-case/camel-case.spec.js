@@ -1,6 +1,6 @@
-// import './camel-case';
+import './camel-case';
 
-xdescribe('Camel case', () => {
+describe('Camel case', () => {
 
     test("'hello case'.camelCase() should return 'HelloCase'", () => {
         expect('hello case'.camelCase()).toBe("HelloCase");

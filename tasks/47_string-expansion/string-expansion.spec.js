@@ -1,6 +1,6 @@
-// import { stringExpansion } from './string-expansion';
+import { stringExpansion } from './string-expansion';
 
-xdescribe('String expansion', () => {
+describe('String expansion', () => {
 
     test("stringExpansion('3D2a5d2f') === 'DDDaadddddff'", () => {
         expect(stringExpansion('3D2a5d2f')).toBe("DDDaadddddff");

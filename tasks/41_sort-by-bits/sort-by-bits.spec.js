@@ -1,6 +1,6 @@
-// import { sortByBits } from './sort-by-bits';
+import { sortByBits } from './sort-by-bits';
 
-xdescribe('sort-by-bits', () => {
+describe('sort-by-bits', () => {
     test(`sortByBits([3, 8, 3, 6, 5, 7, 9, 1]) should return [1, 8, 3, 3, 5, 6, 9, 7]`, () => {
         expect(sortByBits([3, 8, 3, 6, 5, 7, 9, 1])).toEqual([1, 8, 3, 3, 5, 6, 9, 7]);
     });

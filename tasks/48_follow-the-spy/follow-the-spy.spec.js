@@ -1,6 +1,6 @@
-// import { followTheSpy } from './follow-the-spy';
+import { followTheSpy } from './follow-the-spy';
 
-xdescribe('Follow the spy', () => {
+describe('Follow the spy', () => {
 
     test("followTheSpy([['USA', 'BRA'], ['JPN', 'PHL'], ['UAE', 'JPN'], ['BRA', 'UAE']]) should return string", () => {
         expect(typeof followTheSpy([['USA', 'BRA'], ['JPN', 'PHL'], ['UAE', 'JPN'], ['BRA', 'UAE']])).toBe("string");
