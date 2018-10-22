@@ -1,6 +1,6 @@
-// import { uniteUnique } from './unite-unique';
+import { uniteUnique } from './sorted-sequence';
 
-xdescribe('United unique', () => {
+describe('Sorted sequence', () => {
 
     test('uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) should return [1, 3, 2, 5, 4]', () => {
         expect(JSON.stringify(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))).toBe('[1,3,2,5,4]');
