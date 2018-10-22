@@ -1,6 +1,6 @@
-// import { myReplace } from './search-and-replace';
+import { myReplace } from './search-and-replace';
 
-xdescribe('Search and Replace', () => {
+describe('Search and Replace', () => {
 
     test('myReplace("Let us go to the store", "store", "mall") should return "Let us go to the mall"', () => {
         expect(myReplace("Let us go to the store", "store", "mall")).toBe("Let us go to the mall");

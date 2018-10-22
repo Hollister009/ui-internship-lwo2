@@ -1,6 +1,6 @@
-// import { whatIsInAName } from './find-object-analogy';
+import { whatIsInAName } from './find-object-analogy';
 
-xdescribe('Find object analogy', () => {
+describe('Find object analogy', () => {
 
     test('whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }) should return [{ first: "Tybalt", last: "Capulet" }]', () => {
         expect(JSON.stringify(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }))).toBe(JSON.stringify([{ first: "Tybalt", last: "Capulet" }]));
