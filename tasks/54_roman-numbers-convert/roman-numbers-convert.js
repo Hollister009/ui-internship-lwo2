@@ -12,7 +12,7 @@ export const convertToRoman = (arg) => {
   let numCp = arg;
 
   for (let value of romaKeys) {
-    while (+value <= numCp) {
+    while (numCp >= +value) {
       romanaized += romansNum[value];
       numCp -= +value;
     }

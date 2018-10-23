@@ -1,6 +1,6 @@
-// import { diffArray } from './diff-array';
+import { diffArray } from './diff-array';
 
-xdescribe('Diff 2 arrays', () => {
+describe('Diff 2 arrays', () => {
 
     test('diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])should return an array', () => {
         expect(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]) instanceof Array).toBe(true);
