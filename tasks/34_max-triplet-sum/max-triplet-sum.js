@@ -1,7 +1,7 @@
 export const maxTripletSum = (arr) => {
-  arr = arr.filter((el) => el > 0).sort((a, b) => a > b);
+  const modArr = arr.slice().filter((el) => el > 0).sort((a, b) => a > b);
   /* eslint-disable-next-line */
-  let uniqueVal = [...new Set(arr)];
+  const uniqueVal = [...new Set(modArr)];
   if (uniqueVal.length < 3) uniqueVal.push(0);
   return uniqueVal.slice(-3).reduce((sum, cur) => (sum += cur));
 };
