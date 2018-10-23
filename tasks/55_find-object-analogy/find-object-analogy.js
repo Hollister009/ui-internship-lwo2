@@ -1,5 +1,5 @@
 export const whatIsInAName = (collection, source) => {
-  let arr = [];
+  const arr = [];
   const srcLength = Object.keys(source).length;
   collection.forEach((obj) => {
     const objLength = Object.keys(obj).length;

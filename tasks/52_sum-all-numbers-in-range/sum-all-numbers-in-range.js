@@ -1,7 +1,7 @@
 export const sumAll = (arg) => {
   const firstNum = Math.min(...arg);
   const lastNum = Math.max(...arg);
-  let newArr = [firstNum];
+  const newArr = [firstNum];
   let numI = firstNum + 1;
   while (numI <= lastNum) {
     newArr.push(numI);

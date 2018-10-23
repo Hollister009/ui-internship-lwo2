@@ -1,7 +1,7 @@
 export const myReplace = (str, before, after) => {
-  // str.indexOf(before);
+  let wordChange = after;
   if (/[A-Z]/.test(before[0])) {
-    after = after[0].toUpperCase() + after.substr(1, after.length);
+    wordChange = after[0].toUpperCase() + after.substr(1, after.length);
   }
-  return str.replace(before, after);
+  return str.replace(before, wordChange);
 };
