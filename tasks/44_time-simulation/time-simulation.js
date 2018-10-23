@@ -1,5 +1,5 @@
 /* eslint "require-jsdoc": 0 */
-class SimTime {
+export class SimTime {
   constructor() {
     this.time = 0;
     this.realtime = 0;
@@ -21,5 +21,3 @@ class SimTime {
     this.realtime = time;
   }
 }
-
-export {SimTime};
