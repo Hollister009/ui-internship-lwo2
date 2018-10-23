@@ -1,6 +1,6 @@
-// import { sumPrimes } from './sum-primes';
+import { sumPrimes } from './sum-primes';
 
-xdescribe('Sum primes', () => {
+describe('Sum primes', () => {
 
     test(`sumPrimes(10) should return number`, () => {
         expect(typeof sumPrimes(10)).toBe('number');

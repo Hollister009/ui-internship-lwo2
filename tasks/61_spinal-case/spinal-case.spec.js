@@ -1,6 +1,6 @@
-// import { spinalCase } from './spinal-case';
+import { spinalCase } from './spinal-case';
 
-xdescribe('Spinal case', () => {
+describe('Spinal case', () => {
 
     test('spinalCase("This Is Spinal Tap") should return "this-is-spinal-tap"', () => {
         expect(spinalCase("This Is Spinal Tap")).toBe('this-is-spinal-tap');
