@@ -1,6 +1,6 @@
-// import { expressionMatter } from './expressions-matter';
+import { expressionMatter } from './expressions-matter';
 
-xdescribe('Expressions matter', () => {
+describe('Expressions matter', () => {
 
     test('expressionMatter(2, 1, 2) should return 6', () => {
         expect(expressionMatter(2, 1, 2)).toBe(6);

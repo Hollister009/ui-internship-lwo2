@@ -1,6 +1,6 @@
-// import { DNAStrand } from './complementary-dna';
+import { DNAStrand } from './complementary-dna';
 
-xdescribe('Complementary DNA ', () => {
+describe('Complementary DNA ', () => {
 
     test('DNAStrand("ATTGC") should return TAACG', () => {
         expect(DNAStrand("ATTGC")).toBe('TAACG');

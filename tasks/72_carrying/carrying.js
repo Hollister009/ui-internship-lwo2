@@ -1,18 +1,19 @@
-export const addTogether = (a, b) => {
-  /* eslint-disable-next-line */
-  const args = [].slice.call(arguments);
-  for (let v in args) {
-    if (typeof args[v] !== 'number') {
-      return;
-    }
+export const addTogether = (...args) => {
+  if (typeof args[0] !== 'number') {
+    return;
   }
-  if (args.length < 2) {
-    return function(b) {
-      if (typeof b !== 'number') {
+
+  if (!args[1]) {
+    return function(x) {
+      if (typeof x !== 'number') {
         return;
       }
-      return a + b;
+      return args[0] + x;
     };
   }
-  return a + b;
+
+  if (typeof args[1] !== 'number') {
+    return;
+  }
+  return args[0] + args[1];
 };
