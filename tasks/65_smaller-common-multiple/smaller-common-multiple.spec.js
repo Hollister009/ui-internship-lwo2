@@ -1,6 +1,6 @@
 import { smallestCommons } from './smaller-common-multiple';
 
-fidescribe('Smallest common multiple', () => {
+describe('Smallest common multiple', () => {
 
     test('smallestCommons([1, 5]) should return a number', () => {
         expect(typeof smallestCommons([1, 5])).toBe('number');
