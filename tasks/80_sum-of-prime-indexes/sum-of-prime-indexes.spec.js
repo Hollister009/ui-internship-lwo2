@@ -1,6 +1,6 @@
-// import { sumPrimeIndexedElements } from './sum-of-prime-indexes';
+import { sumPrimeIndexedElements } from './sum-of-prime-indexes';
 
-xdescribe('Sum of prime indexes', () => {
+describe('Sum of prime indexes', () => {
     
     test("sumPrimeIndexedElements([]) should return 0", () => {
         expect(sumPrimeIndexedElements([])).toBe(0);
