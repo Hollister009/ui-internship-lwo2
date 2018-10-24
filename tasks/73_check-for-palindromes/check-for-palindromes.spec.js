@@ -1,6 +1,6 @@
-// import { palindrome } from './check-for-palindromes';
+import { palindrome } from './check-for-palindromes';
 
-xdescribe('Check is palindrome', () => {
+describe('Check is palindrome', () => {
 
     test('palindrome("eye") should return a boolean', () => {
         expect(typeof palindrome("eye")).toBe('boolean');

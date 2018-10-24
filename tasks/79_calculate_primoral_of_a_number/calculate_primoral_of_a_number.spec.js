@@ -1,6 +1,6 @@
-// import { numPrimorial } from './calculate_primoral_of_a_number';
+import { numPrimorial } from './calculate_primoral_of_a_number';
 
-xdescribe('Calculate Primorial Of a Number', () => {
+describe('Calculate Primorial Of a Number', () => {
 
     test("numPrimorial(6) should return 30030", () => {
         expect(numPrimorial(6)).toBe(30030);
