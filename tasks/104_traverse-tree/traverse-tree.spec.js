@@ -1,6 +1,6 @@
-// import { traverseTree } from './traverse-tree';
+import { traverseTree } from './traverse-tree';
 
-xdescribe('Traverse tree function', () => {
+describe('Traverse tree function', () => {
     test('Should call callback for every of tree nodes', () => {
         const tree = {
             value: 1,
