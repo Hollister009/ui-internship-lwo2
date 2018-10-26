@@ -7,6 +7,8 @@ export class Stack {
   }
 
   push(el) {
+
+    el.prev = this.collection[this.count -1];
     this.collection[this.count] = el;
     this.count = this.count + 1;
     this.size = this.count;
@@ -21,7 +23,7 @@ export class Stack {
   }
 
   isEmpty() {
-    return (Object.keys(this.collection).length === 0);
+    return Object.keys(this.collection).length === 0;
   }
 
   size() {

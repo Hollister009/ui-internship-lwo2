@@ -1,6 +1,6 @@
-// import { updateInventory } from './inventory-update';
+import { updateInventory } from './inventory-update';
 
-xdescribe('Inventory update', () => {
+describe('Inventory update', () => {
 
     test("The function updateInventory should return an array", () => {
         const currInv = [];
