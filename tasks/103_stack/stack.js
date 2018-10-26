@@ -7,7 +7,6 @@ export class Stack {
   }
 
   push(el) {
-
     el.prev = this.collection[this.count -1];
     this.collection[this.count] = el;
     this.count = this.count + 1;
