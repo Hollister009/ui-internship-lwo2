@@ -24,18 +24,8 @@ export class LinkedList {
     this.amount++;
   }
 
-  iterate(callback) {
-    let currNode = this.head;
-
-    while (currNode.next) {
-      callback(currNode);
-      currNode = currNode.next;
-    }
-    callback(currNode);
-  }
-
   pop() {
-    let currNode = this.tail;
+    const currNode = this.tail;
 
     if (this.amount === 1) {
       this.head = null;
@@ -50,16 +40,32 @@ export class LinkedList {
     return currNode;
   }
 
+  iterate(callback) {
+    let currNode = this.head;
+
+    while (currNode) {
+      callback(currNode);
+      currNode = currNode.next;
+    }
+  }
+
   insertAfter(after, value) {
     let currNode = this.head;
     const childNode = new Node(value);
-    while (currNode.next) {
+
+    while (currNode) {
       if (currNode.value === after) {
         const nextNode = currNode.next;
         currNode.next = childNode;
         childNode.prev = currNode;
         childNode.next = nextNode;
-        nextNode.prev = childNode;
+
+        if (nextNode !== null) {
+          nextNode.prev = childNode;
+        } else {
+          this.tail = childNode;
+        }
+
         this.amount++;
         return true;
       }
@@ -75,10 +81,19 @@ export class LinkedList {
       if (currNode.value === value) {
         const prevNode = currNode.prev;
         const nextNode = currNode.next;
-        prevNode.next = nextNode;
-        if (!currNode.prev) {
-          nextNode.prev = prevNode;
+
+        if (prevNode !== null) {
+          prevNode.next = nextNode;
+        } else {
+          this.head = nextNode;
         }
+
+        if (nextNode !== null) {
+          nextNode.prev = prevNode;
+        } else {
+          this.tail = prevNode;
+        }
+
         this.amount--;
         return true;
       }

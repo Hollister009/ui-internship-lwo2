@@ -1,16 +1,16 @@
 export const fatFingers = (text) => {
   let capsPressed = false;
-  let misspeled = '';
+  let misspelled = '';
   for (let i = 0; i < text.length; i++) {
     if (text[i].toLowerCase() === 'a') {
       capsPressed = !capsPressed;
       continue;
     }
     if (capsPressed) {
-      misspeled += text[i].toUpperCase();
+      misspelled += text[i].toUpperCase();
     } else {
-      misspeled += text[i];
+      misspelled += text[i];
     }
   }
-  return misspeled;
+  return misspelled;
 };
