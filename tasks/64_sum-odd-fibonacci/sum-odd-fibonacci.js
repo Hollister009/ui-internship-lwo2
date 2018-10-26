@@ -6,7 +6,7 @@ export const sumFibs = (num) => {
 };
 
 const fibonacci = (num) => {
-  let sequence = [1, 1];
+  const sequence = [1, 1];
   let fibo = num;
   let n = 1;
   while (fibo > 2) {
