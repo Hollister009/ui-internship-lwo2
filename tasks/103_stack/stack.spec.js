@@ -1,6 +1,5 @@
 // import { Stack } from './stack';
 
-
 xdescribe('Stack class', () => {
     let stack;
 
