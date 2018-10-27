@@ -1,6 +1,6 @@
-// import { Stack } from './stack';
+import { Stack } from './stack';
 
-xdescribe('Stack class', () => {
+describe('Stack class', () => {
     let stack;
 
     const firstNodeValue = 5;
@@ -11,21 +11,21 @@ xdescribe('Stack class', () => {
         stack = new Stack();
     });
 
-    xdescribe('push method', () => {
+    describe('push method', () => {
         test('Should add nodes to empty stack', () => {
             stack.push(firstNodeValue);
             expect(stack.last.value).toBe(firstNodeValue);
         });
 
         test('Should set correct prev link', () => {
-            stack.push(firstNodeValue);
-            stack.push(secondNodeValue);
+              stack.push(firstNodeValue);
+              stack.push(secondNodeValue);
 
             expect(stack.last.prev.value).toBe(firstNodeValue);
         });
     });
 
-    xdescribe('size prop', () => {
+    describe('size prop', () => {
         test('Should return 0 for empty stack', () => {
             expect(stack.size).toBe(0);
         });
@@ -39,7 +39,7 @@ xdescribe('Stack class', () => {
         })
     });
 
-    xdescribe('pop method', () => {
+    describe('pop method', () => {
         test('Should do nothing for empty list', () => {
             const lastSnapshotBeforePop = JSON.stringify(stack.last);
             stack.pop();

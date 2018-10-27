@@ -1,28 +1,35 @@
 export class Stack {
   constructor() {
     this.collection = {};
-    this.count = 0;
-    this.size = this.count;
-    this.value = this.collection[this.count];
+    this.size = 0;
+    this.collection.last = null;
   }
 
-  push(el) {
-    el.prev = this.collection[this.count -1];
-    this.collection[this.count] = el;
-    this.count = this.count + 1;
-    this.size = this.count;
-    return this.collection[this.count];
+  push(value) {
+    const item = new Item(value);
+
+    if (this.size > 0) {
+      item.prev = this.collection[this.size-1];
+    }
+
+    this.collection[this.size] = item;
+    this.collection.last = this.collection[this.size];
+    this.size++;
+    return this.collection.last.value;
   }
 
   pop() {
-    this.count = this.count - 1;
-    this.size = this.count;
-    delete this.collection[this.count];
-    return;
+    if (this.size > 0) {
+      const element = this.collection.last;
+      this.collection.last = element.prev;
+      delete this.collection[this.size-1];
+      this.size--;
+      return element.value;
+    }
   }
 
   isEmpty() {
-    return Object.keys(this.collection).length === 0;
+    return this.size === 0;
   }
 
   size() {
@@ -30,6 +37,13 @@ export class Stack {
   }
 
   get last() {
-    return this.collection[this.count];
+    return this.collection.last;
+  }
+}
+
+class Item {
+  constructor(value) {
+    this.value = value;
+    this.prev;
   }
 }
