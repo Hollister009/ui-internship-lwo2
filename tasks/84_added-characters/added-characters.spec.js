@@ -1,4 +1,4 @@
-import { addedChar } from './added_characters';
+import { addedChar } from './added-characters';
 
 describe('Three added characters', () => {
   test("addedChar('aabbcc', 'aacccbbcc') should return ‘c’", () => {

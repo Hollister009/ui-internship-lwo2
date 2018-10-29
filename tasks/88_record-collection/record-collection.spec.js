@@ -1,6 +1,6 @@
-// import { updateRecords } from './record-collection';
+import { updateRecords } from './record-collection';
 
-xdescribe('Record collection', () => {
+describe('Record collection', () => {
 
     test('After updateRecords(5439, "artist", "ABBA"), artist should be "ABBA"', () => {
         const collection = updateRecords(5439, "artist", "ABBA");

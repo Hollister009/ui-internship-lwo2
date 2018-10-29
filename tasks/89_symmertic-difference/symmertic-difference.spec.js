@@ -1,6 +1,6 @@
-// import { sym } from './symmertic-difference';
+import { sym } from './symmertic-difference';
 
-xdescribe('Symmetric Difference', () => {
+describe('Symmetric Difference', () => {
 
     test('sym([1, 2, 3], [5, 2, 1, 4]) should return [3, 4, 5]', () => {
         expect(JSON.stringify(sym([1, 2, 3], [5, 2, 1, 4]))).toBe(JSON.stringify([3, 4, 5]));
