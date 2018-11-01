@@ -1,0 +1,319 @@
+/* Normalize */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before, 
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  color: #3c3c3c;
+}
+
+img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+}
+
+section {
+  background: #fff;
+  padding: 10rem 0;
+}
+
+/* Typography */
+
+h2 {
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  line-height: 1.2;
+  margin-bottom: 5rem;
+  font-weight: 700;
+}
+
+.title-text {
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.message-text {
+  margin-bottom: 2rem;
+  line-height: 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+/* Utility */
+
+.centered {
+  width: 60rem;
+  margin: 0 auto;
+}
+
+.mt-sm {
+  margin-top: 15rem;
+}
+
+.text_white {
+  color: #fff;
+}
+
+.text-secondary {
+  padding: 0 7rem;
+}
+
+/* Messages */
+
+.message {
+  border: 2px solid #3c3c3c;
+  border-top: none;
+  width: 90rem;
+  margin: 0 auto;
+  position: relative;
+  padding: 7rem 17rem 5rem;
+}
+
+.message-title {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.message::before,
+.message::after {
+  content: '';
+  display: block;
+  width: 24rem;
+  height: 0.2rem;
+  top: -.2rem;
+  position: absolute;
+  background: #3c3c3c;
+}
+
+.message::before {
+  left: -.2rem;
+}
+
+.message::after {
+  right: -.2rem;
+}
+
+.message_white {
+  border: 2px solid white;
+  border-top: none;
+}
+
+.message_white::before,
+.message_white::after {
+  background: white;
+}
+
+/* Hero Section */
+
+#hero {
+  height: 100vh;
+  background: url('../img/bg_hero.png') no-repeat top / cover;
+  padding-top: 30rem;
+  position: relative;
+}
+
+.header-logo {
+  position: absolute;
+  top: 21.5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* About Us */ 
+
+#about {
+  padding: 15.7rem 0;
+}
+
+/* Services */
+
+#services {
+  min-height: 48rem;
+  background: url('../img/services_bg.png') no-repeat center / cover;
+}
+
+/* What we do - Cards box */
+
+#what-we-do .message {
+  padding: 10rem 17rem;
+}
+
+.card-element {
+  min-height: 25rem;
+}
+
+.card-element:not(:last-child) {
+  margin-bottom: 10rem;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: .5rem;
+  line-height: 2;
+  margin: 2rem 0;
+  font-weight: 700;
+}
+
+.card-describe {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 2.4rem;
+}
+
+/* Works */
+
+#works {
+  padding: 0;
+}
+
+.tile-row {
+  min-height: 23.5rem;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.tile-row:first-child {
+  margin-bottom: 1rem;
+}
+
+.tile-item {
+  display: inline-block;
+  width: 27.5%;
+}
+
+.tile-item-md {
+  display: inline-block;
+  margin: 0 1rem;
+  width: calc(45% - 1rem);
+}
+
+.tile-item,
+.tile-item-md {
+  min-height: 23.5rem;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+
+.tile-item:hover,
+.tile-item-md:hover {
+  opacity: .8;
+}
+
+.tile-name {
+  color: #fff;
+  font-size: 3.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .9rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 3rem;
+}
+
+.item-1 {
+  background: url('../img/topworkz.png') no-repeat center center / cover;
+}
+
+.item-2 {
+  background: url('../img/joint.png') no-repeat center center / cover;
+}
+
+.item-3 {
+  background: url('../img/market.png') no-repeat center center / cover;
+}
+
+.item-4 {
+  background: url('../img/worktop.png') no-repeat center center / cover;
+}
+
+.item-5 {
+  background: url('../img/label.png') no-repeat center center / cover;
+}
+
+.item-6 {
+  background: url('../img/kyiv.png') no-repeat center center / cover;
+}
+
+/* Contact Us */
+
+#contact-us {
+  padding: 0;
+  padding-top: 13.5rem; 
+}
+
+.contact-btn {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  padding: 1rem 15rem;
+  color: #fff;
+  border: none;
+  line-height: 3.8rem;
+  background-color: rgb(60, 60, 60);
+  cursor: pointer;
+  transition: all .4s ease;
+  outline: none;
+}
+
+.contact-btn:hover {
+  background: rgba(60, 60, 60, .8);
+  transform: translateY(-.3rem);
+  box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .5);
+}
+
+.contact-btn:active {
+  transform: translateY(-.1rem);
+}
+
+/* Footer */
+
+#footer {
+  padding: 4rem 0;
+  min-height: 3.5rem;
+}
+
+.copy {
+  display: inline-block;
+  line-height: 3.5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  vertical-align: bottom;
+}
+
+.copy-logo {
+  vertical-align: bottom;
+  margin-right: 3rem;
+}
