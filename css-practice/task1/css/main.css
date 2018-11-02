@@ -8,12 +8,14 @@
 *,
 *::before, 
 *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 html {
-  font-size: 62.5%;
-  box-sizing: border-box;
+  font-size: 10px; 
+  -webkit-box-sizing: border-box; 
+          box-sizing: border-box;
 }
 
 body {
@@ -59,13 +61,13 @@ h2 {
   letter-spacing: 0.9px;
   font-weight: 400;
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 15px;
 }
 
 .message-text {
   margin-bottom: 2rem;
   line-height: 2.4rem;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -101,7 +103,9 @@ h2 {
   position: absolute;
   top: -2rem;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .message::before,
@@ -143,10 +147,14 @@ h2 {
 }
 
 .header-logo {
+  display: block;
+  width: 100%;
   position: absolute;
   top: 21.5%;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .mouse-icon {
@@ -194,7 +202,7 @@ h2 {
 }
 
 .card-describe {
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 300;
   line-height: 2.4rem;
 }
@@ -290,18 +298,25 @@ h2 {
   line-height: 3.8rem;
   background-color: rgb(60, 60, 60);
   cursor: pointer;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
   transition: all .4s ease;
   outline: none;
 }
 
 .contact-btn:hover {
   background: rgba(60, 60, 60, .8);
-  transform: translateY(-.3rem);
-  box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .7);
+  -webkit-transform: translateY(-.3rem);
+      -ms-transform: translateY(-.3rem);
+          transform: translateY(-.3rem);
+  -webkit-box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .7);
+          box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .7);
 }
 
 .contact-btn:active {
-  transform: translateY(-.1rem);
+  -webkit-transform: translateY(-.1rem);
+      -ms-transform: translateY(-.1rem);
+          transform: translateY(-.1rem);
 }
 
 /* Footer */
@@ -314,7 +329,7 @@ h2 {
 .copy {
   display: inline-block;
   line-height: 3.5rem;
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 400;
   vertical-align: bottom;
 }
@@ -328,20 +343,11 @@ h2 {
 
 @media only screen and (max-width: 900px) {
   html {
-    font-size: 50%;
+    font-size: 8px; 
   }
 
   .mouse-icon {
     margin-top: 20rem;
-  }
-
-  .card-describe,
-  .copy {
-    font-size: 14px;
-  }
-
-  .message-text {
-    font-size: 16px;
   }
 
   .item-1>.tile-name,
@@ -382,7 +388,9 @@ h2 {
 
   .tile-item-md>.tile-name {
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 
   .item-3>.tile-name,
@@ -393,7 +401,6 @@ h2 {
 }
 
 @media only screen and (max-width: 650px) {
-
   .message::before,
   .message::after {
     width: 14rem;
@@ -403,7 +410,8 @@ h2 {
 @media only screen and (max-width: 575px) {
   #hero {
     height: 55vh;
-    padding-top: 15rem;
+    padding-top: 22rem;
+    background: url('../img/bg_hero-small.png') no-repeat top / cover;
   }
 
   .header-logo {
@@ -438,7 +446,6 @@ h2 {
 }
 
 @media only screen and (max-width: 440px) {
-
   .message::before,
   .message::after {
     width: 3.5rem;
@@ -465,6 +472,19 @@ h2 {
 }
 
 /* Animate.CSS */
+
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
 
 @keyframes slideInLeft {
   from {
