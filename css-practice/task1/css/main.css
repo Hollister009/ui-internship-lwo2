@@ -33,7 +33,7 @@ img {
 
 section {
   background: #fff;
-  padding: 100px 0;
+  padding: 10rem 0;
 }
 
 .container {
@@ -63,7 +63,7 @@ h2 {
 
 .title-text {
   text-transform: uppercase;
-  letter-spacing: 0.9px;
+  letter-spacing: 1px;
   font-weight: 400;
   line-height: 1.5;
   font-size: 15px;
@@ -72,14 +72,14 @@ h2 {
 .message-text {
   margin-bottom: 2rem;
   line-height: 2.4rem;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 300;
 }
 
 /* Utility */
 
 .centered {
-  max-width: 60rem;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -88,7 +88,7 @@ h2 {
 }
 
 .text-secondary {
-  padding: 0 90px;
+  padding: 0 9rem;
   margin-bottom: 0;
 }
 
@@ -97,7 +97,8 @@ h2 {
 .message {
   border: 2px solid #3c3c3c;
   border-top: none;
-  max-width: 902px;
+  width: 902px;
+  max-width: 90%;
   margin: 0 auto;
   position: relative;
   padding: 7rem 17rem 5rem;
@@ -107,7 +108,7 @@ h2 {
   display: inline-block;
   width: 100%;
   position: absolute;
-  top: -2rem;
+  top: -20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -118,7 +119,7 @@ h2 {
 .message::after {
   content: '';
   display: block;
-  width: 24rem;
+  width: 26.5%;
   height: 2px;
   top: -2px;
   position: absolute;
@@ -146,9 +147,9 @@ h2 {
 /* Hero Section */
 
 .hero {
-  height: 100vh;
+  height: 1072px;
   background: url('../img/bg_hero.png') no-repeat top / cover;
-  padding-top: 35vh;
+  padding-top: 44rem;
   position: relative;
 }
 
@@ -156,7 +157,7 @@ h2 {
   display: block;
   width: 100%;
   position: absolute;
-  top: 21.5%;
+  top: 26.5%;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -164,18 +165,18 @@ h2 {
 }
 
 .mouse-icon {
-  margin-top: 15rem;
+  margin-top: 240px;
 }
 
 /* About Us - Services */ 
 
 .about {
-  padding: 160px 0;
+  padding: 16rem 0;
 }
 
 .services {
-  padding-top: 130px;
-  padding-bottom: 105px;
+  padding-top: 13rem;
+  padding-bottom: 10.5rem;
   background: url('../img/services_bg.png') no-repeat center / cover;
 }
 
@@ -186,7 +187,7 @@ h2 {
 /* What we do - Cards box */
 
 .what-we-do {
-  padding: 120px 0;
+  padding: 12rem 0;
 }
 
 .what-we-do .message {
@@ -194,7 +195,7 @@ h2 {
 } 
 
 .cards-box {
-  padding: 100px 160px 60px;
+  padding: 10rem 16rem 6rem;
 }
 
 .card-element {
@@ -215,12 +216,12 @@ h2 {
   font-size: 2rem;
   letter-spacing: 3.5px;
   line-height: 2;
-  margin: 2rem 0;
+  margin: 20px 0;
   font-weight: 700;
 }
 
 .card-describe {
-  font-size: 14px;
+  font-size: 1.5rem;
   font-weight: 300;
   line-height: 2.4rem;
   padding-bottom: 2rem;
@@ -269,10 +270,10 @@ h2 {
   font-size: 3.4rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .9rem;
+  letter-spacing: 9px;
   position: absolute;
-  bottom: 2rem;
-  left: 3rem;
+  bottom: 20px;
+  left: 30px;
 }
 
 .item-1 {
@@ -303,22 +304,23 @@ h2 {
 
 .contact-us {
   padding: 0;
-  padding-top: 140px; 
+  padding-top: 14rem; 
 }
 
 .contact-btn {
   text-transform: uppercase;
   font-size: 1.6rem;
   margin-top: 20px;
-  padding: 10px 150px;
+  padding: 0 15rem;
   color: #fff;
   border: none;
-  line-height: 3.8rem;
+  line-height: 4.8rem;
   background-color: rgb(60, 60, 60);
   cursor: pointer;
   -webkit-transition: all .4s ease;
   -o-transition: all .4s ease;
   transition: all .4s ease;
+  white-space: nowrap;
   outline: none;
 }
 
@@ -341,52 +343,66 @@ h2 {
 
 .footer {
   padding: 6rem 0;
-  min-height: 3.5rem;
+  min-height: 35px;
 }
 
 .copy {
   display: inline-block;
   line-height: 3.5rem;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
   vertical-align: bottom;
 }
 
 .copy-logo {
   vertical-align: bottom;
-  margin-right: 3rem;
+  margin-right: 30px;
 }
 
 /* Media Queries */
 
-@media only screen and (max-width: 900px) {
-  html {
-    font-size: 8px; 
+@media only screen and (max-width: 1440px) {
+  .tile-item {
+    width: 25%;
   }
 
-  .mouse-icon {
-    margin-top: 20rem;
-  }
-
-  .item-1 > .tile-name,
-  .item-4 > .tile-name {
-    left: 1rem;
+  .tile-item-md {
+    width: calc(50% - 20px);
   }
 }
 
-@media only screen and (max-width: 764px) {
-  .message {
-    padding: 5rem;
-    width: 90%;
+@media only screen and (max-width: 1024px) {
+  .tile-item {
+    width: 30%;
   }
 
-  .what-we-do .message {
-    padding: 10rem;
+  .tile-item-md {
+    width: calc(40% - 20px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    height: 90vh;
+    padding-top: 35vh;
+    background: url('../img/bg_hero-small.png') no-repeat top right / cover;
+  }
+
+  .mouse-icon {
+    display: none;
+  }
+
+  .message {
+    padding: 5rem;
   }
 
   .message::before,
   .message::after {
-    width: 15rem;
+    width: 20%;
+  }
+
+  .cards-box {
+    padding: 10rem;
   }
 
   .tile-row:first-child {
@@ -395,13 +411,13 @@ h2 {
 
   .tile-item,
   .tile-item-md {
-    width: calc(100% - 2rem);
-    margin: .5rem;
+    width: calc(100% - 20px);
+    margin: 5px 10px;
   }
 
   .item-1 > .tile-name,
   .item-4 > .tile-name {
-    left: 3rem;
+    left: 30px;
   }
 
   .tile-item-md > .tile-name {
@@ -414,78 +430,77 @@ h2 {
   .item-3 > .tile-name,
   .item-6 > .tile-name {
     left: auto;
-    right: 3rem;
+    right: 30px;
   }
 }
 
-@media only screen and (max-width: 650px) {
-  .message::before,
-  .message::after {
-    width: 14rem;
-  }
-}
 
-@media only screen and (max-width: 575px) {
-  .hero {
-    height: 55vh;
-    padding-top: 22rem;
-    background: url('../img/bg_hero-small.png') no-repeat top / cover;
-  }
-
-  .header-logo {
-    top: 10%;
-  }
-
-  .mouse-icon {
-    display: none;
-    margin: 0;
-  }
-
+@media only screen and (max-width: 440px) {
   h2 {
     font-size: 3rem;
   }
 
-  .message::before,
-  .message::after {
-    width: 8rem;
+  .hero {
+    height: 60vh;
+    padding-top: 30vh;
   }
 
-  .contact-btn {
-    padding: 1rem 10rem;
+  .title {
+    font-size: 4.5rem; 
   }
 
-  .message-text {
-    margin-bottom: 2.5rem;
+  .title-text {
+    display: none;
   }
 
-  .text-secondary {
+  .about,
+  .services,
+  .what-we-do .message {
+    padding: 10rem 0;
+  }
+
+  .what-we-do {
+    padding: 10rem 0 0;
+  }
+
+  .services .message {
+    padding-bottom: 0;
+  }
+
+  .text-secondary,
+  .cards-box {
     padding: 0;
-  }
-}
-
-@media only screen and (max-width: 440px) {
-  .message::before,
-  .message::after {
-    width: 3.5rem;
   }
 
   .message {
     border: none;
-    padding: 5rem 0;
+    padding: 0;
+    padding-top: 5rem;
   }
 
-  .what-we-do .message {
-    padding: 10rem 0;
+  .message::before,
+  .message::after {
+    width: 10%;
+  }
+
+  .contact-btn {
+    padding: .75rem 5rem;
+    line-height: 3.5rem;
   }
 }
 
-@media only screen and (max-width: 360px) {
-  html {
-    font-size: 36.75%;
+@media only screen and (max-height: 500px) {
+  .hero {
+    height: 100vh;
+    padding-top: 25%;
   }
 
-  .message-title {
-    top: -1rem;
+  .header-logo {
+    top: 17.5%;
+  }
+
+  .title-text {
+    display: none;
   }
 }
 
