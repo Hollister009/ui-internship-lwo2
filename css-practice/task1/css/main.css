@@ -33,7 +33,12 @@ img {
 
 section {
   background: #fff;
-  padding: 10rem 0;
+  padding: 100px 0;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 /* Typography */
@@ -41,7 +46,7 @@ section {
 h2 {
   font-size: 3.4rem;
   text-transform: uppercase;
-  letter-spacing: 0.9rem;
+  letter-spacing: 5.5px;
   margin-bottom: 2rem;
 }
 
@@ -83,7 +88,8 @@ h2 {
 }
 
 .text-secondary {
-  padding: 0 7rem;
+  padding: 0 90px;
+  margin-bottom: 0;
 }
 
 /* Messages */
@@ -91,7 +97,7 @@ h2 {
 .message {
   border: 2px solid #3c3c3c;
   border-top: none;
-  max-width: 90rem;
+  max-width: 902px;
   margin: 0 auto;
   position: relative;
   padding: 7rem 17rem 5rem;
@@ -139,7 +145,7 @@ h2 {
 
 /* Hero Section */
 
-#hero {
+.hero {
   height: 100vh;
   background: url('../img/bg_hero.png') no-repeat top / cover;
   padding-top: 35vh;
@@ -161,41 +167,53 @@ h2 {
   margin-top: 15rem;
 }
 
-/* About Us */ 
+/* About Us - Services */ 
 
-#about {
-  padding: 15.7rem 0;
+.about {
+  padding: 160px 0;
 }
 
-/* Services */
-
-#services {
-  min-height: 48rem;
+.services {
+  padding-top: 130px;
+  padding-bottom: 105px;
   background: url('../img/services_bg.png') no-repeat center / cover;
+}
+
+.services .message {
+  padding-bottom: 4rem;
 }
 
 /* What we do - Cards box */
 
-#what-we-do .message {
-  padding: 10rem 17rem;
+.what-we-do {
+  padding: 120px 0;
+}
+
+.what-we-do .message {
+  padding: 1rem;
+} 
+
+.cards-box {
+  padding: 100px 160px 60px;
 }
 
 .card-element {
-  min-height: 25rem;
+  min-height: 250px;
 }
 
 .card-element:not(:last-child) {
-  margin-bottom: 10rem;
+  margin-bottom: 80px;
 }
 
 .card-element img {
-  width: 8rem;
+  width: 80px;
+  margin-top: 12px;
 }
 
 .card-title {
   text-transform: uppercase;
   font-size: 2rem;
-  letter-spacing: .5rem;
+  letter-spacing: 3.5px;
   line-height: 2;
   margin: 2rem 0;
   font-weight: 700;
@@ -205,37 +223,37 @@ h2 {
   font-size: 14px;
   font-weight: 300;
   line-height: 2.4rem;
+  padding-bottom: 2rem;
 }
 
-/* Works */
+/* Tile-grid */
 
-#works {
+.tile-grid {
   padding: 0;
 }
 
 .tile-row {
-  min-height: 23.5rem;
   font-size: 0;
 }
 
 .tile-row:first-child {
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .tile-item {
   display: inline-block;
-  width: 27.5%;
+  width: 21.5%;
 }
 
 .tile-item-md {
   display: inline-block;
-  margin: 0 1rem;
-  width: calc(45% - 2rem);
+  margin: 0 10px;
+  width: calc(57% - 20px);
 }
 
 .tile-item,
 .tile-item-md {
-  min-height: 23.5rem;
+  min-height: 235px;
   text-align: left;
   cursor: pointer;
   position: relative;
@@ -283,16 +301,16 @@ h2 {
 
 /* Contact Us */
 
-#contact-us {
+.contact-us {
   padding: 0;
-  padding-top: 13.5rem; 
+  padding-top: 140px; 
 }
 
 .contact-btn {
   text-transform: uppercase;
   font-size: 1.6rem;
-  margin-top: 1rem;
-  padding: 1rem 15rem;
+  margin-top: 20px;
+  padding: 10px 150px;
   color: #fff;
   border: none;
   line-height: 3.8rem;
@@ -321,8 +339,8 @@ h2 {
 
 /* Footer */
 
-#footer {
-  padding: 4rem 0;
+.footer {
+  padding: 6rem 0;
   min-height: 3.5rem;
 }
 
@@ -350,8 +368,8 @@ h2 {
     margin-top: 20rem;
   }
 
-  .item-1>.tile-name,
-  .item-4>.tile-name {
+  .item-1 > .tile-name,
+  .item-4 > .tile-name {
     left: 1rem;
   }
 }
@@ -362,7 +380,7 @@ h2 {
     width: 90%;
   }
 
-  #what-we-do .message {
+  .what-we-do .message {
     padding: 10rem;
   }
 
@@ -381,20 +399,20 @@ h2 {
     margin: .5rem;
   }
 
-  .item-1>.tile-name,
-  .item-4>.tile-name {
+  .item-1 > .tile-name,
+  .item-4 > .tile-name {
     left: 3rem;
   }
 
-  .tile-item-md>.tile-name {
+  .tile-item-md > .tile-name {
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
   }
 
-  .item-3>.tile-name,
-  .item-6>.tile-name {
+  .item-3 > .tile-name,
+  .item-6 > .tile-name {
     left: auto;
     right: 3rem;
   }
@@ -408,7 +426,7 @@ h2 {
 }
 
 @media only screen and (max-width: 575px) {
-  #hero {
+  .hero {
     height: 55vh;
     padding-top: 22rem;
     background: url('../img/bg_hero-small.png') no-repeat top / cover;
@@ -456,7 +474,7 @@ h2 {
     padding: 5rem 0;
   }
 
-  #what-we-do .message {
+  .what-we-do .message {
     padding: 10rem 0;
   }
 }
