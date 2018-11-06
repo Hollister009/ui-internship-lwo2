@@ -243,13 +243,13 @@ h2 {
 
 .tile-item {
   display: inline-block;
-  width: 21.5%;
+  width: 27.5%;
 }
 
 .tile-item-md {
   display: inline-block;
   margin: 0 10px;
-  width: calc(57% - 20px);
+  width: calc(45% - 20px);
 }
 
 .tile-item,
@@ -361,17 +361,11 @@ h2 {
 
 /* Media Queries */
 
-@media only screen and (max-width: 1440px) {
-  .tile-item {
-    width: 25%;
-  }
-
-  .tile-item-md {
-    width: calc(50% - 20px);
-  }
-}
-
 @media only screen and (max-width: 1024px) {
+  .message {
+    padding: 7rem 10rem 5rem;
+  }
+
   .tile-item {
     width: 30%;
   }
@@ -382,10 +376,18 @@ h2 {
 }
 
 @media only screen and (max-width: 768px) {
+  html {
+    font-size: 9px;
+  }
+
   .hero {
     height: 90vh;
     padding-top: 35vh;
     background: url('../img/bg_hero-small.png') no-repeat top right / cover;
+  }
+
+  .header-logo {
+    top: 21%;
   }
 
   .mouse-icon {
@@ -402,7 +404,7 @@ h2 {
   }
 
   .cards-box {
-    padding: 10rem;
+    padding: 10rem 3rem;
   }
 
   .tile-row:first-child {
@@ -446,7 +448,8 @@ h2 {
   }
 
   .title {
-    font-size: 4.5rem; 
+    font-size: 4.5rem;
+    padding-left: .5rem; 
   }
 
   .title-text {
@@ -489,6 +492,13 @@ h2 {
   }
 }
 
+@media only screen and (max-width: 360px) {
+  .title {
+    font-size: 2.7rem;
+    line-height: 1.6;
+  }
+}
+
 @media only screen and (max-height: 500px) {
   .hero {
     height: 100vh;
@@ -497,6 +507,10 @@ h2 {
 
   .header-logo {
     top: 17.5%;
+  }
+
+  .title {
+    font-size: 4.5rem;
   }
 
   .title-text {
