@@ -1,0 +1,17 @@
+@import '../variables';
+
+.hero {
+  min-height: 100vh;
+  background-color: #000; 
+  background: url(../img/bg_hero.png) no-repeat center / cover;
+
+  &--title {
+    text-transform: uppercase;
+    font-family: $font-main;
+    font-size: 3.6rem;
+  }
+}
+
+.signup-form {
+  max-width: 360px;
+}

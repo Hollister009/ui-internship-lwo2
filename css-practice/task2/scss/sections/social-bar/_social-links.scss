@@ -1,0 +1,35 @@
+.btn-social {
+  display: block;
+  background-image: url(../img/icons_sprite.png);
+  background-repeat: no-repeat;
+  height: 46px;
+  width: 55px;
+
+  &__fb {
+    background-position: 10px 0;
+  }
+
+  &__tw {
+    background-position: -85px 0;
+  }
+
+  &__gp {
+    background-position: -190px 0;
+  }
+
+  &__pn {
+    background-position: -280px 0;
+  }
+
+  &__ins {
+    background-position: -381px 0;
+  }
+
+  &__stup {
+    background-position: -483px 0;
+  }
+
+  &__rss {
+    background-position: -592px 0;
+  }
+}
