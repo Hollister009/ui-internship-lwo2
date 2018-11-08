@@ -1,0 +1,60 @@
+// Footer
+.footer {
+  background-color: #000;
+  color: rgba(#fff, .5);
+  min-height: 80px;
+  text-align: center;
+
+  &--links-list {
+    width: 320px;
+    margin: 0 auto;
+    display: flex;
+    padding: 1.2rem 0;
+    justify-content: space-between;
+
+    li {
+      cursor: pointer;
+    }
+  }
+}
+
+.social-link {
+
+  &__fb-sm,
+  &__tw-sm,
+  &__gp-sm,
+  &__pn-sm,
+  &__ins-sm,
+  &__stu-sm,
+  &__rss-sm {
+    @include socialLinks($sprite-sm, 29px, 23px);
+  }
+
+  &__fb-sm {
+    background-position: 8px 0;
+  }
+
+  &__tw-sm {
+    background-position: -39px 0;
+  }
+
+  &__gp-sm {
+    background-position: -91px 0;
+  }
+
+  &__pn-sm {
+    background-position: -137px 0;
+  }
+
+  &__ins-sm {
+    background-position: -187px 0;
+  }
+
+  &__stu-sm {
+    background-position: -241px 0;
+  }
+
+  &__rss-sm {
+    background-position: -294px 0;
+  }
+}

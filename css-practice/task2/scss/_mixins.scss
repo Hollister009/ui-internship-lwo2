@@ -1,0 +1,7 @@
+@mixin socialLinks($sprite, $width, $height) {
+  display: block;
+  background-image: $sprite;
+  background-repeat: no-repeat;
+  width: $width;
+  height: $height;
+}

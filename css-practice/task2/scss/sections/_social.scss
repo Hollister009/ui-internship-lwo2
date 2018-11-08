@@ -1,9 +1,21 @@
-.btn-social {
-  display: block;
-  background-image: url(../img/icons_sprite.png);
-  background-repeat: no-repeat;
-  height: 46px;
-  width: 55px;
+.social--links-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px dotted crimson;
+}
+
+.social-link {
+
+  &__fb,
+  &__tw,
+  &__gp,
+  &__pn,
+  &__ins,
+  &__stu,
+  &__rss {
+    @include socialLinks($sprite-bg, 55px, 46px);
+  }
 
   &__fb {
     background-position: 10px 0;
@@ -25,7 +37,7 @@
     background-position: -381px 0;
   }
 
-  &__stup {
+  &__stu {
     background-position: -483px 0;
   }
 

@@ -1,10 +1,41 @@
-@import 'variables';
-
 .section-heading {
   font-family: $font-main;
   font-size: 3.6rem;
   font-weight: 400;
+  position: relative;
   text-transform: uppercase;
   text-align: center;
   line-height: 1.2;
+  padding: 2rem;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 64px;
+    height: 2px;
+    background: $color-main;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.small-heading {
+  color: $color-grey-1;
+  font-family: $font-second;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.custom-heading {
+  color: $color-white;
+  font-family: $font-main;
+  font-size: 1.6rem;
+  font-weight: 300;
+  opacity: .8;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  font-family: $font-second;
 }

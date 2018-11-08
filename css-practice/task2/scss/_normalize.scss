@@ -3,19 +3,31 @@
   margin: 0; 
 }
 
+*,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
-  font-size: 62.5%; // default 16px --> 10px
+  font-size: 62.5%; // default 16px --> 10px = 1rem;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $font-second;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-weight: 400;
 }
 
 img {
   display: inline-block;
   height: auto;
-  width: 100%;
+  max-width: 100%;
 }
 
 ul {
@@ -38,7 +50,13 @@ a {
   color: #fff;
 }
 
+.d-flex {
+  display: flex;
+}
+
 section {
   min-height: 200px;
   border: 1px solid yellowgreen;
+  text-align: center;
+  padding-top: 9.5rem;
 }

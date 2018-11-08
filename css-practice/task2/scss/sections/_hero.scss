@@ -1,15 +1,36 @@
-@import '../variables';
-
 .hero {
   min-height: 100vh;
   background-color: #000; 
   background: url(../img/bg_hero.png) no-repeat center / cover;
+  color: $color-white;
+  font-family: $font-main;
 
   &--title {
     text-transform: uppercase;
-    font-family: $font-main;
     font-size: 3.6rem;
   }
+
+  &--description {
+    opacity: .8;
+    font-weight: 300;
+    line-height: 1.5;
+    position: relative;
+    padding: 2rem;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 64px;
+      height: 2px;
+      background: $color-white;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+.company-name {
+  display: inline-block;
 }
 
 .signup-form {
