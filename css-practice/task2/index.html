@@ -36,38 +36,37 @@
       </nav>
     </header>
 
-    <section class="hero" id="hero">
-      <div class="container">
-        <h1 class="company-name" title="AXIT">
-          <img src="img/company_logo.png" alt="AXIT Logo">
-        </h1>
-        <h2 class="hero--title">modern axure template for beautiful prototypes</h2>
-        <p class="hero--description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-          euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan
-          et viverra justo commodo.
-        </p>
-        <button class="btn-border">Download</button>
+    <main class="container">
+      <section class="hero d-flex" id="hero">
+        <div class="company">
+          <h1 class="company--name" title="AXIT">
+            <img src="img/company_logo.png" alt="AXIT Logo">
+          </h1>
+          <h2 class="hero--title">modern axure template<br>for beautiful prototypes</h2>
+          <p class="hero--description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan
+            et viverra justo commodo.
+          </p>
+          <button class="btn-border">Download</button>
+        </div>
 
         <form action="#" method="POST" class="signup-form">
+          <h3 class="signup-form--heading">Try Your <ins>free</ins> Trial Today</h3>
           <fieldset>
-            <legend class="signup-form--title">
-              Try Your <ins>FREE</ins> Trial Today
-            </legend>
             <input type="text" name="name" placeholder="Name" />
             <input type="email" name="email" placeholder="Email" />
             <input type="password" name="password" placeholder="Password" />
           </fieldset>
           <input type="button" value="Get Started" />
         </form>
-      </div>
-    </section>
-
-    <section id="social" class="social">
-      <div class="container">
-        <h3>Social Media</h3>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-          euismod bibendum laoreet.</span>
+      </section>
+  
+      <section id="social" class="social d-flex">
+        <div class="social--bar">
+          <h3>Social Media</h3>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</span>
+        </div>
         <ul class="social--links-list">
           <li><a href="#" class="social-link__fb" title="facebook"></a></li>
           <li><a href="#" class="social-link__tw" title="twitter"></a></li>
@@ -77,17 +76,17 @@
           <li><a href="#" class="social-link__stu" title="stubon upon"></a></li>
           <li><a href="#" class="social-link__rss" title="RSS"></a></li>
         </ul>
-      </div>
-    </section>
+      </section>
+  
+      <article id="features" class="features">
+        <section class="features--first">
 
-    <article id="features" class="features">
-      <section class="features--first">
-        <div class="container">
           <div class="feature--tabs">
             <button class="features--btn__active">Tab1</button>
             <button class="features--btn">Tab2</button>
             <button class="features--btn">Tab3</button>
           </div>
+
           <div class="feature--content">
             <h3 class="feature--title">Tabs with soft transitioning effect.</h3>
             <p class="feature--text">
@@ -102,12 +101,12 @@
             </p>
             <button class="btn-primary">Download</button>
           </div>
-          <img class="feature--image" src="img/image_right_u255.png" />
-        </div>
-      </section>
+          <img class="feature--image" src="img/image_right_u255.png" alt=""/>
 
-      <section class="features--second">
-        <div class="container">
+        </section>
+  
+        <section class="features--second">
+
           <img src="img/image_left_sub_list_u260.png" alt="" />
           <div class="feature--content">
             <h3 class="feature--title">Sub list section</h3>
@@ -117,11 +116,11 @@
               accumsan et viverra justo commodo.
             </p>
           </div>
-        </div>
-      </section>
 
-      <section class="features--third">
-        <div class="container">
+        </section>
+  
+        <section class="features--third">
+
           <div class="feature--content">
             <h3 class="feature--title">Standard Picture Section</h3>
             <p class="feature--text">
@@ -136,12 +135,12 @@
             </p>
           </div>
           <img src="img/image_right_standard_u262.png" alt="" />
-        </div>
-      </section>
-    </article>
 
-    <section id="about" class="about">
-      <div class="container">
+        </section>
+      </article>
+  
+      <article id="about" class="about">
+
         <h2 class="section-heading">why this is awesome</h2>
         <span class="small-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         <section class="benefits d-flex">
@@ -175,16 +174,16 @@
             dolor sit amet lacus accumsan et viverra.</p>
           </div>
         </section>
-      </div>
-    </section>
 
-    <section id="pricing" class="pricing">
-      <div class="container">
+      </article>
+  
+      <section id="pricing" class="pricing">
+
         <h2 class="section-heading">pricing options</h2>
         <span class="small-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-        <section class="cards-holder d-flex"> 
+        <div class="cards-holder d-flex"> 
           
-          <div class="card-element">
+          <!-- <div class="card-element">
             <div class="card-element--top">
               <span class="card-element--header">Type</span>
               <p class="card-element--price">99999</p>
@@ -200,86 +199,88 @@
                 <li>six</li>
               </ul>
             </div>
-          </div>
+          </div> -->
 
-        </section>
-      </div>
-    </section>
+        </div>
 
-    <section id="reviews" class="reviews">
-      <div class="container">
+      </section>
+  
+      <section id="reviews" class="reviews">
+
         <h2 class="section-heading">what our customers are saying</h2>
         <span class="small-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-        <div class="reviews--block d-flex">
-          <div class="testimonial">
-            <blockquote>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-              accusamus expedita repellat similique odio aspernatur ex, architecto
-              eaque quo suscipit.
-            </blockquote>
-            <img src="img/avatar.png" class="avatar" alt="Avatar" />
-            <h3 class="review-author">Name X</h3>
-            <span class="review-author-position">Job</span>
-          </div>
-  
-          <div class="testimonial">
-            <blockquote>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-              accusamus expedita repellat similique odio aspernatur ex, architecto
-              eaque quo suscipit.
-            </blockquote>
-            <img src="img/avatar.png" class="avatar" alt="Avatar" />
-            <h3 class="review-author">Name X</h3>
-            <span class="review-author-position">Job</span>
-          </div>
-  
-          <div class="testimonial">
-            <blockquote>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-              accusamus expedita repellat similique odio aspernatur ex, architecto
-              eaque quo suscipit.
-            </blockquote>
-            <img src="img/avatar.png" class="avatar" alt="Avatar" />
-            <h3 class="review-author">Name X</h3>
-            <span class="review-author-position">Job</span>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="users-list">
 
-    <section id="custom" class="custom">
-      <div class="container">
+          <div class="testimonial">
+            <blockquote>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
+              accusamus expedita repellat similique odio aspernatur ex, architecto
+              eaque quo suscipit.
+            </blockquote>
+            <img src="img/avatar1.jpeg" class="avatar" alt="User Avatar" />
+            <div class="user-details">
+              <h4 class="review-author">Jeremy H.</h4>
+              <span class="review-author-position">Freelancer</span>
+            </div>
+          </div>
+  
+          <div class="testimonial">
+            <blockquote>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
+              accusamus expedita repellat similique odio aspernatur ex, architecto
+              eaque quo suscipit.
+            </blockquote>
+            <img src="img/avatar2.jpeg" class="avatar" alt="User Avatar" />
+            <div class="user-details">
+              <h4 class="review-author">Susan W.</h4>
+              <span class="review-author-position">Realtor</span>
+            </div>
+          </div>
+  
+          <div class="testimonial">
+            <blockquote>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
+              accusamus expedita repellat similique odio aspernatur ex, architecto
+              eaque quo suscipit.
+            </blockquote>
+            <img src="img/avatar3.jpeg" class="avatar" alt="User Avatar" />
+            <div class="user-details">
+              <h4 class="review-author">Erik F.</h4>
+              <span class="review-author-position">Manager</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+  
+      <section id="custom" class="custom">
+
         <h2 class="section-heading white">stylish axure design</h2>
         <p class="custom-heading">
           Use the sections you need, remove the ones you don't. Create gorgeous
           prototypes faster than ever!
         </p>
         <button class="btn-border">Download</button>
-      </div>
-    </section>
 
-    <section id="contacts-us" class="contact-us">
-      <div class="container">
-        <h2 class="section-heading">contact us</h2>
-        <span class="small-heading"
-          >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span
-        >
-        <form action="#" class="message">
-          <fieldset>
-            <input type="text" name="name" placeholder="Name" />
-            <input type="email" name="email" placeholder="Email" />
-            <input type="text" name="subject" placeholder="subject" />
-          </fieldset>
-          <textarea
-            name="message"
-            placeholder="Message"
-            cols="30"
-            rows="10"
-          ></textarea>
-          <input type="button" value="Send Message" />
-        </form>
-      </div>
-    </section>
+      </section>
+  
+      <section id="contacts-us" class="contact-us">
+
+          <h2 class="section-heading">contact us</h2>
+          <span class="small-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <form action="#" class="message">
+            <fieldset>
+              <input type="text" name="name" placeholder="Name" />
+              <input type="email" name="email" placeholder="Email" />
+              <input type="text" name="subject" placeholder="Subject" />
+            </fieldset>
+            <textarea name="message" placeholder="Message" cols="30" rows="10"></textarea>
+            <input type="button" class="btn-primary" value="Send Message" />
+          </form>
+
+      </section>
+    </main>
 
     <footer id="footer" class="footer">
       <ul class="footer--links-list">

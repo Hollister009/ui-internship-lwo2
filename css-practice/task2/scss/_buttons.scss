@@ -1,7 +1,22 @@
-.btn-border {
-  background: transparent;
-  padding: .5rem 1.5rem;
-  color: $color-white;
-  border: 1px solid $color-white;
-  font-size: 1.5rem;
+.btn {
+
+  &-primary,
+  &-border {
+    font-family: $font-second;
+    font-size: 1.5rem;
+    padding: .75rem 2.5rem;
+    color: $color-white;
+  }
+
+  &-primary {
+    border: none;
+    border-radius: 3px;
+    background: $color-main;
+    line-height: 1.4;
+  }
+
+  &-border {
+    background: transparent;
+    border: 1px solid $color-white;
+  }
 }

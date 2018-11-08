@@ -1,8 +1,22 @@
+.social {
+  min-height: auto;
+  text-align: left;
+  padding: 1rem 15rem;
+  // For test purpose
+  justify-content: space-between;
+
+  &--bar {
+    max-width: 380px;
+    margin-right: 80px;
+  }
+
+}
+
 .social--links-list {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
-  border: 1px dotted crimson;
+  align-self: center;
+  flex: 1 0 auto;
 }
 
 .social-link {

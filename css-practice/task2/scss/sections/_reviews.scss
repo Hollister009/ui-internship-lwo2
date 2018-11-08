@@ -1,8 +1,13 @@
-.reviews--block {
+.users-list {
 
   .testimonial {
-    max-width: 33%;
     border: 1px dotted crimson;
+
+    .avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
   }
 
 }

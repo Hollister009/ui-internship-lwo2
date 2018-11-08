@@ -1,21 +1,18 @@
 .hero {
   min-height: 100vh;
-  background-color: #000; 
+  background-color: $color-black; 
   background: url(../img/bg_hero.png) no-repeat center / cover;
   color: $color-white;
   font-family: $font-main;
+  // For test purpose
+  align-items: center;
+  justify-content: space-around;
 
   &--title {
     text-transform: uppercase;
     font-size: 3.6rem;
-  }
-
-  &--description {
-    opacity: .8;
-    font-weight: 300;
-    line-height: 1.5;
+    padding: 2rem 0;
     position: relative;
-    padding: 2rem;
 
     &::after {
       content: '';
@@ -27,12 +24,65 @@
       bottom: 0;
     }
   }
+
+  &--description {
+    opacity: .8;
+    font-weight: 300;
+    line-height: 1.5;
+    padding: 2rem 3.5rem 2rem 0;
+  }
 }
 
-.company-name {
-  display: inline-block;
+
+.company {
+  width: 45%;
+  text-align: left;
+  border: 1px dotted $color-black;
+
+  &--name {
+    display: inline-block;
+  }
 }
 
 .signup-form {
-  max-width: 360px;
+  background-color: $color-white;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: $font-second;
+
+  &--heading {
+    background: $color-light-g1;
+    color: $color-dark;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+
+    ins {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color-main;
+    }
+  }
+
+  fieldset,
+  input {
+    border: none;
+  }
+
+  [type="text"],
+  [type="email"],
+  [type="password"] {
+    width: 90%;
+    margin: 2.5rem auto;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 1, 0.16);
+  }
+
+  [type="button"] {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: $color-main;
+    color: $color-white;
+    font-weight: 600;
+    cursor: pointer;
+  }
 }
