@@ -19,4 +19,8 @@
     background: transparent;
     border: 1px solid $color-white;
   }
+
+  &__active {
+    background: $color-main;
+  }
 }

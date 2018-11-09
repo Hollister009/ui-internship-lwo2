@@ -1,0 +1,114 @@
+.features {
+  
+  section {
+    text-align: left;
+    padding: 15rem 10%;
+
+    img {
+      max-width: 525px;
+      max-height: 375px;
+    }
+  }
+
+  &--first,
+  &--third {
+    background: $color-light-g1;
+  }
+
+  &--second,
+  &--third {
+    justify-content: space-between;
+  }
+
+  &--btn {
+    border: none;
+    width: 112px;
+    height: 112px;
+    background: $color-dark;
+    color: $color-white;
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+    &:not(:last-child) {
+      margin-bottom: 1px;
+    }
+
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+
+.feature {
+
+  &--tabs {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &--content {
+    margin: 0 auto;
+    flex-basis: 500px;
+
+    &__side {
+      flex-basis: 435px;
+    }
+  }
+
+  &--image {
+    max-width: 320px;
+    max-height: 253px;
+    align-self: center;
+  }
+
+  &--sublist {
+    height: 177px;
+
+    .sublist-item {
+      font-size: 0;
+  
+      & > figure {
+        @include figureCircle($size-side1);
+        vertical-align: top;
+      }
+  
+      &:nth-child(1) > figure {
+        background-image: $icon-upload;
+      }
+
+      &:nth-child(2) > figure {
+        background-image: $icon-download;
+      }
+
+      .icon-caption {
+        display: inline-block;
+        width: calc(100% - 60px);
+        max-width: 364px;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        margin-left: 20px;
+
+        & > span {
+          font-weight: 600;
+        }
+
+        & > p {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}

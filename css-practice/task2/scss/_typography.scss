@@ -39,3 +39,35 @@
   font-size: 1.2rem;
   font-family: $font-second;
 }
+
+.feature {
+
+  &--title {
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: $color-black;
+  }
+  
+  &--text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $color-grey-1;
+    margin-bottom: 30px;
+  }
+}
+
+.text-default {
+  font-family: $font-second;
+  font-size: 14px;
+  color: $color-grey-1;
+}
+
+.small-line {
+  display: block;
+  width: 64px;
+  height: 2px;
+  border: none;
+  background: $color-main;
+  margin-bottom: 25px;
+}
+

@@ -18,6 +18,7 @@ body {
   font-size: 1.6rem;
   font-family: $font-second;
   overflow-x: hidden;
+  font-weight: 400;
 }
 
 img {
@@ -58,6 +59,8 @@ textarea {
   margin: 0 auto;
 }
 
+// Utility
+
 .white {
   color: #fff;
 }
@@ -66,9 +69,12 @@ textarea {
   display: flex;
 }
 
+.mb-med {
+  margin-bottom: 30px;
+}
+
 section,
 article {
   min-height: 200px;
-  border: 1px solid yellowgreen;
   text-align: center;
 }
