@@ -3,16 +3,21 @@
   section {
     text-align: left;
     // For test purpose
-    @include d-flex;
+    // @include d-flex();
+  }
 
-    img {
-      max-width: 525px;
-      max-height: 375px;
-    }
+  img {
+    max-width: 525px;
+    max-height: 375px;
   }
 
   &--first {
     padding: $padding-feature-1;
+
+    // dev option
+    & > * {
+      border: 1px dotted rebeccapurple;
+    }
   }
   
   &--second {
@@ -59,27 +64,22 @@
 .feature {
 
   &--tabs {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 20%;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
+    @include d-flex(center, column) {
+      align-items: center;
+    }
   }
   
   &--content {
-    margin: 0 auto;
-    flex-basis: 500px;
-
-    &__side {
-      flex-basis: 435px;
-    }
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  &--image {
+  &s &--image {
     max-width: 320px;
     max-height: 253px;
-    align-self: center;
+    justify-self: center;
+    margin-top: 25px;
+    margin-left: -25px;
   }
 
   &--sublist {

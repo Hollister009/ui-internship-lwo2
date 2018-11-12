@@ -4,9 +4,6 @@
   color: $color-white;
   font-family: $font-main;
   padding: $padding-hero;
-  // For test purpose
-  @include d-flex;
-  align-items: center;
 
   &--title {
     text-transform: uppercase;
@@ -30,9 +27,8 @@
 }
 
 .company {
-  max-width: 50%;
+  max-width: 520px;
   text-align: left;
-  border: 1px dotted $color-black;
 
   &--name {
     display: inline-block;
@@ -41,16 +37,19 @@
 
 .signup-form {
   background-color: $color-white;
-  border-radius: 5px;
+  border-radius: 3px;
   font-family: $font-second;
   overflow: hidden;
-  padding: 2rem;
+  margin-top: 30px;
+  max-height: 362px;
+  max-width: 360px;
 
   &--heading {
     background: $color-light-g1;
     color: $color-dark;
     font-size: 2rem;
     padding: 1rem 3rem;
+    line-height: 3.3rem;
 
     ins {
       text-transform: uppercase;
@@ -58,6 +57,10 @@
       color: $color-main;
     }
     
+  }
+
+  & > fieldset {
+    padding: 0 1rem 1.8rem 3.2rem;
   }
 
   input {
@@ -68,14 +71,15 @@
   [type="email"],
   [type="password"] {
     width: 90%;
-    margin: 2.5rem auto;
-    padding: 1rem 2rem;
+    margin: 2rem 0 3rem;
+    padding: 0 2rem;
+    line-height: 4.1rem;
     border-bottom: 1px solid rgba($color-black, 0.15);
   }
 
   [type="button"] {
     width: 100%;
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: $color-main;
     color: $color-white;
     font-weight: 600;

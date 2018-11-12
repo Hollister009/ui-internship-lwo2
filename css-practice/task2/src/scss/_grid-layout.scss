@@ -1,3 +1,36 @@
+// Hero Section
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2%;
+}
+
+// Social Section
+.social {
+  display: grid;
+  grid-gap: 60px;
+  grid-template-columns: minmax(min-content, 380px) auto;
+}
+
+// Features Section
+.features--first {
+  display: grid;
+  grid-template-columns: 20% minmax(auto, 500px) auto;
+  grid-gap: 30px;
+}
+
+.features--second {
+  display: grid;
+  grid-template-columns: max-content minmax(auto, 435px);
+  grid-gap: 13.5%;
+}
+
+.features--third {
+  display: grid;
+  grid-template-columns: minmax(auto, 435px) max-content;
+  grid-gap: 13.5%;
+}
+
 // About Section
 .benefits {
   display: grid;

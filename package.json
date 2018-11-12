@@ -8,7 +8,7 @@
     "tdd": "jest --watch",
     "watch:sass": "node-sass -w css-practice/task2/src/scss/ -o css-practice/task2/css/",
     "compile:sass": "node-sass css-practice/task2/src/scss/ -o css-practice/task2/css/",
-    "pugtohtml": "pug -w css-practice/task2/src/pug/ -o css-practice/task2/html/ -P"
+    "pugtohtml": "pug css-practice/task2/src/pug/index.pug -o css-practice/task2/ -P"
   },
   "husky": {
     "hooks": {

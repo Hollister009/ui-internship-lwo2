@@ -28,7 +28,9 @@
   }
 }
 
-@mixin d-flex {
+@mixin d-flex($justify:space-between, $direction:row) {
   display: flex;
-  justify-content: space-between;
+  justify-content: $justify;
+  flex-direction: $direction;
+  @content;
 }

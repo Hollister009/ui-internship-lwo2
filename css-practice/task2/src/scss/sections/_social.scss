@@ -4,11 +4,11 @@
   padding: $padding-social;
   box-shadow: 0px 1px 3px 0px rgba($color-black, .38);
   // For test purpose
-  @include d-flex;
+  // @include d-flex;
 
   &--bar {
     max-width: 380px;
-    margin-right: 80px;
+    // margin-right: 60px;
 
     & > h3 {
       font-size: 2rem;
@@ -22,9 +22,10 @@
   }
 
   &--links-list {
-    @include d-flex;
-    align-self: center;
-    flex: 1 0 auto;
+    @include d-flex() {
+      flex: 1 0 auto;
+      align-self: center;
+    };
   }
 }
 
