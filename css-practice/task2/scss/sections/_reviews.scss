@@ -1,13 +1,66 @@
+.reviews {
+  padding: $padding-reviews;
+}
+
 .users-list {
+  margin-top: 20px;
 
   .testimonial {
-    border: 1px dotted crimson;
+    text-align: left;
+    max-width: 275px;
 
-    .avatar {
+    & > blockquote {
+      position: relative;
+      color: $color-grey-1;
+      border-radius: 5px;
+      background-color: $color-light-g1;
+      font-style: italic;
+      padding: 2.6rem 1.2rem;
+      margin-bottom: 20px;
+      letter-spacing: 0.35px;
+      line-height: 1.25;
+
+      @include p-el(after, 20px, 15px) {
+        bottom: -15px;
+        left: 25px;
+        border-top: 15px solid $color-light-g1;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+    }
+
+    &--avatar {
+      display: inline-block;
+      vertical-align: middle;
       width: 70px;
       height: 70px;
       border-radius: 50%;
+      cursor: pointer;
+      overflow: hidden;
+
+      & > img {
+        transition: all .5s ease;
+      }
+
+      &:hover > img {
+        transform: scale(1.1);
+        filter: blur(2px) brightness(70%);
+      }
     }
   }
 
+  .user-details {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+
+    .review-author {
+      color: $color-dark;
+      font-size: 2rem;
+    }
+
+    .reviewer-position {
+      color: $color-grey-1;
+    }
+  }
 }

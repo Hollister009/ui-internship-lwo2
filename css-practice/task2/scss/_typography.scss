@@ -1,38 +1,43 @@
 .section-heading {
-  font-family: $font-main;
-  font-size: 3.6rem;
-  font-weight: 400;
-  position: relative;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1.2;
-  padding: 2rem;
+  @extend %base-heading;
+  color: $color-dark-2;
 
-  &::after {
-    display: block;
-    content: '';
-    width: 64px;
-    height: 2px;
+  @include p-el(after, 64px, 2px) {
     background: $color-main;
-    position: absolute;
     left: 50%;
+    bottom: -5px;
     transform: translateX(-50%);
+  }
+
+  &__white {
+    @extend %base-heading;
+    color: $color-white;
+
+    @include p-el(after, 64px, 2px) {
+      background: $color-white;
+      left: 50%;
+      bottom: -5px;
+      transform: translateX(-50%);
+    }
   }
 }
 
 .small-heading {
+  display: block;
   color: $color-grey-1;
   font-family: $font-second;
   font-size: 1.4rem;
   line-height: 1.5;
+  padding: 3rem;
 }
 
 .custom-heading {
-  color: $color-white;
+  color: rgba($color-white, .8);
   font-family: $font-main;
   font-size: 1.6rem;
   font-weight: 300;
-  opacity: .8;
+  line-height: 2;
+  padding: 3rem 0 2.5rem;
 }
 
 .copyright {
@@ -58,7 +63,7 @@
 
 .text-default {
   font-family: $font-second;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: $color-grey-1;
 }
 

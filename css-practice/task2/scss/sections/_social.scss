@@ -1,22 +1,31 @@
 .social {
-  min-height: auto;
   text-align: left;
-  padding: 1rem 15rem;
+  position: relative;
+  padding: $padding-social;
+  box-shadow: 0px 1px 3px 0px rgba($color-black, .38);
   // For test purpose
-  justify-content: space-between;
+  @include d-flex;
 
   &--bar {
     max-width: 380px;
     margin-right: 80px;
+
+    & > h3 {
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+
+    & > span {
+      line-height: 2rem;
+    }
   }
 
-}
-
-.social--links-list {
-  display: flex;
-  justify-content: space-around;
-  align-self: center;
-  flex: 1 0 auto;
+  &--links-list {
+    @include d-flex;
+    align-self: center;
+    flex: 1 0 auto;
+  }
 }
 
 .social-link {

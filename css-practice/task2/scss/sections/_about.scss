@@ -1,8 +1,11 @@
+.about {
+  padding: $padding-about;
+}
+
 .benefits {
+  margin-top: 50px;
 
   &--block {
-    border: 1px solid green;
-    width: 33%;
 
     & > figure {
       @include figureCircle($size-side2);
@@ -19,22 +22,18 @@
     &:nth-child(3) > figure {
       background-image: $icon-lightning;
     }
-  }
 
-  &-icon {
-    position: relative;
-    display: block;
-    width: 70px;
-    height: 70px;
-    border: 1px solid $color-main;
-    border-radius: 50%;
-    margin: 0 auto;
+    & > h4 {
+      margin: 20px 10px;
+      font-size: 2rem;
+      line-height: 1.2;
+      color: $color-dark;
+    }
 
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    & > p {
+      color: $color-grey-1;
+      line-height: 2rem;
+      padding: 0 1.2rem;
     }
   }
 }

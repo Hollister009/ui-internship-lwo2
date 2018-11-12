@@ -16,3 +16,19 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+
+@mixin p-el($el, $width, $height, $content:null, $pos:absolute) {
+  &::#{$el} {
+    display: block;
+    content: "#{$content}";
+    position: $pos;
+    width: $width;
+    height: $height;
+    @content;
+  }
+}
+
+@mixin d-flex {
+  display: flex;
+  justify-content: space-between;
+}

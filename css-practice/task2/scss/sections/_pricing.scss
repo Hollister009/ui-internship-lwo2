@@ -1,3 +1,81 @@
-.card-element {
-  border: 1px dotted crimson;
+.pricing {
+  background-color: $color-light-g1;
+  padding: $padding-pricing;
+}
+
+.cards-holder {
+  margin-top: 82px;
+  // For test purpose
+  @include d-flex;
+}
+
+.pricing-slot {
+  flex-basis: 345px;
+
+  &:nth-child(2) {
+    position: relative;
+    top: -35px;
+
+    & > div {
+      border-bottom: none;
+    }
+  }
+
+  &--upper {
+    color: $color-white;
+    background-color: $color-dark;
+    border-bottom: 5px solid $color-main;
+  }
+
+  &--header {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 1.8rem;
+    border-bottom: 1px solid $color-white;
+  }
+
+  &--value {
+    font-family: $font-main;
+    font-size: 9.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+
+    sub {
+      font-size: 3.5rem;
+      line-height: 0;
+      vertical-align: baseline;
+    }
+  }
+
+  &--sub {
+    color: rgba($color-white, .5);
+    font-size: 1.4rem;
+    font-style: italic;
+    padding: 1rem 0 1.8rem;
+    position: relative;
+    letter-spacing: 0.8px;
+  }
+
+  &--sub__popular {
+    @extend .pricing-slot--sub; 
+    @include p-el(after, 100%, auto, 'our most popular', relative) {
+      @extend %font-base;
+      font-weight: 700;
+      line-height: 4rem;
+      top: 18px;
+      text-transform: uppercase;
+      background-color: $color-main;
+    }
+  }
+
+  &--list {
+    & > li {
+      background-color: $color-white;
+      line-height: 4rem;
+      color: $color-grey-1;
+      text-transform: uppercase;
+      border-bottom: 1px solid $color-light-g1;
+    }
+  }
 }

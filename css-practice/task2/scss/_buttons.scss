@@ -2,22 +2,21 @@
 
   &-primary,
   &-border {
-    font-family: $font-second;
-    font-size: 1.5rem;
-    padding: .75rem 2.5rem;
-    color: $color-white;
+    @extend %button;
   }
 
   &-primary {
     border: none;
     border-radius: 3px;
     background: $color-main;
-    line-height: 1.4;
+    line-height: 4.6rem;
+    padding: 0 2.2rem;
   }
 
   &-border {
     background: transparent;
-    border: 1px solid $color-white;
+    border: 2px solid $color-white;
+    padding: 0.9rem 3rem;
   }
 
   &__active {

@@ -1,41 +1,36 @@
 .hero {
-  min-height: 100vh;
   background-color: $color-black; 
   background: url(../img/bg_hero.png) no-repeat center / cover;
   color: $color-white;
   font-family: $font-main;
+  padding: $padding-hero;
   // For test purpose
+  @include d-flex;
   align-items: center;
-  justify-content: space-around;
 
   &--title {
     text-transform: uppercase;
     font-size: 3.6rem;
-    padding: 2rem 0;
+    font-weight: 400;
+    padding: 2rem 0 3.5rem;
     position: relative;
-
-    &::after {
-      content: '';
-      display: block;
-      width: 64px;
-      height: 2px;
+    @include p-el(after, 64px, 2px) {
       background: $color-white;
-      position: absolute;
       bottom: 0;
     }
   }
 
   &--description {
-    opacity: .8;
+    color: rgba($color-white, .8);
+    font-size: 1.6rem;
     font-weight: 300;
-    line-height: 1.5;
-    padding: 2rem 3.5rem 2rem 0;
+    line-height: 1.45;
+    padding: 3.5rem 3.5rem 4rem 0;
   }
 }
 
-
 .company {
-  width: 45%;
+  max-width: 50%;
   text-align: left;
   border: 1px dotted $color-black;
 
@@ -47,8 +42,9 @@
 .signup-form {
   background-color: $color-white;
   border-radius: 5px;
-  overflow: hidden;
   font-family: $font-second;
+  overflow: hidden;
+  padding: 2rem;
 
   &--heading {
     background: $color-light-g1;
@@ -61,9 +57,9 @@
       text-decoration: none;
       color: $color-main;
     }
+    
   }
 
-  fieldset,
   input {
     border: none;
   }
@@ -74,7 +70,7 @@
     width: 90%;
     margin: 2.5rem auto;
     padding: 1rem 2rem;
-    border-bottom: 1px solid rgba(0, 0, 1, 0.16);
+    border-bottom: 1px solid rgba($color-black, 0.15);
   }
 
   [type="button"] {

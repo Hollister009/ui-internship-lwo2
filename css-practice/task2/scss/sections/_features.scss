@@ -1,8 +1,9 @@
 .features {
-  
+
   section {
     text-align: left;
-    padding: 15rem 10%;
+    // For test purpose
+    @include d-flex;
 
     img {
       max-width: 525px;
@@ -10,14 +11,21 @@
     }
   }
 
+  &--first {
+    padding: $padding-feature-1;
+  }
+  
+  &--second {
+    padding: $padding-feature-2;
+  }
+  
+  &--third {
+    padding: $padding-feature-3;
+  }
+
   &--first,
   &--third {
     background: $color-light-g1;
-  }
-
-  &--second,
-  &--third {
-    justify-content: space-between;
   }
 
   &--btn {

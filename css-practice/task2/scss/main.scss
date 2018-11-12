@@ -1,5 +1,6 @@
 // Variables
 @import 'variables';
+@import 'helper';
 @import 'normalize';
 // Mixins
 @import 'mixins';
@@ -16,6 +17,7 @@
 @import 'sections/pricing';
 @import 'sections/reviews';
 @import 'sections/custom';
+@import 'sections/contact';
 // Footer
 @import 'footer/footer';
 // Grid-CSS
