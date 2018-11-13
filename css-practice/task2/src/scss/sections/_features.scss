@@ -2,8 +2,6 @@
 
   section {
     text-align: left;
-    // For test purpose
-    // @include d-flex();
   }
 
   img {
@@ -14,9 +12,11 @@
   &--first {
     padding: $padding-feature-1;
 
-    // dev option
-    & > * {
-      border: 1px dotted rebeccapurple;
+    .feature--image {
+      max-width: 320px;
+      max-height: 253px;
+      justify-self: center;
+      margin-top: 25px;
     }
   }
   
@@ -26,37 +26,24 @@
   
   &--third {
     padding: $padding-feature-3;
+
+    .feature--content__side {
+      padding-top: 3rem;
+    }
   }
 
   &--first,
   &--third {
-    background: $color-light-g1;
+    background: $color-light;
   }
 
   &--btn {
-    border: none;
-    width: 112px;
-    height: 112px;
-    background: $color-dark;
-    color: $color-white;
-    font-family: inherit;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    cursor: pointer;
-    
-    &:not(:last-child) {
-      margin-bottom: 1px;
-    }
+    @extend %btn-tab;
+    background: $color-dark-1;
 
-    &:first-child {
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-    }
-
-    &:last-child {
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
+    &__active {
+      @extend %btn-tab;
+      background-color: $color-main;
     }
   }
 }
@@ -67,55 +54,66 @@
     @include d-flex(center, column) {
       align-items: center;
     }
+
+    button:not(:last-child) {
+      margin-bottom: 1px;
+    }
+
+    button:first-child {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    button:last-child {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
   }
   
   &--content {
-    margin-left: 0;
-    margin-right: 0;
-  }
 
-  &s &--image {
-    max-width: 320px;
-    max-height: 253px;
-    justify-self: center;
-    margin-top: 25px;
-    margin-left: -25px;
+    &__side {
+      line-height: 1;
+    }
   }
 
   &--sublist {
-    height: 177px;
+    position: relative;
 
     .sublist-item {
-      font-size: 0;
   
       & > figure {
         @include figureCircle($size-side1);
-        vertical-align: top;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
   
       &:nth-child(1) > figure {
+        top: 2%;
         background-image: $icon-upload;
       }
 
       &:nth-child(2) > figure {
+        top: 57%;
         background-image: $icon-download;
       }
+    }
 
-      .icon-caption {
-        display: inline-block;
-        width: calc(100% - 60px);
-        max-width: 364px;
-        font-size: 1.4rem;
-        line-height: 1.7rem;
-        margin-left: 20px;
+    .icon-caption {
+      display: inline-block;
+      width: 85%;
+      max-width: 364px;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      margin-left: 15%;
 
-        & > span {
-          font-weight: 600;
-        }
+      & > span {
+        font-weight: 600;
+      }
 
-        & > p {
-          margin-top: 1rem;
-        }
+      & > p {
+        margin-top: 1rem;
       }
     }
   }

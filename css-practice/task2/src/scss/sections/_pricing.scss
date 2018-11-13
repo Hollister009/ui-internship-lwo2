@@ -1,16 +1,17 @@
 .pricing {
-  background-color: $color-light-g1;
+  background-color: $color-light;
   padding: $padding-pricing;
 }
 
 .cards-holder {
   margin-top: 82px;
   // For test purpose
-  @include d-flex;
+  // @include d-flex;
+  padding: 0 4rem;
 }
 
 .pricing-slot {
-  flex-basis: 345px;
+  max-width: 345px;
 
   &:nth-child(2) {
     position: relative;
@@ -23,7 +24,7 @@
 
   &--upper {
     color: $color-white;
-    background-color: $color-dark;
+    background-color: $color-dark-1;
     border-bottom: 5px solid $color-main;
   }
 
@@ -73,9 +74,9 @@
     & > li {
       background-color: $color-white;
       line-height: 4rem;
-      color: $color-grey-1;
+      color: $color-grey;
       text-transform: uppercase;
-      border-bottom: 1px solid $color-light-g1;
+      border-bottom: 1px solid $color-light;
     }
   }
 }

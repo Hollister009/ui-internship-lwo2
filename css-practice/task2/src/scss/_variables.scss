@@ -7,11 +7,11 @@ $sprite-sm: url(../img/icons_sprite_small.png);
 // Colors
 $color-main: #ff8b38;
 $color-white: #fff;
-$color-light-g1: #f5f5f5;
-$color-grey-1: #86878b;
-$color-dark: #333;
-$color-dark-2: #212121;
 $color-black: #000;
+$color-light: #f5f5f5;
+$color-grey: #86878b;
+$color-dark-1: #333;
+$color-dark-2: #212121;
 // Size
 $size-side1: 40px;
 $size-side2: 70px;
@@ -22,15 +22,15 @@ $icon-bulb: url(../img/common_icons/bulb.png);
 $icon-keyboard: url(../img/common_icons/keyboard.png);
 $icon-lightning: url(../img/common_icons/lightning.png);
 // Section paddings
-$padding-hero: 18rem 15rem 13.8rem;
-$padding-social: 2rem 15rem;
-$padding-feature-1: 14.5rem 7.4rem 11rem;
-$padding-feature-2: 11rem 11.6rem;
-$padding-feature-3: 10.5rem 15.3rem 4.5rem;
-$padding-about: 8rem 12.5rem 10.4rem;
-$padding-pricing: 7.5rem 14.5rem 6rem;
-$padding-reviews: 8rem 17rem 10rem;
-$padding-custom: 4.5rem 5rem 6.2rem;
-$padding-contact: 8rem 8rem 5.6rem;
+$padding-hero: 18rem 9.5% 13.8rem 10.5%;
+$padding-social: 2rem 11%;
+$padding-feature-1: 14.5rem 5.5% 11rem;
+$padding-feature-2: 11rem 8.5% 11.5rem;
+$padding-feature-3: 7.5rem 5% 7.5rem 11%;
+$padding-about: 8rem 7.5% 10.2rem;
+$padding-pricing: 8rem 7.5% 6rem;
+$padding-reviews: 8rem 11.5% 10rem;
+$padding-custom: 4.5rem 6rem 6.2rem;
+$padding-contact: 8rem 6% 5.6rem;
 // Container
 $max-width: 1400px;

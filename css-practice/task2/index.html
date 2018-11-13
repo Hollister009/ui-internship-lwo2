@@ -15,6 +15,7 @@
           <li><a href="#features">Features</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#reviews">Reviews</a></li>
           <li><a href="#contact-us">Contact</a></li>
         </ul>
       </nav>
@@ -30,7 +31,7 @@
           </p>
           <button class="btn-border">Download</button>
         </div>
-        <form class="signup-form" action="" method="POST">
+        <form class="signup-form" action="#">
           <h3 class="signup-form--heading">Try Your <ins>free </ins>Trial Today</h3>
           <fieldset>
             <input type="text" name="name" placeholder="Name">
@@ -57,13 +58,13 @@
       <article class="features" id="features">
         <section class="features--first">
           <div class="feature--tabs">
-            <button class="features--btn">Tab1</button>
+            <button class="features--btn__active">Tab1</button>
             <button class="features--btn">Tab2</button>
             <button class="features--btn">Tab3</button>
           </div>
           <div class="feature--content">
-            <h3 class="feature--title">Tabs with soft transitioning effect.</h3>
-            <p class="feature--text">
+            <h3 class="feature--title__tabs">Tabs with soft transitioning effect.</h3>
+            <p class="feature--text mt-bg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus 
               accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
@@ -73,7 +74,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
               euismod bibendum laoreet.
             </p>
-            <button class="btn-primary">Download</button>
+            <button class="btn-primary mt-md">Download</button>
           </div><img class="feature--image" src="img/skyscrapers.png" alt="Skyscrappers">
         </section>
         <section class="features--second"><img src="img/image_city_1.png" alt="Image of City">
@@ -84,11 +85,11 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
               euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
             </p>
-            <div class="feature--sublist">
+            <div class="feature--sublist mt-bg">
               <div class="sublist-item">
                 <figure></figure>
                 <div class="icon-caption"><span>Title</span>
-                  <p class="text-default mb-med">
+                  <p class="text-default mb-bg">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
                     euismod bibendum laoreet.
                   </p>
@@ -247,7 +248,7 @@
       </section>
       <section class="contact-us" id="contact-us">
         <h2 class="section-heading">contact us</h2><span class="small-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-        <form class="message" action="">
+        <form class="message" action="#">
           <div class="message--fields">
             <input type="text" name="name" placeholder="Name">
             <input type="email" name="email" placeholder="Email">

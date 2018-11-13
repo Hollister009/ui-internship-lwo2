@@ -1,7 +1,7 @@
 // Hero Section
 .hero {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: minmax(520px, 65%) 1fr;
   grid-gap: 2%;
 }
 
@@ -21,20 +21,28 @@
 
 .features--second {
   display: grid;
-  grid-template-columns: max-content minmax(auto, 435px);
+  grid-template-columns: max-content minmax(auto, 470px);
   grid-gap: 13.5%;
 }
 
 .features--third {
   display: grid;
-  grid-template-columns: minmax(auto, 435px) max-content;
-  grid-gap: 13.5%;
+  grid-template-columns: minmax(450px, 60%) max-content;
+  grid-gap: 14rem;
 }
 
 // About Section
 .benefits {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+// Pricing Section
+.cards-holder {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(350px, min-content));
+  grid-gap: 30px;
 }
 
 // Reviews Section

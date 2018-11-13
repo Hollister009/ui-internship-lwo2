@@ -1,15 +1,12 @@
-// Variables
+// Variables & Base
 @import 'variables';
 @import 'helper';
 @import 'normalize';
-// Mixins
 @import 'mixins';
 @import 'typography';
-// Buttons
 @import 'buttons';
-// Header
-@import 'header/navbar';
 // Sections
+@import 'header/navbar';
 @import 'sections/hero';
 @import 'sections/social';
 @import 'sections/features';
@@ -18,7 +15,6 @@
 @import 'sections/reviews';
 @import 'sections/custom';
 @import 'sections/contact';
-// Footer
 @import 'footer/footer';
 // Grid-CSS
 @import 'grid-layout';

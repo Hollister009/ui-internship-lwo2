@@ -1,16 +1,31 @@
 // Navbar
-// .header {
-//   background-color: #000;
-//   position: fixed;
-//   width: 100%;
-//   z-index: 2;
+.header {
+  background-color: $color-black;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 
-//   &--logo {
-//     img {
-//       display: block;
-//       width: 79px;
-//       height: 27px;
-//     }
-//   }
-// }
-.header { display: none; }
+  &--nav {
+    @include d-flex();
+    padding: 0 10%;
+  }
+
+  &--menu {
+    @include d-flex();
+    width: 435px;
+    line-height: 5;
+  }
+
+  &--logo {
+    margin-left: 1%;
+
+    img {
+      display: block;
+      position: relative;
+      width: 79px;
+      height: 27px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -24,7 +24,7 @@
 
 .small-heading {
   display: block;
-  color: $color-grey-1;
+  color: $color-grey;
   font-family: $font-second;
   font-size: 1.4rem;
   line-height: 1.5;
@@ -51,20 +51,25 @@
     margin-bottom: 25px;
     font-size: 2rem;
     color: $color-black;
+
+    &__tabs {
+      @extend .feature--title;
+      line-height: 2;
+    }
   }
   
   &--text {
     font-size: 1.4rem;
     line-height: 1.5;
-    color: $color-grey-1;
-    margin-bottom: 30px;
+    color: $color-grey;
+    margin-bottom: 15px;
   }
 }
 
 .text-default {
   font-family: $font-second;
   font-size: 1.4rem;
-  color: $color-grey-1;
+  color: $color-grey;
 }
 
 .small-line {

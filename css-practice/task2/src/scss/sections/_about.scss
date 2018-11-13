@@ -3,7 +3,7 @@
 }
 
 .benefits {
-  margin-top: 50px;
+  margin-top: 45px;
 
   &--block {
 
@@ -27,11 +27,11 @@
       margin: 20px 10px;
       font-size: 2rem;
       line-height: 1.2;
-      color: $color-dark;
+      color: $color-dark-1;
     }
 
     & > p {
-      color: $color-grey-1;
+      color: $color-grey;
       line-height: 2rem;
       padding: 0 1.2rem;
     }
