@@ -40,9 +40,8 @@
   border-radius: 3px;
   font-family: $font-second;
   overflow: hidden;
-  margin-top: 30px;
   max-height: 362px;
-  max-width: 360px;
+  
 
   &--heading {
     background: $color-light;
@@ -56,11 +55,11 @@
       text-decoration: none;
       color: $color-main;
     }
-    
   }
 
   & > fieldset {
-    padding: 0 1rem 1.8rem 3.2rem;
+    padding-bottom: 1.8rem;
+    padding-left: 3.2rem;
   }
 
   input {
@@ -79,10 +78,11 @@
 
   [type="button"] {
     width: 100%;
-    padding: 2rem;
+    padding: 0 2rem;
     background-color: $color-main;
     color: $color-white;
     font-weight: 600;
+    line-height: 5.4rem;
     cursor: pointer;
   }
 }

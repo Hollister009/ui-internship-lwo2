@@ -25,7 +25,7 @@ $icon-lightning: url(../img/common_icons/lightning.png);
 $padding-hero: 18rem 9.5% 13.8rem 10.5%;
 $padding-social: 2rem 11%;
 $padding-feature-1: 14.5rem 5.5% 11rem;
-$padding-feature-2: 11rem 8.5% 11.5rem;
+$padding-feature-2: 11rem 7.5% 11.5rem;
 $padding-feature-3: 7.5rem 5% 7.5rem 11%;
 $padding-about: 8rem 7.5% 10.2rem;
 $padding-pricing: 8rem 7.5% 6rem;
@@ -34,3 +34,8 @@ $padding-custom: 4.5rem 6rem 6.2rem;
 $padding-contact: 8rem 6% 5.6rem;
 // Container
 $max-width: 1400px;
+// Breakpoints
+$screen-sm-min: 576px; // Smartphones
+$screen-md-min: 768px; // Tablets
+$screen-lg-min: 992px; // Desktop small
+$screen-xl-min: 1200px; // Desktop medium

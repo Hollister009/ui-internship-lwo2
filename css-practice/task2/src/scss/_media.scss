@@ -1,0 +1,130 @@
+// 1200px
+@media only screen and (max-width: $screen-xl-min) {
+  .signup-form {
+
+    &--heading {
+      padding: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    [type="button"] {
+      line-height: 3.3;
+    }
+  }
+};
+
+// 992px
+@media only screen and (max-width: $screen-lg-min) {
+  .hero {
+    grid-template-columns: auto 40.5%;
+    padding: 18rem 7.5% 13.8rem;
+  }
+
+  .social {
+    padding: 2rem 5%;
+  }
+
+  .signup-form {
+
+    & > fieldset {
+      padding-left: 5%;
+    }
+  }
+
+  .cards-holder {
+    padding: 0;
+  }
+}
+
+// 768px
+@media only screen and (max-width: $screen-md-min) {
+  .hero {
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
+    grid-gap: unset;
+
+    &--title::after {
+      display: none;
+    }
+  }
+
+  .company {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .singup-form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+  }
+
+  .features {
+    &--first,
+    &--second,
+    &--third {
+      grid-template-columns: auto;
+    }
+
+    &--second {
+      grid-gap: 5%;
+    }
+
+    &--first {
+      grid-gap: 5.5%;
+      padding: 9.5rem 7.5% 11rem;
+    
+      .feature--content {
+        text-align: center;
+      }
+    }
+  }
+
+  .feature--tabs {
+    flex-direction: row;
+
+    button:first-child {
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 5px;
+    }
+
+    button:last-child {
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 5px;
+    }
+
+    button:not(:last-child) {
+      margin: 0;
+      margin-right: 10px;
+    }
+  }
+
+  .feature--title {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .small-line {
+    margin: 0 auto 25px;
+  }
+
+  .benefits {
+    grid-template-columns: auto;
+    grid-gap: 5%;
+  }
+
+  .cards-holder {
+    grid-template-columns: auto;
+  }
+
+  .pricing-slot {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+
+// 576px
+@media only screen and (max-width: $screen-sm-min) {
+  
+}

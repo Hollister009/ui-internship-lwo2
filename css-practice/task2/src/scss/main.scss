@@ -1,3 +1,8 @@
+@use autoprefixer {
+  remove: false;
+  grid: true;
+  browsers: "> 1%, firefox 32";
+};
 // Variables & Base
 @import 'variables';
 @import 'helper';
@@ -18,3 +23,5 @@
 @import 'footer/footer';
 // Grid-CSS
 @import 'grid-layout';
+// Media queries
+@import 'media';

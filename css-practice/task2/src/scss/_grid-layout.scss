@@ -1,14 +1,14 @@
 // Hero Section
 .hero {
   display: grid;
-  grid-template-columns: minmax(520px, 65%) 1fr;
+  grid-template-columns: minmax(65%, 520px) auto;
   grid-gap: 2%;
 }
 
 // Social Section
 .social {
   display: grid;
-  grid-gap: 60px;
+  grid-gap: 5%;
   grid-template-columns: minmax(min-content, 380px) auto;
 }
 
@@ -16,19 +16,19 @@
 .features--first {
   display: grid;
   grid-template-columns: 20% minmax(auto, 500px) auto;
-  grid-gap: 30px;
+  grid-gap: 2.5%;
 }
 
 .features--second {
   display: grid;
-  grid-template-columns: max-content minmax(auto, 470px);
-  grid-gap: 13.5%;
+  grid-template-columns: auto minmax(auto, 500px);
+  grid-gap: 5.5%;
 }
 
 .features--third {
   display: grid;
-  grid-template-columns: minmax(450px, 60%) max-content;
-  grid-gap: 14rem;
+  grid-template-columns: minmax(auto, 500px) auto;
+  grid-gap: 11%;
 }
 
 // About Section
@@ -41,7 +41,7 @@
 // Pricing Section
 .cards-holder {
   display: grid;
-  grid-template-columns: repeat(3, minmax(350px, min-content));
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
 }
 

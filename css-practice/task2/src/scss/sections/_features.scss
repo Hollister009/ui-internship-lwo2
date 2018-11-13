@@ -5,16 +5,16 @@
   }
 
   img {
-    max-width: 525px;
-    max-height: 375px;
+    width: 525px;
+    margin: 0 auto;
   }
 
   &--first {
     padding: $padding-feature-1;
 
     .feature--image {
-      max-width: 320px;
-      max-height: 253px;
+      width: 320px;
+      // max-height: 253px;
       justify-self: center;
       margin-top: 25px;
     }
@@ -79,13 +79,13 @@
 
   &--sublist {
     position: relative;
+    padding: 0 15%;
 
     .sublist-item {
   
       & > figure {
         @include figureCircle($size-side1);
         position: absolute;
-        top: 0;
         left: 0;
       }
   
@@ -101,12 +101,10 @@
     }
 
     .icon-caption {
-      display: inline-block;
-      width: 85%;
       max-width: 364px;
       font-size: 1.4rem;
       line-height: 1.7rem;
-      margin-left: 15%;
+      position: relative;
 
       & > span {
         font-weight: 600;
