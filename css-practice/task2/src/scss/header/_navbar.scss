@@ -1,9 +1,28 @@
 // Navbar
 .header {
-  background-color: $color-black;
   position: fixed;
   width: 100%;
+  min-height: 80px;
+  background-color: $color-black;
   z-index: 2;
+
+  .menu-opener {
+    display: none;
+  }
+
+  &--logo {
+    margin-left: 1%;
+    width: 80px;
+    height: 80px;
+
+    img {
+      display: block;
+      position: relative;
+      width: 79px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 
   &--nav {
     @include d-flex();
@@ -12,25 +31,12 @@
 
   &--menu {
     @include d-flex();
-    width: 435px;
     line-height: 5;
+    width: 435px;
 
     a {
       display: block;
       padding: 0 .5rem;
-    }
-  }
-
-  &--logo {
-    margin-left: 1%;
-
-    img {
-      display: block;
-      position: relative;
-      width: 79px;
-      height: 27px;
-      top: 50%;
-      transform: translateY(-50%);
     }
   }
 }

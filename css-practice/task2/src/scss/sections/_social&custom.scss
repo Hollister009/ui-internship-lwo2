@@ -29,43 +29,7 @@
   }
 }
 
-.social-link {
-
-  &__fb,
-  &__tw,
-  &__gp,
-  &__pn,
-  &__ins,
-  &__stu,
-  &__rss {
-    @include socialLinks($sprite-bg, 55px, 46px);
-  }
-
-  &__fb {
-    background-position: 10px 0;
-  }
-
-  &__tw {
-    background-position: -85px 0;
-  }
-
-  &__gp {
-    background-position: -190px 0;
-  }
-
-  &__pn {
-    background-position: -280px 0;
-  }
-
-  &__ins {
-    background-position: -381px 0;
-  }
-
-  &__stu {
-    background-position: -483px 0;
-  }
-
-  &__rss {
-    background-position: -592px 0;
-  }
+.custom {
+  padding: $padding-custom;
+  background: url(../img/custom_panel.png) no-repeat center / cover;
 }

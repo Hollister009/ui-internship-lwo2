@@ -13,7 +13,7 @@
   }
 };
 
-// 992px
+// 1024px
 @media only screen and (max-width: $screen-lg + 'px') {
   .hero {
     padding: 18rem 7.5% 13.8rem;
@@ -46,8 +46,8 @@
   }
 }
 
-// 991px - 767px
-@media only screen and (max-width: $screen-lg - 1 + 'px') and (min-width: $screen-md - 1 + 'px') {
+// 1023px - 767px
+@media only screen and (max-width: $screen-lg + 'px') and (min-width: $screen-md - 1 + 'px') {
   .hero {
     grid-template-columns: auto 40.5%;
   }
@@ -55,6 +55,53 @@
 
 // 768px
 @media only screen and (max-width: $screen-md + 'px') {
+  // Navbar
+  .header {
+    
+    &--menu {
+      display: none;
+      position: absolute;
+      background: rgba($color-black, .7);
+      top: 80px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+
+      &.show {
+        display: block;
+      }
+    }
+
+    .menu-opener {
+      display: block;
+      width: 40px;
+      height: 30px;
+      position: relative;
+      border: 1px solid $color-main;
+      border-radius: 3px;
+      margin-top: 20px;
+      cursor: pointer;
+
+      .icon-bar {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: $color-white;
+        transition: all 0.5s ease;
+        @include abs-center;
+        @include p-el(before, 24px, 2px) {
+          background: $color-white;
+          top: -7px;
+        }
+        @include p-el(after, 24px, 2px) {
+          background: $color-white;
+          top: 7px;
+        }
+      }
+    }
+  }
+
   // Hero & Social
   .hero {
     grid-gap: 0;
@@ -140,6 +187,7 @@
   // Pricing
   .cards-holder {
     grid-gap: 0;
+    margin-top: 40px;
   }
 
   .pricing-slot {
@@ -157,15 +205,17 @@
     grid-gap: 5%;
 
     .testimonial {
-      @include d-flex();
       max-width: 100%;
       align-items: center;
+      @include d-flex() {
+        flex-wrap: wrap;
+      }
 
       &:nth-child(2) {
         
         & > blockquote {
           order: 1;
-  
+
           &::after {
             left: -17px;
             bottom: 20px;
@@ -194,7 +244,7 @@
     }
 
     blockquote {
-      max-width: 60%;
+      max-width: 55%;
     }
   }
 
@@ -208,6 +258,78 @@
   }
 }
 
-// 576px
+// 475px
 @media only screen and (max-width: $screen-sm + 'px') {
+  html {
+    font-size: 50%;
+  }
+  // Social
+  .social {
+    padding: 2rem 0;
+  }
+
+  .social-links--list {
+    display: none;
+  }
+
+  // Features
+  .features--btn,
+  .features--btn__active {
+    width: 80px;
+    height: 80px;
+  }
+
+  // Pricing
+  .pricing {
+    padding: 5rem 5%;
+  }
+
+  // Reviews
+  .users-list {
+
+    blockquote {
+      max-width: 100%;
+    }
+
+    .user-details {
+      margin-right: auto;
+    }
+
+    .testimonial {
+
+      &--avatar {
+        margin-left: auto;
+      }
+
+      &:nth-child(2) {
+        & > blockquote {
+          order: 0;
+        }
+      }
+    }
+  }
+
+  // Contact
+  .contact-us {
+
+    .message {
+      grid-template-columns: auto;
+      grid-gap: auto;
+      padding: 0 2%;
+  
+      &--button {
+        grid-column: auto;
+      }
+  
+      &--fields {
+        padding-left: 0;
+      }
+
+      [type="text"],
+      [type="email"],
+      textarea {
+        padding: .5em;
+      }
+    }
+  }
 }

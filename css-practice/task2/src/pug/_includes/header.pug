@@ -1,8 +1,12 @@
+- var logo = "img/company_logo.png";
+
 header#header.header
   nav.header--nav.container
     a(href="#", class="header--logo")
-      img(src="img/company_logo.png", alt="AXIT Logo")
-    ul.header--menu
+      img(src="" + logo, alt="AXIT Logo")
+    a#menu-btn.menu-opener(title="burger menu")
+      span.icon-bar
+    ul#menu.header--menu
       li: a(href="#features") Features
       li: a(href="#about") About
       li: a(href="#pricing") Pricing

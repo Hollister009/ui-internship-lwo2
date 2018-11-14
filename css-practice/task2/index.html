@@ -10,8 +10,8 @@
   </head>
   <body>
     <header class="header" id="header">
-      <nav class="header--nav container"><a class="header--logo" href="#"><img src="img/company_logo.png" alt="AXIT Logo"></a>
-        <ul class="header--menu">
+      <nav class="header--nav container"><a class="header--logo" href="#"><img src="img/company_logo.png" alt="AXIT Logo"></a><a class="menu-opener" id="menu-btn" title="burger menu"><span class="icon-bar"></span></a>
+        <ul class="header--menu" id="menu">
           <li><a href="#features">Features</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#pricing">Pricing</a></li>
@@ -272,5 +272,28 @@
         <li><a class="social-link__rss-sm" href="#" title="RSS chanel"></a></li>
       </ul><span class="copyright">&copy; 2018 Axure Themes</span>
     </footer>
+    <script type="text/javascript">
+'use strict';
+
+(function (d) {
+  const menuBtn = d.getElementById('menu-btn');
+  const navMenu = d.getElementById('menu');
+  // navMenu State
+  let menuShow = false;
+
+  menuBtn.addEventListener('click', () => {
+    if (!menuShow) {
+      menuBtn.classList.add('close');
+      navMenu.classList.add('show');
+    } else {
+      menuBtn.classList.remove('close');
+      navMenu.classList.remove('show');
+    }
+    // change navMenu state
+    menuShow = !menuShow;
+  })
+})(document);
+
+    </script>
   </body>
 </html>

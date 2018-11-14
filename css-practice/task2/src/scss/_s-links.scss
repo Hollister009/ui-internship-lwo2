@@ -1,0 +1,78 @@
+.social-link {
+
+  &__fb-sm,
+  &__tw-sm,
+  &__gp-sm,
+  &__pn-sm,
+  &__ins-sm,
+  &__stu-sm,
+  &__rss-sm {
+    @include socialLinks($sprite-sm, 29px, 23px);
+  }
+
+  &__fb-sm {
+    background-position: 8px 0;
+  }
+
+  &__tw-sm {
+    background-position: -39px 0;
+  }
+
+  &__gp-sm {
+    background-position: -91px 0;
+  }
+
+  &__pn-sm {
+    background-position: -137px 0;
+  }
+
+  &__ins-sm {
+    background-position: -187px 0;
+  }
+
+  &__stu-sm {
+    background-position: -241px 0;
+  }
+
+  &__rss-sm {
+    background-position: -294px 0;
+  }
+
+  &__fb,
+  &__tw,
+  &__gp,
+  &__pn,
+  &__ins,
+  &__stu,
+  &__rss {
+    @include socialLinks($sprite-bg, 55px, 46px);
+  }
+
+  &__fb {
+    background-position: 10px 0;
+  }
+
+  &__tw {
+    background-position: -85px 0;
+  }
+
+  &__gp {
+    background-position: -190px 0;
+  }
+
+  &__pn {
+    background-position: -280px 0;
+  }
+
+  &__ins {
+    background-position: -381px 0;
+  }
+
+  &__stu {
+    background-position: -483px 0;
+  }
+
+  &__rss {
+    background-position: -592px 0;
+  }
+}
