@@ -1,5 +1,5 @@
 // 1200px
-@media only screen and (max-width: $screen-xl-min) {
+@media only screen and (max-width: $screen-xl + 'px') {
   .signup-form {
 
     &--heading {
@@ -14,9 +14,8 @@
 };
 
 // 992px
-@media only screen and (max-width: $screen-lg-min) {
+@media only screen and (max-width: $screen-lg + 'px') {
   .hero {
-    grid-template-columns: auto 40.5%;
     padding: 18rem 7.5% 13.8rem;
   }
 
@@ -34,14 +33,31 @@
   .cards-holder {
     padding: 0;
   }
+
+  .reviews {
+    padding: 8rem 5.5% 10rem;
+  }
+
+  .users-list {
+    .user-details {
+      margin-left: 4%;
+      width: 100px;
+    }
+  }
+}
+
+// 991px - 767px
+@media only screen and (max-width: $screen-lg - 1 + 'px') and (min-width: $screen-md - 1 + 'px') {
+  .hero {
+    grid-template-columns: auto 40.5%;
+  }
 }
 
 // 768px
-@media only screen and (max-width: $screen-md-min) {
+@media only screen and (max-width: $screen-md + 'px') {
+  // Hero & Social
   .hero {
-    grid-template-columns: auto;
-    grid-auto-rows: auto;
-    grid-gap: unset;
+    grid-gap: 0;
 
     &--title::after {
       display: none;
@@ -59,24 +75,28 @@
     max-width: 90%;
   }
 
+  .social--bar {
+    display: none;
+  }
+
+  // Features
   .features {
-    &--first,
-    &--second,
-    &--third {
-      grid-template-columns: auto;
+    
+    &--first {
+      grid-gap: 5.5%;
+      padding: 9.5rem 7.5% 11rem;
+      
+      .feature--content {
+        text-align: center;
+      }
     }
 
     &--second {
       grid-gap: 5%;
     }
 
-    &--first {
-      grid-gap: 5.5%;
-      padding: 9.5rem 7.5% 11rem;
-    
-      .feature--content {
-        text-align: center;
-      }
+    &--third {
+      padding: 7.5rem 10% 2rem;
     }
   }
 
@@ -108,23 +128,86 @@
     margin: 0 auto 25px;
   }
 
+  // About
+  .about {
+    padding-bottom: 11.5rem;
+  }
+
   .benefits {
-    grid-template-columns: auto;
     grid-gap: 5%;
   }
 
+  // Pricing
   .cards-holder {
-    grid-template-columns: auto;
+    grid-gap: 0;
   }
 
   .pricing-slot {
     width: 70%;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+
+  // Reviews
+  .users-list {
+    grid-gap: 5%;
+
+    .testimonial {
+      @include d-flex();
+      max-width: 100%;
+      align-items: center;
+
+      &:nth-child(2) {
+        
+        & > blockquote {
+          order: 1;
+  
+          &::after {
+            left: -17px;
+            bottom: 20px;
+            transform: rotate(90deg);
+          }
+        }
+
+        .user-details {
+          margin-right: auto;
+        }
+      } 
+
+      &:not(:nth-child(2)) {
+
+        & > blockquote::after {
+          left: auto;
+          right: -17px;
+          bottom: 20px;
+          transform: rotate(-90deg);
+        }
+
+        .testimonial--avatar {
+          margin-left: auto;
+        }
+      }
+    }
+
+    blockquote {
+      max-width: 60%;
+    }
+  }
+
+  // Custom & Contact
+  .custom {
+    padding: 5rem;
+  }
+
+  .contact-us {
+    padding: 4rem 1rem;
   }
 }
 
 // 576px
-@media only screen and (max-width: $screen-sm-min) {
-  
+@media only screen and (max-width: $screen-sm + 'px') {
 }

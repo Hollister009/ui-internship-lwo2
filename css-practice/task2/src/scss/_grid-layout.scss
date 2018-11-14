@@ -49,7 +49,7 @@
 .users-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 120px;
+  grid-gap: 10%;
 }
 
 // Contact Section
@@ -71,3 +71,20 @@
   }
 }
 
+@media only screen and (max-width: $screen-md-min + 'px') {
+  .hero,
+  .social,
+  .benefits,
+  .users-list, 
+  .cards-holder {
+    grid-template-columns: auto;
+  }
+
+  .features {
+    &--first,
+    &--second,
+    &--third {
+      grid-template-columns: auto;
+    }
+  }
+}
