@@ -54,6 +54,15 @@
           <li><a class="social-link__stu" href="#" title="stubon upon"></a></li>
           <li><a class="social-link__rss" href="#" title="RSS"></a></li>
         </ul>
+        <ul class="social--links-list__mb">
+          <li><a class="social-link__fb-sm" href="#" title="facebook"></a></li>
+          <li><a class="social-link__tw-sm" href="#" title="twitter"></a></li>
+          <li><a class="social-link__gp-sm" href="#" title="google+"></a></li>
+          <li><a class="social-link__pn-sm" href="#" title="pinterest"></a></li>
+          <li><a class="social-link__ins-sm" href="#" title="instagram"></a></li>
+          <li><a class="social-link__stu-sm" href="#" title="stubon upon"></a></li>
+          <li><a class="social-link__rss-sm" href="#" title="RSS"></a></li>
+        </ul>
       </section>
       <article class="features" id="features">
         <section class="features--first">
@@ -272,28 +281,25 @@
         <li><a class="social-link__rss-sm" href="#" title="RSS chanel"></a></li>
       </ul><span class="copyright">&copy; 2018 Axure Themes</span>
     </footer>
-    <script type="text/javascript">
-'use strict';
+    <script>
+      'use strict';
 
-(function (d) {
-  const menuBtn = d.getElementById('menu-btn');
-  const navMenu = d.getElementById('menu');
-  // navMenu State
-  let menuShow = false;
+      (function (d) {
+        const menuBtn = d.getElementById('menu-btn');
+        const navMenu = d.getElementById('menu');
+        // navMenu State
+        let menuShow = false;
 
-  menuBtn.addEventListener('click', () => {
-    if (!menuShow) {
-      menuBtn.classList.add('close');
-      navMenu.classList.add('show');
-    } else {
-      menuBtn.classList.remove('close');
-      navMenu.classList.remove('show');
-    }
-    // change navMenu state
-    menuShow = !menuShow;
-  })
-})(document);
-
+        menuBtn.addEventListener('click', () => {
+          if (!menuShow) {
+            navMenu.classList.add('show');
+          } else {
+            navMenu.classList.remove('show');
+          }
+          // change navMenu state
+          menuShow = !menuShow;
+        });
+      })(document);
     </script>
   </body>
 </html>
