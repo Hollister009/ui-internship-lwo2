@@ -8,3 +8,53 @@
   font-weight: 700;
   font-size: 3rem;
 }
+
+.header {
+
+  &__nav {
+    min-height: 50px;
+    @include d-flex() {
+      align-items: flex-end;
+    }
+  }
+
+  &__menu {
+    width: 620px;
+    @include d-flex();
+    text-transform: uppercase;
+  }
+}
+
+.icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  &__shoping {
+    @include icon-bg($icon-shoping_cart);
+  }
+  
+  &__glass {
+    @include icon-bg($icon-magnifying_glass);
+  }
+}
+
+.slider {
+  @include d-flex();
+  text-transform: uppercase;
+
+  & > li {
+    width: 280px;
+    border-top: 3px solid $color-white;
+    opacity: .7;
+
+    & > a {
+      display: block;
+      line-height: 7rem;
+    }
+  }
+}
+
+.welcome-heading {
+  margin-bottom: 156px;
+}

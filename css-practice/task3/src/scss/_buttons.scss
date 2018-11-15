@@ -1,0 +1,9 @@
+.btn {
+
+  &-border {
+    @extend %button;
+    border: 3px solid $color-white;
+    background: transparent;
+    padding: 1rem 3.2rem;
+  }
+}

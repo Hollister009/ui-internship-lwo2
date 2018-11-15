@@ -29,3 +29,19 @@ ul {
   margin: 0;
   list-style: none;
 }
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+// fix for IE >= 9
+main {
+  display: block;
+}
+
+// Utility classes
+.mt-lg {
+  margin-top: 50px;
+}

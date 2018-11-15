@@ -1,8 +1,13 @@
 // Normalize
 @import 'variables';
+@import 'helper';
 @import 'normalize';
+@import 'mixins';
 @import 'typography';
-@import 'grid-system';
+@import 'buttons';
 // Sections
 @import 'sections/hero';
 @import 'sections/footer';
+// Media & Grid-system
+@import 'grid-system';
+@import 'media';
