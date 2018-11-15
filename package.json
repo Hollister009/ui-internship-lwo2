@@ -6,9 +6,9 @@
     "test": "jest",
     "lint": "./node_modules/.bin/eslint tasks/**/*.js",
     "tdd": "jest --watch",
-    "watch:sass": "node-sass -w css-practice/task2/src/scss/ -o css-practice/task2/css/",
-    "compile:sass": "node-sass css-practice/task2/src/scss/ -o css-practice/task2/css/",
-    "pugtohtml": "pug css-practice/task2/src/pug/index.pug -o css-practice/task2/ -P"
+    "watch:sass": "node-sass -w css-practice/task3/src/scss/ -o css-practice/task3/css/",
+    "compile:sass": "node-sass css-practice/task3/src/scss/ -o css-practice/task3/css/",
+    "pugtohtml": "pug css-practice/task3/src/pug/index.pug -o css-practice/task3/ -P"
   },
   "husky": {
     "hooks": {
