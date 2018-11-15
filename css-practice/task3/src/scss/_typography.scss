@@ -1,0 +1,16 @@
+.welcome-heading {
+  border: 1px dotted darkmagenta;
+  max-width: 800px;
+  margin: 0 auto;
+  color: $color-white;
+  text-align: center;
+
+  &__top {
+    font-family: $font-alt;
+  }
+
+  &__main {
+    font-size: 15rem;
+    text-transform: uppercase;
+  }
+}
