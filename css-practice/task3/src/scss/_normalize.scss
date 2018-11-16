@@ -15,8 +15,11 @@ html {
 }
 
 body {
+  color: $color-dark;
+  background: $color-white;
   font-family: $font-main;
   font-size: 1.4rem;
+  font-weight: 400;
 }
 
 a {
@@ -36,6 +39,15 @@ img {
   max-width: 100%;
 }
 
+input, button {
+  font: inherit;
+  outline: none;
+}
+
+span {
+  display: inline-block;
+}
+
 // fix for IE >= 9
 main {
   display: block;
@@ -44,4 +56,8 @@ main {
 // Utility classes
 .mt-lg {
   margin-top: 50px;
+}
+
+.mb-md {
+  margin-bottom: 30px;
 }

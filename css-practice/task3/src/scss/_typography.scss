@@ -25,3 +25,112 @@
     }
   }
 }
+
+.company-logo {
+  color: $color-white;
+  font-weight: 700;
+  font-size: 3rem;
+
+  &--2 {
+    color: $color-grey-l1;
+    font-size: 4.6rem;
+  }
+}
+
+.text-regular {
+  color: $color-grey-l2;
+  font-size: 1.5rem;
+  font-family: $font-second;
+  line-height: 2.4rem;
+}
+
+.base-title {
+  color: $color-dark;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.copyright {
+  color: $color-dark;
+  text-align: center;
+  line-height: 1.2;
+  padding: 2rem;
+
+  & > span {
+    color: $color-main;
+  }
+}
+
+.section-heading {
+  text-align: center;
+  padding: 10rem 0 4rem;
+  position: relative;
+  @include p-el(after, 60px, 3px) {
+    background: $color-main;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  & > span {
+    display: inline-block;
+    font-family: $font-alt;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+
+  & > h2 {
+    font-family: $font-main;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+}
+
+.item-post {
+
+  &__date {
+    color: $color-white;
+    font-family: $font-second;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.5rem;
+    background: $color-alt;
+    text-align: center;
+    padding: .75rem;
+
+    & > b {
+      font-family: $font-main;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 3rem;
+    }
+  }
+
+  & > h4 {
+    padding: 1rem 0;
+  }
+
+  &__text {
+    font-family: $font-second;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    color: $color-grey-l2;
+    padding-bottom: 1rem;
+  }
+
+  & > hr {
+    background: $color-light-2;
+    border: none;
+    height: 1px;
+    margin-bottom: 10px;
+  }
+}
+
+.specialization {
+  font-family: $font-second;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 2.4rem;
+}

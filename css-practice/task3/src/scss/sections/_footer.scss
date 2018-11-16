@@ -1,0 +1,154 @@
+.footer {
+  background: $color-light-1;
+  padding-top: $padding-footer;
+
+  h3 {
+    padding-bottom: 4rem;
+  }
+  
+  &__sections {
+    @include d-flex();
+    padding-bottom: 7rem;
+    border-bottom: 1px solid $color-light-2;
+  }
+
+  // Subscribe
+  &__subscribe {
+    max-width: 480px;
+
+    & > p {
+      margin-top: 40px;
+      margin-bottom: 45px;
+    }
+
+    & > span {
+      display: inline-block;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: $color-dark;
+      margin-bottom: 10px;
+
+      & > ins {
+        font-weight: 400;
+        font-size: 1.4rem;
+        text-decoration: none;
+      }
+    }
+
+    & > hr {
+      border: none;
+      height: 1px;
+      background: $color-light-2;
+      margin-bottom: 1em;
+    }
+
+    .follow {
+      display: flex;
+
+      span {
+        font-size: 1.5rem;
+        font-family: $font-second;
+        font-weight: 300;
+        font-style: italic;
+        color: #999;
+        margin-right: 20px;
+      }
+
+      &__list {
+        @include d-flex();
+        width: 220px;
+
+        i {
+          color: $color-alt;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    form {
+      font-size: 0;
+
+      [type="email"] {
+        color: $color-grey-l1;
+        vertical-align: middle;
+        font-size: 1.4rem;
+        font-family: $font-second;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.3;
+        padding: 1rem;
+        border-right: none;
+        border: 1px solid #e7e7e7;
+        width: 230px;
+      }
+    }
+  }
+
+  // Blogs
+  &__blogs {
+    max-width: 340px;
+
+    &-item {
+      height: 79px;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+
+      &::after {
+        display: table;
+        content: '';
+        clear: both;
+      }
+
+      & > img {
+        float: left;
+      }
+
+      & > p {
+        font-size: 1.2rem;
+        padding: 1em 0 1em 1em;
+        line-height: 1.5;
+        width: calc(100% - 120px);
+        float: left;
+      }
+
+      & > span {
+        color: $color-grey-l2;
+        font-family: $font-second;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1.3rem;
+        padding-left: 1em;
+      }
+    }
+  }
+  
+  // Instagram
+  &__instagram {
+    max-width: 270px;
+
+    .photos-grid {
+    
+      &__row {
+        display: flex;
+    
+        & > img {
+          width: 88px;
+          height: 88px;
+          margin: 1px;
+        }
+      }
+    }
+
+    & > a {
+      display: inline-block;
+      color: $color-dark;
+      font-family: $font-second;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.3rem;
+      margin-top: 20px;
+    }    
+  }
+}

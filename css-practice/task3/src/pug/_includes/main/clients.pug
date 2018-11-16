@@ -6,27 +6,29 @@ section.clients
       span Happy Clients
       h2 What people say
     .clients__reviews
-      .client 
-        img(src="img/customer1.png", alt="Matthew Dix")
-        .client__info
-          h4.client__name Matthew Dix
-          span.client__profession Graphic Design
-          p #{review}
-      .client 
-        img(src="img/customer2.png", alt="Nick Karvounis")
-        .client__info
-          h4.client__name Nick Karvounis
-          span.client__profession Graphic Design
-          p #{review}
-      .client 
-        img(src="img/customer3.png", alt="Jaelynn Castillo ")
-        .client__info
-          h4.client__name Jaelynn Castillo 
-          span.client__profession Graphic Design
-          p #{review}
-      .client 
-        img(src="img/customer4.png", alt="Mike Petrucci")
-        .client__info
-          h4.client__name Mike Petrucci
-          span.client__profession Graphic Design
-          p #{review}
+      .col-1
+        .client 
+          img(src="img/customer1.png", alt="Matthew Dix")
+          .client__info
+            h4.client__name Matthew Dix
+            span.specialization Graphic Design
+            p.text-regular #{review}
+        .client 
+          img(src="img/customer2.png", alt="Nick Karvounis")
+          .client__info
+            h4.client__name Nick Karvounis
+            span.specialization Graphic Design
+            p.text-regular #{review}
+      .col-1
+        .client 
+          img(src="img/customer3.png", alt="Jaelynn Castillo ")
+          .client__info
+            h4.client__name Jaelynn Castillo 
+            span.specialization Graphic Design
+            p.text-regular #{review}
+        .client 
+          img(src="img/customer4.png", alt="Mike Petrucci")
+          .client__info
+            h4.client__name Mike Petrucci
+            span.specialization Graphic Design
+            p.text-regular #{review}

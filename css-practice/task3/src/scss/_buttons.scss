@@ -6,4 +6,12 @@
     background: transparent;
     padding: 1rem 3.2rem;
   }
+
+  &-submit {
+    @extend %button;
+    background: $color-alt;
+    border: none;
+    padding: 1.1rem 3.2rem;
+    width: 150px;
+  }
 }
