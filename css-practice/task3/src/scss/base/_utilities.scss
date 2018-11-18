@@ -2,12 +2,12 @@
 // margin-top
 .mt {
   
-  &-xl {
+  &-90 {
     margin-top: 90px;
   }
   
   &-lg {
-    margin-top: 45px;
+    margin-top: 50px;
   }
 
   &-md {
@@ -17,16 +17,16 @@
 // margin-bottom
 .mb {
   
-  &-xl {
-    margin-top: 90px;
+  &-90 {
+    margin-bottom: 90px;
   }
   
   &-lg {
-    margin-top: 45px;
+    margin-bottom: 50px;
   }
 
   &-md {
-    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 

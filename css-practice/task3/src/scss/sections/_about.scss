@@ -1,8 +1,9 @@
 // About
 .about {
-  padding-bottom: 10rem;
+  padding-bottom: 11rem;
   
   &__pictures {
+    margin-top: 100px;
 
     img {
       margin: 0 auto;
@@ -31,7 +32,12 @@
 
     &--large {
       font-size: 7.2rem;
-      font-weight: 700; 
+      font-weight: 700;
+      margin-top: -15px;
+    }
+
+    &--small {
+      margin-top: 10px;
     }
   }
 }

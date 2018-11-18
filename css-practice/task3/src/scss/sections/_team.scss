@@ -1,0 +1,23 @@
+// Team
+.team {
+  padding: $padding-team;
+
+  &__members {
+    text-align: center;
+
+    figcaption {
+      margin-top: 28px;
+    }
+  }
+}
+// Compamies
+.companies {
+  background-color: $color-light-1;
+  
+  &__list {
+    min-height: 250px;
+    @include d-flex() {
+      align-items: center;
+    }
+  }
+}

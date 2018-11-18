@@ -1,23 +1,64 @@
 // Feature
 .feature {
   min-height: 850px;
+  padding-top: 2rem;
   position: relative;
   background-image: $gradient-white, $bg-feature;
   @include bg-center(fixed);
 
   &__image {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 7%);
+    left: 36%;
+    transform: translateY(7%);
   }
 }
 // Service2
 .service2 {
-  padding-bottom: 12rem;
+  padding: $padding-service2;
 }
 // Quote
 .quote {
-  min-height: 290px;
   background-color: $color-light-1;
-  border: 1px dotted red;
+  
+  &__slide {
+    padding: $padding-quote;
+    @include d-flex();
+
+    & > figure {
+      width: 150px;
+      height: 150px;
+      border: 3px solid $color-alt;
+      position: relative;
+  
+      & > img {
+        @include abs-center;
+      }
+    }
+
+    & > blockquote {
+      width: 767px;
+      color: $color-grey-l2;
+      font-family: $font-second;
+      font-size: 2.4rem;
+      padding-top: .3rem;
+      letter-spacing: -0.4px;
+      line-height: 3.6rem;
+
+      & > p {
+        margin-bottom: 11px;
+      }
+    }
+  }
+
+  &__author {
+    color: $color-dark;
+    font-family: $font-alt;
+    display: inline-block;
+    position: relative;
+    transform: translateX(70px);
+    @include p-el(before, 60px, 3px, $color-main) {
+      left: -70px;
+      top: 50%;
+    }
+  }
 }

@@ -24,6 +24,9 @@ $figure-5: url(../img/icons/home_icon.svg);
 $figure-6: url(../img/icons/image_icon.svg);
 // Paddings
 $padding-footer: 7rem;
+$padding-service2: 2rem 0 12rem;
+$padding-quote: 7rem 9.4% 6.2rem;
+$padding-team: 1rem 0 12rem;
 // Backgrounds
 $bg-banner: url(../img/backgrounds/banner_bg.png);
 $bg-feature: url(../img/backgrounds/feature_bg.png);
@@ -41,7 +44,7 @@ $gradient-white: linear-gradient(
 // Container
 $max-width: 1200px;
 $column-gap: 2%;
-// Media queries
+// Breakpoints
 $screen-sm: 475;  // Smartphone
 $screen-md: 768;  // Tablet
 $screen-lg: 1024; // Desktop Small
