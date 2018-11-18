@@ -1,0 +1,45 @@
+
+@mixin d-flex($justify:space-between, $direction:row) {
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $direction;
+  @content;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin icon-bg($path) {
+  background: $path no-repeat 50% 50%;
+}
+
+@mixin bg-center($attachment: scroll) {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-attachment: $attachment; 
+} 
+
+@mixin p-el($el, $width, $height, $bg-color:#000, $content:null, $pos:absolute) {
+  &::#{$el} {
+    display: block;
+    content: "#{$content}";
+    background: $bg-color;
+    position: $pos;
+    width: $width;
+    height: $height;
+    @content;
+  }
+}

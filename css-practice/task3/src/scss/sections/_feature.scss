@@ -1,0 +1,23 @@
+// Feature
+.feature {
+  min-height: 850px;
+  position: relative;
+  background-image: $gradient-white, $bg-feature;
+  @include bg-center(fixed);
+
+  &__image {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 7%);
+  }
+}
+// Service2
+.service2 {
+  padding-bottom: 12rem;
+}
+// Quote
+.quote {
+  min-height: 290px;
+  background-color: $color-light-1;
+  border: 1px dotted red;
+}

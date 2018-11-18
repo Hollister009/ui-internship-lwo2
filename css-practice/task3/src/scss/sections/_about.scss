@@ -1,0 +1,37 @@
+// About
+.about {
+  padding-bottom: 10rem;
+  
+  &__pictures {
+
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+// Facts
+.facts {
+  color: $color-white;
+  background-color: $color-alt;
+  text-align: center;
+  text-transform: uppercase;
+
+  &__list {
+    @include d-flex();
+  }
+
+  &__item{
+    min-height: 270px;
+    border-left: 1px solid rgba($color-white, .3);
+    width: 20%;
+    &:last-child {
+      border-right: 1px solid rgba($color-white, .3);
+    }
+    @include d-flex(center, column);
+
+    &--large {
+      font-size: 7.2rem;
+      font-weight: 700; 
+    }
+  }
+}

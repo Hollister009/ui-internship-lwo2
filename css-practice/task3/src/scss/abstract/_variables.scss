@@ -1,0 +1,48 @@
+// Colors
+$color-main: #f38181;
+$color-second: #fce38a;
+$color-alt: #95e1d3;
+$color-white: #fff;
+$color-light-1: #f8f8f8;
+$color-light-2: #e5e5e5;
+$color-grey-l1: #ccc;
+$color-grey-l2: #999;
+$color-dark:#333;
+// Fonts
+$font-main: 'Montserrat', sans-serif;
+$font-second: 'Roboto', sans-serif;
+$font-alt: 'Kaushan Script', cursive;
+// Icons
+$icon-shoping_cart: url(../img/icons/shoping_cart.svg);
+$icon-magnifying_glass: url(../img/icons/magnifying_glass.svg);
+$icon-map_pin: url(../img/icons/map_pin.svg);
+$figure-1: url(../img/icons/alarm_icon.svg);
+$figure-2: url(../img/icons/graph_icon.svg);
+$figure-3: url(../img/icons/computer_icon.svg);
+$figure-4: url(../img/icons/book_icon.svg);
+$figure-5: url(../img/icons/home_icon.svg);
+$figure-6: url(../img/icons/image_icon.svg);
+// Paddings
+$padding-footer: 7rem;
+// Backgrounds
+$bg-banner: url(../img/backgrounds/banner_bg.png);
+$bg-feature: url(../img/backgrounds/feature_bg.png);
+$bg-clients: url(../img/backgrounds/clients_bg.png);
+$bg-map: url(../img/backgrounds/map_bg.png);
+// Gradients
+$gradien-main: linear-gradient(
+                    to top,
+                    rgba($color-second, 0.9) 0%,
+                    rgba($color-main, 0.9) 100%);
+$gradient-white: linear-gradient(
+                    90deg, 
+                    rgba($color-white,.85 ) 0%, 
+                    rgba($color-white,.85) 100%);
+// Container
+$max-width: 1200px;
+$column-gap: 2%;
+// Media queries
+$screen-sm: 475;  // Smartphone
+$screen-md: 768;  // Tablet
+$screen-lg: 1024; // Desktop Small
+$screen-xl: 1200; // Desktop Medium

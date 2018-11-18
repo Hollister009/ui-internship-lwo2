@@ -1,11 +1,8 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 *,
 *::before,
 *::after {
+  padding: 0;
+  margin: 0;
   box-sizing: inherit;
 }
 
@@ -53,11 +50,9 @@ main {
   display: block;
 }
 
-// Utility classes
-.mt-lg {
-  margin-top: 50px;
-}
-
-.mb-md {
-  margin-bottom: 30px;
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1.4rem;
+  border-width: 0;
+  border-top: 1px solid $color-light-2;
 }

@@ -26,20 +26,12 @@
       font-size: 1.8rem;
       font-weight: 700;
       color: $color-dark;
-      margin-bottom: 10px;
 
       & > ins {
         font-weight: 400;
         font-size: 1.4rem;
         text-decoration: none;
       }
-    }
-
-    & > hr {
-      border: none;
-      height: 1px;
-      background: $color-light-2;
-      margin-bottom: 1em;
     }
 
     .follow {
@@ -90,15 +82,10 @@
 
     &-item {
       height: 79px;
+      @include clearfix;
 
       &:not(:last-child) {
         margin-bottom: 30px;
-      }
-
-      &::after {
-        display: table;
-        content: '';
-        clear: both;
       }
 
       & > img {

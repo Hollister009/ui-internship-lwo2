@@ -1,0 +1,57 @@
+.service {
+  padding-bottom: 12rem;
+  
+  &__grid {
+    margin-top: 60px;
+    
+    .row:first-child {
+      padding-bottom: 5rem; 
+      border-bottom: 1px solid $color-light-2;
+    }
+
+    .row:last-child {
+      margin-top: 50px; 
+    }
+  }
+  
+  &__icon {
+    
+    &-alarm {
+      @include icon-bg($figure-1);
+    }
+    &-graph {
+      @include icon-bg($figure-2);
+    }
+    &-computer {
+      @include icon-bg($figure-3);
+    }
+    &-book {
+      @include icon-bg($figure-4);
+    }
+    &-home {
+      @include icon-bg($figure-5);
+    }
+    &-image {
+      @include icon-bg($figure-6);
+    }
+  }
+  
+  &__grid-item {
+    
+    & > figure {
+      float: left;
+      padding: 0 3rem;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__describe {
+    float: left;
+    width: calc(100% - 60px);
+
+    h4 {
+      padding-bottom: 2rem;
+    }
+  }
+}
