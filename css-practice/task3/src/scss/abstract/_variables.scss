@@ -24,6 +24,7 @@ $figure-5: url(../img/icons/home_icon.svg);
 $figure-6: url(../img/icons/image_icon.svg);
 $icon-arrow: url(../img/icons/arrow.svg);
 // Paddings
+$padding-about: 11rem;
 $padding-service: 2rem 0 7rem;
 $padding-service2: 2rem 0 12rem;
 $padding-quote: 7rem 5rem 6.2rem;
@@ -39,9 +40,9 @@ $bg-clients: url(../img/backgrounds/clients_bg.png);
 $bg-map: url(../img/backgrounds/map_bg.png);
 // Gradients
 $gradient-main: linear-gradient(
-                    to top,
-                    rgba($color-second, 0.9) 0%,
-                    rgba($color-main, 0.9) 100%);
+                    to bottom,
+                    rgba($color-main, 0.9) 0%,
+                    rgba($color-second, 0.9) 100%);
 $gradient-white: linear-gradient(
                     90deg, 
                     rgba($color-white,.85 ) 0%, 

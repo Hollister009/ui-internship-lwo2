@@ -1,7 +1,19 @@
 // Overlay Effects
 .overlay-box {
   position: relative;
-}
+  cursor: pointer;
+  transition: all .4s ease;
+  @include p-el(before, 100%, 100%, $gradient-main) {
+    opacity: 0;
+    transition: all .4s ease;
+  }
+  
+  &:hover::before {
+    opacity: 1;
+  }
 
-// .overlay {
-// }
+  &:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 0px 0px $color-alt;
+  }
+}

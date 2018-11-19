@@ -5,6 +5,14 @@
     border: 3px solid $color-white;
     background: transparent;
     padding: 1rem 3rem;
+    transition: all .4s ease;
+
+    &:hover,
+    &:focus {
+      background: rgba($color-white, .5);
+      color: $color-main;
+      border-color: $color-main; 
+    }
   }
 
   &-submit {
