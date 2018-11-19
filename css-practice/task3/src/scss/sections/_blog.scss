@@ -1,10 +1,10 @@
 // Section blog
 .blog {
-  padding-bottom: 10rem;
+  padding: $padding-blog;
 
   .latest-posts {
     @include d-flex();
-    margin-top: 30px;
+    margin-top: 50px;
   }
 
   .item-post {
@@ -50,7 +50,10 @@
     font-weight: 700;
     line-height: 2.7;
     text-transform: uppercase;
-    @include abs-center;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translateX(-50%);
     @include p-el(before, 20px, 26px, $icon-map_pin) {
       top: -15px;
       left: 50%;

@@ -1,34 +1,28 @@
 .clients {
-  padding-bottom: 12rem;
+  padding: $padding-clients;
   background-image: $gradient-white, $bg-clients;
   @include bg-center(fixed);
 
   &__reviews {
-    @include d-flex();
-    margin-top: 87px;
-
-    .col-1 {
-      .client:first-child {
-        padding-bottom: 7rem;
-      }
-    }
     
     .client {
+      margin-bottom: 66px;
       @include clearfix;
       
       & > img {
         float: left;
-        margin-left: 42px;
+        margin-left: 40px;
       }
 
       &__info {
         float: left;
         max-width: 380px;
-        margin-top: 12px;
-        margin-left: 30px;
+        margin-top: 7px;
+        margin-left: 28px;
 
         & > p {
-          padding-top: 2.4rem;
+          padding-top: 2rem;
+          padding-left: .4rem;
         }
       }
 
@@ -39,7 +33,7 @@
 
       .specialization {
         position: relative;
-        padding: 1.7rem 0;
+        padding: .7rem 0 1.5rem;
         @include p-el(after, 60px, 3px, $color-main) {
           bottom: 0;
         }

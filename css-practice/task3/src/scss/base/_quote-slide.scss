@@ -1,0 +1,21 @@
+// Testimonial & Quote
+.quote {
+
+  &__slide {
+    @include d-flex();
+  
+    & > blockquote {
+      max-width: 767px;
+      color: $color-grey-l2;
+      font-family: $font-second;
+      font-size: 2.4rem;
+      padding-top: .3rem;
+      letter-spacing: -0.4px;
+      line-height: 3.6rem;
+  
+      & > p {
+        margin-bottom: 11px;
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@
   padding-top: 2rem;
   position: relative;
   background-image: $gradient-white, $bg-feature;
-  @include bg-center(fixed);
+  @include bg-center();
 
   &__image {
     position: absolute;
@@ -12,53 +12,26 @@
     transform: translateY(7%);
   }
 }
-// Service2
+// Service2 & Quote
 .service2 {
   padding: $padding-service2;
 }
-// Quote
+
 .quote {
   background-color: $color-light-1;
-  
-  &__slide {
+
+  & &__slide {
     padding: $padding-quote;
-    @include d-flex();
 
     & > figure {
       width: 150px;
       height: 150px;
       border: 3px solid $color-alt;
       position: relative;
-  
-      & > img {
-        @include abs-center;
-      }
     }
-
-    & > blockquote {
-      width: 767px;
-      color: $color-grey-l2;
-      font-family: $font-second;
-      font-size: 2.4rem;
-      padding-top: .3rem;
-      letter-spacing: -0.4px;
-      line-height: 3.6rem;
-
-      & > p {
-        margin-bottom: 11px;
-      }
-    }
-  }
-
-  &__author {
-    color: $color-dark;
-    font-family: $font-alt;
-    display: inline-block;
-    position: relative;
-    transform: translateX(70px);
-    @include p-el(before, 60px, 3px, $color-main) {
-      left: -70px;
-      top: 50%;
+    
+    img {
+      @include abs-center;
     }
   }
 }

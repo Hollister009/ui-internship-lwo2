@@ -144,3 +144,15 @@ h4 {
   letter-spacing: -.35px;
   line-height: 2.4rem;
 }
+
+.quote__author {
+  color: $color-dark;
+  font-family: $font-alt;
+  display: inline-block;
+  position: relative;
+  transform: translateX(70px);
+  @include p-el(before, 60px, 3px, $color-main) {
+    left: -70px;
+    top: 50%;
+  }
+}

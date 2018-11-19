@@ -1,0 +1,52 @@
+.work {
+  padding-top: 2rem;
+
+  &__pictures {
+    display: grid;
+    grid-template-areas: 'picture-1 picture-2 picture-5 picture-6'
+                         'picture-3 picture-4 picture-5 picture-7';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin-top: 102px;
+  }
+
+  &__pic-1 {
+    grid-area: picture-1;
+  }
+
+  &__pic-2 {
+    grid-area: picture-2;
+  }
+
+  &__pic-3 {
+    grid-area: picture-3;
+  }
+
+  &__pic-4 {
+    grid-area: picture-4;
+  }
+
+  &__pic-5 {
+    grid-area: picture-5;
+  }
+
+  &__pic-6 {
+    grid-area: picture-6;
+  }
+
+  &__pic-7 {
+    grid-area: picture-7;
+  }
+}
+
+.testimonial {
+  padding: $padding-testimonial;
+
+  .quote__slide {
+  
+    & > blockquote {
+      margin-right: 32px;
+      margin-top: 30px;
+    }
+  }
+}
