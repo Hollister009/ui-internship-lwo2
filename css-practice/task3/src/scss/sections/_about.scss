@@ -5,6 +5,21 @@
   &__pictures {
     margin-top: 100px;
 
+    .col-1-of-3 {
+      position: relative;
+      
+
+      &:hover > .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-image: $gradient-main;
+      }
+    }
+
     img {
       margin: 0 auto;
     }

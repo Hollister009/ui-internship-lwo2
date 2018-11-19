@@ -40,9 +40,14 @@
 }
 
 .testimonial {
-  padding: $padding-testimonial;
-
+  @include d-flex();
+  
   .quote__slide {
+    padding: $padding-testimonial;
+
+    & > figure {
+      margin-right: 34px;
+    }
   
     & > blockquote {
       margin-right: 32px;

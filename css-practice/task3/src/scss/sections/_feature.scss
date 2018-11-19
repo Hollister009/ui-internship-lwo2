@@ -8,8 +8,11 @@
 
   &__image {
     position: absolute;
-    left: 36%;
-    transform: translateY(7%);
+    left: 52.7%;
+    transform: translateY(7%) translateX(-50%);
+    @media screen and (max-width: $screen-xl + 'px') {
+      left: 50%;
+    }
   }
 }
 // Service2 & Quote
@@ -22,6 +25,7 @@
 
   & &__slide {
     padding: $padding-quote;
+    flex-grow: 1;
 
     & > figure {
       width: 150px;

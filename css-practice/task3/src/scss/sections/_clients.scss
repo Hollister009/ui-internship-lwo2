@@ -8,6 +8,9 @@
     .client {
       margin-bottom: 66px;
       @include clearfix;
+      &:not(:last-child) {
+        margin-right: 1%;
+      }
       
       & > img {
         float: left;

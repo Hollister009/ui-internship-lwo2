@@ -1,6 +1,10 @@
 // Testimonial & Quote
 .quote {
 
+  & > .container {
+    @include d-flex();
+  }
+
   &__slide {
     @include d-flex();
   

@@ -22,11 +22,13 @@ $figure-3: url(../img/icons/computer_icon.svg);
 $figure-4: url(../img/icons/book_icon.svg);
 $figure-5: url(../img/icons/home_icon.svg);
 $figure-6: url(../img/icons/image_icon.svg);
+$icon-arrow: url(../img/icons/arrow.svg);
 // Paddings
+$padding-service: 2rem 0 7rem;
 $padding-service2: 2rem 0 12rem;
-$padding-quote: 7rem 9.4% 6.2rem;
+$padding-quote: 7rem 5rem 6.2rem;
 $padding-team: 1rem 0 12rem;
-$padding-testimonial: 10rem 8rem 13rem;
+$padding-testimonial: 10rem 0 13rem;
 $padding-clients: 2rem 0 6rem;
 $padding-blog: 2rem 0 12rem;
 $padding-footer: 6rem;
@@ -36,7 +38,7 @@ $bg-feature: url(../img/backgrounds/feature_bg.png);
 $bg-clients: url(../img/backgrounds/clients_bg.png);
 $bg-map: url(../img/backgrounds/map_bg.png);
 // Gradients
-$gradien-main: linear-gradient(
+$gradient-main: linear-gradient(
                     to top,
                     rgba($color-second, 0.9) 0%,
                     rgba($color-main, 0.9) 100%);

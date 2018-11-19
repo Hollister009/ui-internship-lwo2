@@ -1,5 +1,5 @@
 .banner {
-  background-image: $gradien-main, $bg-banner;
+  background-image: $gradient-main, $bg-banner;
   @include bg-center(fixed);
 }
 
@@ -38,17 +38,23 @@
   text-transform: uppercase;
 
   & > li {
-    width: 280px;
+    width: 22.5%;
     border-top: 3px solid $color-white;
     opacity: .7;
 
     & > a {
       display: block;
       line-height: 7rem;
+      font-size: 1.8rem;
+    }
+
+    span {
+      font-size: 2.4rem;
+      font-weight: 700;
     }
   }
 }
 
 .welcome-heading {
-  margin-bottom: 156px;
+  margin-bottom: 154px;
 }

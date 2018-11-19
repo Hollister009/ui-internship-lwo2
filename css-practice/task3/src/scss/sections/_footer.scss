@@ -3,12 +3,12 @@
   padding-top: $padding-footer;
 
   h3 {
-    padding: 1.4rem 0 3.8rem;
+    padding: 1.4rem 0 3.6rem;
   }
   
   &__sections {
     @include d-flex();
-    padding-bottom: 7rem;
+    padding-bottom: 6rem;
     border-bottom: 1px solid $color-light-2;
   }
 
@@ -96,7 +96,7 @@
 
       & > p {
         font-size: 1.2rem;
-        padding: 1em 0 1em 1em;
+        padding: 1.5rem 0 .5rem 2rem;
         line-height: 1.5;
         width: calc(100% - 120px);
         float: left;
@@ -108,7 +108,7 @@
         font-weight: 300;
         font-style: italic;
         font-size: 1.3rem;
-        padding-left: 1em;
+        padding-left: 2rem;
       }
     }
   }

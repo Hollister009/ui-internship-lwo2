@@ -1,17 +1,15 @@
 .service {
-  padding-top: 2rem;
-  padding-bottom: 10.5rem;
+  padding: $padding-service;
   
   &__grid {
     margin-top: 65px;
     
     .row:first-child {
-      padding-bottom: 3.6rem; 
       border-bottom: 1px solid $color-light-2;
     }
-
+    
     .row:last-child {
-      margin-top: 50px; 
+      margin-top: 48px; 
     }
   }
   
@@ -38,21 +36,22 @@
   }
   
   &__grid-item {
+    padding-bottom: 4.6rem;
     
     & > figure {
       float: left;
-      padding: 0 3rem;
       width: 32px;
       height: 32px;
+      margin: 0 30px; 
     }
   }
-
+  
   &__describe {
     float: left;
-    width: calc(100% - 60px);
-
+    width: calc(100% - 92px);
+    
     h4 {
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
     }
   }
 }
