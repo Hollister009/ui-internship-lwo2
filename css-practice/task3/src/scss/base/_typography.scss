@@ -8,6 +8,9 @@
     font-family: $font-alt;
     font-size: 7.2rem;
     font-weight: 400;
+    @media screen and (max-width: $screen-md) {
+      font-size: 9.4vw;
+    }
   }
 
   &__main {
@@ -27,7 +30,7 @@
       font-size: 12rem;
     }
     @media screen and (max-width: $screen-md) {
-      font-size: 10rem;
+      font-size: 16vw;
     }
   }
 }
@@ -40,6 +43,14 @@ h4 {
   color: $color-white;
   font-weight: 700;
   font-size: 3rem;
+  margin-right: 5.5%;
+  transition: .3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
 
   &--2 {
     color: $color-grey-l1;
@@ -155,7 +166,7 @@ h4 {
   letter-spacing: -.35px;
   line-height: 2.4rem;
   @media screen and (max-width: $screen-md) {
-    margin: 2.85em 6em;
+    margin: 2.85em 0;
   }
 }
 

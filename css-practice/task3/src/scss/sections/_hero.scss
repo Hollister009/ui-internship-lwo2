@@ -7,25 +7,42 @@
 .header {
 
   &__nav {
-    min-height: 3.572em;
+    min-height: 4.26em;
     @include d-flex() {
       align-items: flex-end;
     }
   }
 
   &__menu {
-    width: 44.286em;
-    @include d-flex();
+    font-weight: 700;
     text-transform: uppercase;
-
-    a:hover {
-      color: $color-second;
+    @include d-flex() {
+      flex-basis: 44.286em;
     }
+
+    & > li {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 3.2rem;
+    }
+
+    & > li:hover,
+    & > li:focus {
+      border-bottom: 3px solid $color-second;
+
+      a {
+        color: $color-second;
+      }
+    }
+  }
+
+  .menu-opener {
+    display: none;
   }
 }
 
 .welcome-heading {
-  margin-top: 11.43em;
+  margin-top: 10.75em;
   margin-bottom: 11em;
 }
 
@@ -50,12 +67,33 @@
   & > li {
     width: 22.5%;
     border-top: 3px solid $color-white;
+    position: relative;
     opacity: .7;
+    transition: .3s;
+    @include p-el(before, 60px, 3px, $color-main) {
+      position: absolute;
+      top: -3px;
+      left: 0;
+      opacity: 0;
+      transition: .3s;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+
+      &::before {
+        opacity: 1;
+      }
+    }
 
     & > a {
       display: block;
       line-height: 7rem;
       font-size: 1.8rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;  
     }
 
     span {

@@ -105,6 +105,7 @@
       & > p {
         font-size: 1.2rem;
         line-height: 1.5;
+        font-weight: 700;
       }
       
       & > span {
@@ -134,7 +135,6 @@
     }
 
     & > a {
-      display: inline-block;
       color: $color-dark;
       font-family: $font-second;
       font-weight: 300;

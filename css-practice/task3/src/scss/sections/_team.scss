@@ -5,10 +5,10 @@
   &__share {
     width: 100%;
     opacity: 0;
+    z-index: 1;
     @include abs-center;
 
     & > a {
-      display: inline-block;
       width: 2.333em;
       background-color: $color-second;
       color: $color-main;
@@ -21,7 +21,8 @@
         border-right: 1px solid $color-main; 
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: $color-main;
         color: $color-white;
       }
@@ -35,7 +36,8 @@
       margin-top: 2em;
     }
 
-    .overlay-box:hover > .team__share {
+    .overlay-box:hover > .team__share,
+    .overlay-box:focus > .team__share {
       opacity: 1;
     }
   }
@@ -43,21 +45,28 @@
 // Compamies
 .companies {
   background-color: $color-light-1;
+  min-height: 17.857em;
   
   &__list {
-    min-height: 17.857em;
+    padding: 5rem;
     @include d-flex() {
       align-items: center;
     }
     @media screen and (max-width: $screen-md) {
-      flex-direction: column;
+      flex-wrap: wrap;
     }
 
     img {
       transition: all .4s ease;
     }
 
-    li:hover img {
+    li {
+      flex-basis: 50%;
+      text-align: center;
+    }
+
+    li:hover img,
+    li:focus img {
       transform: scale(1.1);
     }
   }

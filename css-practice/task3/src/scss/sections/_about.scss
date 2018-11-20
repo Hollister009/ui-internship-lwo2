@@ -17,6 +17,7 @@
     font-weight: 700;
     text-transform: uppercase;
     transition: all .4s ease;
+    z-index: 1;
     @include abs-center;
   }
 
@@ -28,7 +29,8 @@
     @include icon-bg($icon-users);
   }
 
-  .overlay-box:hover .about__info {
+  .overlay-box:hover .about__info, 
+  .overlay-box:focus .about__info {
     opacity: 1;
   }
 }

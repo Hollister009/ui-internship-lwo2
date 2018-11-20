@@ -21,6 +21,8 @@ body {
 }
 
 a {
+  display: inline-block;
+  vertical-align: middle;
   color: $color-white;
   text-decoration: none;
 }

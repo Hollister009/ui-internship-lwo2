@@ -18,7 +18,6 @@
   margin-right: $column-gap;
   @media screen and (max-width: $screen-md) {
     margin-right: 0;
-    margin-bottom: $row-gap;
   }
 }
 
@@ -37,5 +36,6 @@
   .col-1-of-3,
   .col-2-of-3 {
     width: 100%;
+    margin-bottom: $row-gap;
   }
 }
