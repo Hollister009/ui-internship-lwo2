@@ -7,14 +7,14 @@
 .header {
 
   &__nav {
-    min-height: 50px;
+    min-height: 3.572em;
     @include d-flex() {
       align-items: flex-end;
     }
   }
 
   &__menu {
-    width: 620px;
+    width: 44.286em;
     @include d-flex();
     text-transform: uppercase;
 
@@ -22,6 +22,11 @@
       color: $color-second;
     }
   }
+}
+
+.welcome-heading {
+  margin-top: 11.43em;
+  margin-bottom: 11em;
 }
 
 .icon {
@@ -58,8 +63,4 @@
       font-weight: 700;
     }
   }
-}
-
-.welcome-heading {
-  margin-bottom: 154px;
 }

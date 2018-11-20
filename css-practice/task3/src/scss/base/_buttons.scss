@@ -20,20 +20,22 @@
     background: $color-alt;
     border: none;
     padding: 1.1rem 3.2rem;
-    width: 150px;
+    min-width: 150px;
+    @media screen and (max-width: $screen-md) {
+      width: 250px;
+      max-width: 50%;
+    }
   }
 
-  &-slide.prev,
-  &-slide.next {
+  &-slide {
     display: block; 
     position: relative;
-    width: 5%;
+    min-width: 60px;
     min-height: 290px;
     cursor: pointer;
     @include icon-bg($icon-arrow);
-  }
-  
-  &-slide.next {
-    transform: rotate(180deg);
+    &.next {
+      transform: rotate(180deg);
+    }
   }
 }

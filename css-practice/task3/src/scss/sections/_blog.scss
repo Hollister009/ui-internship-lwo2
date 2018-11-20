@@ -4,19 +4,25 @@
 
   .latest-posts {
     @include d-flex();
-    margin-top: 50px;
+    margin-top: 3.572em;
+    @media screen and (max-width: $screen-md) {
+      flex-direction: column;
+    }
   }
 
   .item-post {
-    position: relative;
-    max-width: 380px;
+    max-width: 27.143em;
+    
+    & > figure {
+      position: relative;
+    }
 
     &__date {
       position: absolute;
       width: 60px;
       height: 70px;
-      top: 160px;
       left: -10px;
+      bottom: 10px;
     }
 
     span:nth-of-type(2) {
@@ -30,6 +36,7 @@
       font-style: italic;
       font-size: 1.5rem;
       line-height: 2.4rem;
+      margin-right: 10px;
 
       & > i {
         color: $color-alt;
@@ -39,7 +46,7 @@
 }
 // Section map
 .map {
-  min-height: 200px;
+  min-height: 14.286em;
   position: relative;
   background-image: $gradient-white, $bg-map;
   @include bg-center();

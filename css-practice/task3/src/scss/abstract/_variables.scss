@@ -23,6 +23,7 @@ $figure-4: url(../img/icons/book_icon.svg);
 $figure-5: url(../img/icons/home_icon.svg);
 $figure-6: url(../img/icons/image_icon.svg);
 $icon-arrow: url(../img/icons/arrow.svg);
+$icon-users: url(../img/icons/users_icon.svg);
 // Paddings
 $padding-about: 11rem;
 $padding-service: 2rem 0 7rem;
@@ -50,8 +51,9 @@ $gradient-white: linear-gradient(
 // Container
 $max-width: 1200px;
 $column-gap: 2%;
+$row-gap: 3%;
 // Breakpoints
-$screen-sm: 475;  // Smartphone
-$screen-md: 768;  // Tablet
-$screen-lg: 1024; // Desktop Small
-$screen-xl: 1200; // Desktop Medium
+$screen-sm: 475px;  // Smartphone
+$screen-md: 768px;  // Tablet
+$screen-lg: 1024px; // Desktop Small
+$screen-xl: 1199px; // Desktop Medium

@@ -1,6 +1,8 @@
 // Overlay Effects
 .overlay-box {
   position: relative;
+  width: fit-content;
+  margin: 0 auto;
   cursor: pointer;
   transition: all .4s ease;
   @include p-el(before, 100%, 100%, $gradient-main) {

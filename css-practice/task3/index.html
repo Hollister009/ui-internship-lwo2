@@ -49,28 +49,32 @@
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
           </p>
           <div class="about__pictures row">
-            <div class="col-1-of-3 overlay-box"><img src="img/tuc1.png" alt="super team">
-              <div class="about__info"><span>super team</span></div>
+            <div class="col-1-of-3">
+              <div class="overlay-box"><img src="img/tuc1.png" alt="super team">
+                <div class="about__info"><i class="about__icon"></i><span>super team</span></div>
+              </div>
             </div>
-            <div class="col-1-of-3 overlay-box"><img src="img/tuc2.png" alt="creativity">
-              <div class="about__info"><span>creativity</span></div>
+            <div class="col-1-of-3">
+              <div class="overlay-box"><img src="img/tuc2.png" alt="creativity">
+                <div class="about__info"><i class="about__icon"></i><span>creativity</span></div>
+              </div>
             </div>
-            <div class="col-1-of-3 overlay-box"><img src="img/tuc3.png" alt="digital">
-              <div class="about__info"><span>digital</span></div>
+            <div class="col-1-of-3">
+              <div class="overlay-box"><img src="img/tuc3.png" alt="digital">
+                <div class="about__info"><i class="about__icon"></i><span>digital</span></div>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section class="facts">
-        <div class="container">
-          <ul class="facts__list">
-            <li class="facts__item"><span class="facts__item--large">42</span><span class="facts__item--small">web design projects</span></li>
-            <li class="facts__item"><span class="facts__item--large">123</span><span class="facts__item--small">happy client</span></li>
-            <li class="facts__item"><span class="facts__item--large">15</span><span class="facts__item--small">award winner</span></li>
-            <li class="facts__item"><span class="facts__item--large">99</span><span class="facts__item--small">cup of coffe</span></li>
-            <li class="facts__item"><span class="facts__item--large">24</span><span class="facts__item--small">members</span></li>
-          </ul>
-        </div>
+        <ul class="facts__list">
+          <li class="facts__item"><span class="facts__item--large">42</span><span class="facts__item--small">web design projects</span></li>
+          <li class="facts__item"><span class="facts__item--large">123</span><span class="facts__item--small">happy client</span></li>
+          <li class="facts__item"><span class="facts__item--large">15</span><span class="facts__item--small">award winner</span></li>
+          <li class="facts__item"><span class="facts__item--large">99</span><span class="facts__item--small">cup of coffe</span></li>
+          <li class="facts__item"><span class="facts__item--large">24</span><span class="facts__item--small">members</span></li>
+        </ul>
       </section>
       <section class="service" id="service">
         <div class="container">
@@ -275,17 +279,20 @@
             <h2>Latest blog</h2>
           </div>
           <div class="latest-posts row">
-            <div class="col-1-of-3 item-post"><img src="img/post1.png" alt="Post 1"><span class="item-post__date"><b>15</b> Jan</span>
+            <div class="col-1-of-3 item-post">
+              <figure><img src="img/post1.png" alt="Post 1"><span class="item-post__date"><b>15</b> Jan</span></figure>
               <h4 class="base-title">Lorem ipsum dolor sit amet</h4>
               <p class="item-post__text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <hr><span class="item-post__icon"><i class="fas fa-eye"></i> 542</span><span class="item-post__icon"><i class="fas fa-comment"></i> 17</span>
             </div>
-            <div class="col-1-of-3 item-post"><img src="img/post2.png" alt="Post 2"><span class="item-post__date"><b>14</b> Jan</span>
+            <div class="col-1-of-3 item-post">
+              <figure><img src="img/post2.png" alt="Post 2"><span class="item-post__date"><b>14</b> Jan</span></figure>
               <h4 class="base-title">Sed do eiusmod tempor</h4>
               <p class="item-post__text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <hr><span class="item-post__icon"><i class="fas fa-eye"></i> 992</span><span class="item-post__icon"><i class="fas fa-comment"></i> 42</span>
             </div>
-            <div class="col-1-of-3 item-post"><img src="img/post3.png" alt="Post 3"><span class="item-post__date"><b>13</b> Jan</span>
+            <div class="col-1-of-3 item-post">
+              <figure><img src="img/post3.png" alt="Post 3"><span class="item-post__date"><b>13</b> Jan</span></figure>
               <h4 class="base-title">Incididunt ut labore et dolore</h4>
               <p class="item-post__text">Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <hr><span class="item-post__icon"><i class="fas fa-eye"></i> 1560</span><span class="item-post__icon"><i class="fas fa-comment"></i> 98</span>
@@ -305,8 +312,9 @@
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             </p><span>15k <ins>followers</ins></span>
             <hr>
-            <div class="follow mb-md"><span>Follow Us:</span>
+            <div class="follow">
               <ul class="follow__list">
+                <li><span>Follow Us:</span></li>
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
@@ -316,30 +324,36 @@
                 <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
                 <li><a href="#"><i class="fab fa-tumblr"></i></a></li>
               </ul>
+              <form action="#" method="get">
+                <input type="email" name="Email" placeholder="Your Email...">
+                <input class="btn-submit" type="submit" value="Subscribe">
+              </form>
             </div>
-            <form action="#" method="get">
-              <input type="email" name="Email" placeholder="Your Email...">
-              <input class="btn-submit" type="submit" value="Subscribe">
-            </form>
           </div>
           <div class="footer__blogs">
             <h3 class="base-title">blogs</h3>
             <div class="footer__blogs-item"><img src="img/blogs_photo1.png" alt="">
-              <p class="base-title">Lorem ipsum dolor sit amet, consectetur adipiscing</p><span class="date">Jan 9, 2016</span>
+              <div class="footer__blogs-describe">
+                <p class="base-title">Lorem ipsum dolor sit amet, consectetur adipiscing</p><span class="date">Jan 9, 2016</span>
+              </div>
             </div>
             <div class="footer__blogs-item"><img src="img/blogs_photo2.png" alt="">
-              <p class="base-title">Consectetur adipiscing elit, sed do eiusmod tempor</p><span class="date">Jan 9, 2016</span>
+              <div class="footer__blogs-describe">
+                <p class="base-title">Consectetur adipiscing elit, sed do eiusmod tempor</p><span class="date">Jan 9, 2016</span>
+              </div>
             </div>
             <div class="footer__blogs-item"><img src="img/blogs_photo3.png" alt="">
-              <p class="base-title">Sed do eiusmod tempor incididunt ut labore</p><span class="date">Jan 9, 2016</span>
+              <div class="footer__blogs-describe">
+                <p class="base-title">Sed do eiusmod tempor incididunt ut labore</p><span class="date">Jan 9, 2016</span>
+              </div>
             </div>
           </div>
           <div class="footer__instagram">
             <h3 class="base-title">instagram</h3>
             <div class="photos-grid">
-              <div class="photos-grid__row"><img src="img/instagram/photo1.png" alt="Photo 1"><img src="img/instagram/photo2.png" alt="Photo 2"><img src="img/instagram/photo3.png" alt="Photo 3"></div>
-              <div class="photos-grid__row"><img src="img/instagram/photo4.png" alt="Photo 4"><img src="img/instagram/photo5.png" alt="Photo 5"><img src="img/instagram/photo6.png" alt="Photo 6"></div>
-              <div class="photos-grid__row"><img src="img/instagram/photo7.png" alt="Photo 7"><img src="img/instagram/photo8.png" alt="Photo 8"><img src="img/instagram/photo9.png" alt="Photo 9"></div>
+              <div class="photos-grid__col"><img src="img/instagram/photo1.png" alt="Photo 1"><img src="img/instagram/photo2.png" alt="Photo 2"><img src="img/instagram/photo3.png" alt="Photo 3"></div>
+              <div class="photos-grid__col"><img src="img/instagram/photo4.png" alt="Photo 4"><img src="img/instagram/photo5.png" alt="Photo 5"><img src="img/instagram/photo6.png" alt="Photo 6"></div>
+              <div class="photos-grid__col"><img src="img/instagram/photo7.png" alt="Photo 7"><img src="img/instagram/photo8.png" alt="Photo 8"><img src="img/instagram/photo9.png" alt="Photo 9"></div>
             </div><a href="http://instagram.com" target="_blank" rel="nofollow noopener">View more photos</a>
           </div>
         </div>

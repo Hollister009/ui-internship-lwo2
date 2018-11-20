@@ -1,22 +1,24 @@
 .container {
   max-width: $max-width;
   margin: 0 auto;
-  @media screen and (max-width: $screen-xl - 1 + 'px') {
-    max-width: 90%; 
+  @media screen and (max-width: $screen-xl) {
+    max-width: 95%;
+    padding: 0 1rem;
   }
 }
 
 .row {
   display: flex;
-  @media screen and (max-width: $screen-md + 'px') {
+  @media screen and (max-width: $screen-md) {
     flex-direction: column;
   }
 }
 
 [class^='col-']:not(:last-child) {
   margin-right: $column-gap;
-  @media screen and (max-width: $screen-md + 'px') {
+  @media screen and (max-width: $screen-md) {
     margin-right: 0;
+    margin-bottom: $row-gap;
   }
 }
 
@@ -30,7 +32,7 @@
   width: calc(((100% - #{$column-gap}) / 3) * 2);
 }
 
-@media screen and (max-width: $screen-md + 'px') {
+@media screen and (max-width: $screen-md) {
   .col-1-of-2,
   .col-1-of-3,
   .col-2-of-3 {

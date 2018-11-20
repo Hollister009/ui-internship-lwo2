@@ -14,11 +14,11 @@
 
   // Subscribe
   &__subscribe {
-    max-width: 480px;
+    max-width: 34.286em;
 
     & > p {
-      margin-top: 26px;
-      margin-bottom: 44px;
+      margin-top: 1.733em;
+      margin-bottom: 2.933em;
       padding-right: .4rem;
     }
 
@@ -36,7 +36,7 @@
     }
 
     .follow {
-      display: flex;
+      @include d-flex(flex-start, column);
 
       span {
         font-size: 1.5rem;
@@ -44,12 +44,13 @@
         font-weight: 300;
         font-style: italic;
         color: #999;
-        margin-right: 20px;
+        margin-right: 10px;
       }
 
       &__list {
+        width: 22.143em;
+        margin-bottom: 2.5em;
         @include d-flex();
-        width: 220px;
 
         i {
           color: $color-alt;
@@ -72,18 +73,18 @@
         padding: 1rem;
         border-right: none;
         border: 1px solid #e7e7e7;
-        width: 230px;
+        width: 16.429em;
       }
     }
   }
 
   // Blogs
   &__blogs {
-    max-width: 340px;
-    margin-right: 50px;
+    max-width: 24.286em;
+    margin-right: 4%;
 
     &-item {
-      height: 79px;
+      height: 5.643em;
       @include clearfix;
 
       &:not(:last-child) {
@@ -93,38 +94,40 @@
       & > img {
         float: left;
       }
+    }
+
+    &-describe{
+      float: left;
+      padding-top: 1.8rem;
+      padding-left: 2rem;
+      width: calc(100% - 120px);
 
       & > p {
         font-size: 1.2rem;
-        padding: 1.5rem 0 .5rem 2rem;
         line-height: 1.5;
-        width: calc(100% - 120px);
-        float: left;
       }
-
+      
       & > span {
         color: $color-grey-l2;
         font-family: $font-second;
         font-weight: 300;
         font-style: italic;
         font-size: 1.3rem;
-        padding-left: 2rem;
       }
     }
   }
   
   // Instagram
   &__instagram {
-    max-width: 270px;
+    max-width: 19.286em;
 
     .photos-grid {
+      @include d-flex();
     
-      &__row {
-        display: flex;
+      &__col {
     
         & > img {
           width: 88px;
-          height: 88px;
           margin: 1px;
         }
       }

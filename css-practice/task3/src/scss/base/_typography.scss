@@ -1,7 +1,6 @@
 .welcome-heading {
-  max-width: 836px;
+  max-width: 59.715em;
   margin: 0 auto;
-  margin-top: 160px;
   color: $color-white;
   text-align: center;
 
@@ -23,6 +22,12 @@
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
+    }
+    @media screen and (max-width: $screen-lg) {
+      font-size: 12rem;
+    }
+    @media screen and (max-width: $screen-md) {
+      font-size: 10rem;
     }
   }
 }
@@ -92,6 +97,10 @@ h4 {
 }
 
 .item-post {
+  @media screen and (max-width: $screen-md) {
+    max-width: fit-content;
+    margin: 0 auto;
+  } 
 
   &__date {
     color: $color-white;
@@ -121,6 +130,7 @@ h4 {
     line-height: 2.4rem;
     color: $color-grey-l2;
     padding-bottom: 1rem;
+    letter-spacing: -.2px;
   }
 
   & > hr {
@@ -141,9 +151,12 @@ h4 {
 
 .text-section {
   text-align: center;
-  margin: 40px 120px;
+  margin: 2.85em 8.572em;
   letter-spacing: -.35px;
   line-height: 2.4rem;
+  @media screen and (max-width: $screen-md) {
+    margin: 2.85em 6em;
+  }
 }
 
 .quote__author {

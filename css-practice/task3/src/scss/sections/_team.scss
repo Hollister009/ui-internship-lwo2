@@ -9,7 +9,7 @@
 
     & > a {
       display: inline-block;
-      width: 56px;
+      width: 2.333em;
       background-color: $color-second;
       color: $color-main;
       font-size: 2.4rem;
@@ -32,7 +32,7 @@
     text-align: center;
 
     .info {
-      margin-top: 28px;
+      margin-top: 2em;
     }
 
     .overlay-box:hover > .team__share {
@@ -45,9 +45,12 @@
   background-color: $color-light-1;
   
   &__list {
-    min-height: 250px;
+    min-height: 17.857em;
     @include d-flex() {
       align-items: center;
+    }
+    @media screen and (max-width: $screen-md) {
+      flex-direction: column;
     }
 
     img {

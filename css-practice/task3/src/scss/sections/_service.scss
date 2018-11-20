@@ -2,14 +2,17 @@
   padding: $padding-service;
   
   &__grid {
-    margin-top: 65px;
+    margin-top: 4.643em;
     
     .row:first-child {
       border-bottom: 1px solid $color-light-2;
+      @media screen and (max-width: $screen-md) {
+        border: 0;
+      }
     }
     
     .row:last-child {
-      margin-top: 48px; 
+      margin-top: 3.429em; 
     }
   }
   
@@ -37,18 +40,24 @@
   
   &__grid-item {
     padding-bottom: 4.6rem;
+    @media screen and (max-width: $screen-md) {
+      @include d-flex(center);
+    }
     
     & > figure {
       float: left;
       width: 32px;
       height: 32px;
-      margin: 0 30px; 
+      margin: 0 2.15em;
     }
   }
   
   &__describe {
     float: left;
-    width: calc(100% - 92px);
+    width: 75%;
+    @media screen and (max-width: $screen-xl) {
+      width: 59%;
+    }
     
     h4 {
       padding-bottom: 1rem;

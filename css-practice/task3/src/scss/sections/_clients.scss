@@ -6,7 +6,7 @@
   &__reviews {
     
     .client {
-      margin-bottom: 66px;
+      margin-bottom: 4.714em;
       @include clearfix;
       &:not(:last-child) {
         margin-right: 1%;
@@ -14,14 +14,14 @@
       
       & > img {
         float: left;
-        margin-left: 40px;
+        margin-left: 2.857em;
       }
 
       &__info {
         float: left;
-        max-width: 380px;
-        margin-top: 7px;
-        margin-left: 28px;
+        max-width: 27.143em;
+        margin-top: .5em;
+        margin-left: 2em;
 
         & > p {
           padding-top: 2rem;
