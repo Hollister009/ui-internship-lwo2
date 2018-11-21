@@ -245,13 +245,10 @@
   body {
     font-size: 1.6rem;
   }
-  // Hero
-  .banner {
-    max-height: 75vh;
-  
-    .welcome-heading {
-      margin-top: 4em;
-    }
+  // Hero;
+  .welcome-heading {
+    margin-top: 4em;
+    margin-bottom: 7em;
   }
 
   .slider > li > a {

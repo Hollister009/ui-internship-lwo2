@@ -24,11 +24,14 @@
       display: inline-block;
       vertical-align: middle;
       line-height: 3.2rem;
+      padding-bottom: 3px;
+      transition: .3s;
     }
 
     & > li:hover,
     & > li:focus {
       border-bottom: 3px solid $color-second;
+      padding-bottom: 0;
 
       a {
         color: $color-second;
