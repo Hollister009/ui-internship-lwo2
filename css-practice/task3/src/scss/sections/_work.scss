@@ -11,6 +11,20 @@
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-rows: auto auto;
     margin-top: 7.286em;
+
+    & > figure {
+      background: $gradient-main;
+      
+      & > img {
+        transition: .5s;
+        cursor: pointer;
+      }
+
+      & > img:hover,
+      & > img:focus {
+        opacity: .4;
+      }
+    }
   }
 
   &__pic-1 {
@@ -54,23 +68,5 @@
     grid-area: picture-7;
     -ms-grid-row: 2;
     -ms-grid-column: 4;
-  }
-}
-
-.testimonial {
-  @include d-flex();
-  
-  .quote__slide {
-    padding: $padding-testimonial;
-
-    & > figure {
-      align-self: center;
-      margin-right: 2.429em;
-    }
-  
-    & > blockquote {
-      margin-right: 1.333em;
-      margin-top: 1.250em;
-    }
   }
 }

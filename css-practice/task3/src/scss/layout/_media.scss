@@ -1,38 +1,21 @@
 // 1199px
 @media screen and (max-width: $screen-xl) {
-  .testimonial {
+  // Quote slide
+  .slide-quote {
 
-    .quote__slide {
-      padding: 5rem;
+    & > blockquote {
+      max-width: 75%;
     }
   }
+  .quote > .slide-quote {
 
-  // Quote slide
-  .quote {
-
-    &__slide {
-
-      & > blockquote {
-        max-width: 75%;
-      }
-    }
-
-    & &__slide {
-
-      & > figure {
-        width: 125px;
-        height: 125px;
-      } 
+    & > figure {
+      width: 125px;
+      height: 125px;
     } 
   }
-  .btn-slide {
-
-    &.prev {
-      left: 20px;
-    }
-    &.next {
-      right: 20px;
-    }
+  .testimonial > .slide-quote {
+    padding: 5rem;
   }
   // Footer
   .footer {
@@ -93,26 +76,78 @@
 // 768px
 @media screen and (max-width: $screen-md) {
   // Hero 
+  .banner{
+
+    & > .container {
+      max-width: 100%;
+      padding: 0;
+    }
+
+     .section-tab {
+      padding: 0 1rem;
+    }
+  } 
+
   .welcome-heading {
-    max-width: 92%;
+    max-width: 90%;
   }
 
   .header {
 
     &__menu {
-      display: none;
+      position: absolute;
+      flex-direction: column;
+      align-items: flex-start;
+      top: 4.3em;
+      left: 0;
+      padding: 1rem 1.5rem;
+      background-color: rgba($color-dark, .9);
+      width: 100%;
+      max-height: 0;
+      visibility: hidden;
+      will-change: auto;
+      transition: all 1s ease;
+      
+      & > li {
+        opacity: 0;
+        will-change: auto;
+        transition: all .75s ease;
+      }
+
+      &.open {
+        max-height: 250px;
+        visibility: visible;
+        
+        & > li {
+          opacity: 1;
+        }
+      }
     }
 
-    .menu-opener {
+    &__nav {
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    & .menu-opener {
       display: block;
-      position: relative;
-      width: 55px;
+      position: absolute;
+      right: 80px;
+      width: 50px;
       height: 40px;
-      border-radius: 7px;
-      background-color: rgba($color-alt, .4);
+      transition: all .3s;
+      will-change: contents;
+      
+      &:hover > span,
+      &:focus > span {
+        background-color: $color-second;
+        &::before,
+        &::after {
+          background-color: $color-second;
+        }
+      }
 
       & > span {
-        display: block;
         background-color: $color-white;
         width: 30px;
         height: 2px;
@@ -158,40 +193,23 @@
       display: none;
     }
   }
-  // Quote slide
-  .quote {
-    &__slide {
+  // slide-quote
+  .slide-quote {
       
-      & > figure {
-        display: none;
-      }
-      
-      & > blockquote {
-        max-width: 100%;
-        font-size: 2rem;
-        margin: 0 !important;
-      }
+    & > figure {
+      display: none;
     }
-
-    .quote__slide {
-      padding: 6.5rem 0;
+      
+    & > blockquote {
+      max-width: 100%;
+      font-size: 2rem;
+      margin: 0 !important;
     }
   }
 
-  .btn-slide {
-    &.prev {
-      left: -4%;
-    }
-    &.next {
-      right: -4%;
-    }
+  .slider > .slide-quote {
+    padding: 5rem 1rem;
   }
-
-  .testimonial {
-    .quote__slide {
-      padding: 5rem 0;
-    } 
-  } 
   // Work Grid
   .work {
 
@@ -235,6 +253,14 @@
       }
     }
   }
+  // Accordion
+  .panel-group {
+    margin-top: 20px;
+  }
+  // Modal Window
+  .modal__window {
+    max-width: 90%;
+  }
 }
 // 475px
 @media screen and (max-width: $screen-sm) {
@@ -251,7 +277,7 @@
     margin-bottom: 7em;
   }
 
-  .slider > li > a {
+  .section-tab > li > a {
     font-size: 0;
   }
   // Feature
@@ -274,6 +300,10 @@
         margin-bottom: .5em;
       }
     }
+  }
+  // Modal Window
+  .modal__window {
+    max-width: 75%;
   }
 }
 

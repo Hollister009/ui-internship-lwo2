@@ -1,0 +1,94 @@
+.header {
+  min-height: 4.3em;
+  
+  &__nav {
+    position: relative;
+    min-height: 4.3em;
+    z-index: 1;
+    @include d-flex() {
+      align-items: flex-end;
+    }
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba($color-main, .9);
+      align-items: center;
+      padding: 0 1rem;
+      z-index: 2;
+    }
+
+    & > ul.icon-group {
+      width: 60px;
+      margin-left: 20px;
+
+      & > li {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 4rem;
+        transition: transform .2s;
+
+        &:hover,
+        &:focus {
+          transform: scale(1.2);
+        }
+
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    font-weight: 700;
+    text-transform: uppercase;
+    @include d-flex() {
+      flex-basis: 43em;
+    }
+
+    & > li {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 3.2rem;
+      padding-bottom: 3px;
+      transition: .3s;
+    }
+
+    & > li:hover,
+    & > li:focus,
+    & > li.active {
+      border-bottom: 3px solid $color-second;
+      padding-bottom: 0;
+
+      a {
+        color: $color-second;
+      }
+    }
+  }
+
+  .menu-opener {
+    display: none;
+  }
+}
+
+.welcome-heading {
+  margin-top: 10.75em;
+  margin-bottom: 11em;
+}
+
+.icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  &__shoping {
+    @include icon-bg($icon-shoping_cart);
+  }
+  
+  &__glass {
+    @include icon-bg($icon-magnifying_glass);
+  }
+}

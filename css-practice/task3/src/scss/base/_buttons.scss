@@ -11,7 +11,7 @@
     &:focus {
       background: rgba($color-white, .5);
       color: $color-main;
-      border-color: $color-main; 
+      border-color: $color-main;
     }
   }
 
@@ -28,14 +28,19 @@
   }
 
   &-slide {
-    display: block; 
+    display: block;
     position: relative;
     min-width: 60px;
     min-height: 290px;
     cursor: pointer;
+    outline: none;
     @include icon-bg($icon-arrow);
     &.next {
       transform: rotate(180deg);
+    }
+
+    &:hover {
+      background-size: 30%;
     }
   }
 }

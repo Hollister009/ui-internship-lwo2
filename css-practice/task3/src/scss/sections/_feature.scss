@@ -1,4 +1,4 @@
-// Feature
+// Feature, Service2
 .feature {
   min-height: 60.7em;
   padding-top: 2rem;
@@ -16,31 +16,7 @@
     }
   }
 }
-// Service2 & Quote
+
 .service2 {
   padding: $padding-service2;
-
-  img {
-    margin: 0 auto;
-  }
-}
-
-.quote {
-  background-color: $color-light-1;
-
-  & &__slide {
-    padding: $padding-quote;
-    flex-grow: 1;
-
-    & > figure {
-      width: 150px;
-      height: 150px;
-      border: 3px solid $color-alt;
-      position: relative;
-    }
-    
-    img {
-      @include abs-center;
-    }
-  }
 }

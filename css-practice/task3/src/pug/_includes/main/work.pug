@@ -7,21 +7,45 @@ section#work.work
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   .work__pictures
-    img.work__pic-1(src="img/creative1.png", alt="Creative picture")
-    img.work__pic-2(src="img/creative2.png", alt="Creative picture")
-    img.work__pic-3(src="img/creative3.png", alt="Creative picture")
-    img.work__pic-4(src="img/creative4.png", alt="Creative picture")
-    img.work__pic-5(src="img/creative5.png", alt="Creative picture")
-    img.work__pic-6(src="img/creative6.png", alt="Creative picture")
-    img.work__pic-7(src="img/creative7.png", alt="Creative picture")
-  .testimonial.container
+    figure.work__pic-1
+      img(src="img/creative1.png", alt="Creative picture")
+    figure.work__pic-2
+      img(src="img/creative2.png", alt="Creative picture")
+    figure.work__pic-3
+      img(src="img/creative3.png", alt="Creative picture")
+    figure.work__pic-4
+      img(src="img/creative4.png", alt="Creative picture")
+    figure.work__pic-5
+      img(src="img/creative5.png", alt="Creative picture")
+    figure.work__pic-6
+      img(src="img/creative6.png", alt="Creative picture")
+    figure.work__pic-7
+      img(src="img/creative7.png", alt="Creative picture")
+  .testimonial.slider
     a.btn-slide.prev(href="#", title="Previous slide")
-    .quote__slide
-      figure
-        img(src="img/joshua.png", alt="Joshua")
-      blockquote
-        p: i.
-          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation.”
-        cite.quote__author Joshua Earle
+    .slides-holder
+      .slide-quote.prev
+        figure
+          img(src="img/joshua.png", alt="Joshua")
+        blockquote
+          p: i.
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation.”
+          cite.quote__author Joshua Earle
+      .slide-quote.current
+        figure
+          img(src="img/joshua.png", alt="Joshua")
+        blockquote
+          p: i.
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation.”
+          cite.quote__author Joshua Earle
+      .slide-quote.next
+        figure
+          img(src="img/joshua.png", alt="Joshua")
+        blockquote
+          p: i.
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation.”
+          cite.quote__author Joshua Earle
     a.btn-slide.next(href="#", title="Next slide")

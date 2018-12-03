@@ -4,66 +4,7 @@
   @include bg-center(fixed);
 }
 
-.header {
-
-  &__nav {
-    min-height: 4.26em;
-    @include d-flex() {
-      align-items: flex-end;
-    }
-  }
-
-  &__menu {
-    font-weight: 700;
-    text-transform: uppercase;
-    @include d-flex() {
-      flex-basis: 44.286em;
-    }
-
-    & > li {
-      display: inline-block;
-      vertical-align: middle;
-      line-height: 3.2rem;
-      padding-bottom: 3px;
-      transition: .3s;
-    }
-
-    & > li:hover,
-    & > li:focus {
-      border-bottom: 3px solid $color-second;
-      padding-bottom: 0;
-
-      a {
-        color: $color-second;
-      }
-    }
-  }
-
-  .menu-opener {
-    display: none;
-  }
-}
-
-.welcome-heading {
-  margin-top: 10.75em;
-  margin-bottom: 11em;
-}
-
-.icon {
-  display: block;
-  width: 18px;
-  height: 18px;
-
-  &__shoping {
-    @include icon-bg($icon-shoping_cart);
-  }
-  
-  &__glass {
-    @include icon-bg($icon-magnifying_glass);
-  }
-}
-
-.slider {
+.section-tab {
   @include d-flex();
   text-transform: uppercase;
 

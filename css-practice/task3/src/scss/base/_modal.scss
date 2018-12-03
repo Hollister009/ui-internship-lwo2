@@ -1,0 +1,27 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color-dark, .7);
+    z-index: 2;
+  }
+
+  &__window {
+    position: relative;
+    max-height: 80vh;
+    box-shadow: 0 0 10px rgba($color-dark, 0.7);
+    border-radius: 7px;
+    overflow-y: hidden;
+    z-index: 3;
+  }
+}

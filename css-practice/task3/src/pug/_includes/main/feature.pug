@@ -12,15 +12,16 @@ section.service2
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     .row.mt-90
+      .col-1-of-2.center-item
+        img.accordion-pic.in(src="img/service1.png", alt="Photography")
+        img.accordion-pic(src="img/creative4.png", alt="Creativity")
+        img.accordion-pic(src="img/web_design.png", alt="Web Design")
       .col-1-of-2
-        img(src="img/service1.png", alt="")
-      .col-1-of-2
-        img(src="img/service1.png", alt="")
-      //- #accordion.accordion
-section.quote
-  .container
-    a.btn-slide.prev(href="#", title="Previous slide")
-    .quote__slide
+        include accordion.pug
+section.quote.slider
+  a.btn-slide.prev(href="#", title="Previous slide")
+  .slides-holder
+    .slide-quote.prev
       figure
         img(src="img/icons/speech_icon.svg", alt="Speech Icon")
       blockquote
@@ -28,5 +29,21 @@ section.quote
           “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation.”
         cite.quote__author Jon Doe
-    a.btn-slide.next(href="#", title="Next slide")
+    .slide-quote.current
+      figure
+        img(src="img/icons/speech_icon.svg", alt="Speech Icon")
+      blockquote
+        p: i.
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation.”
+        cite.quote__author Jon Doe
+    .slide-quote.next
+      figure
+        img(src="img/icons/speech_icon.svg", alt="Speech Icon")
+      blockquote
+        p: i.
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation.”
+        cite.quote__author Jon Doe
+  a.btn-slide.next(href="#", title="Next slide")
 

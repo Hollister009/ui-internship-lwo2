@@ -1,0 +1,91 @@
+.panel {
+  
+  &-item {
+    box-shadow: 0 1px 1px rgba($color-dark, .05);
+    margin-bottom: 10px;
+
+    &.open > .panel-collapse {
+      opacity: 1;
+      max-height: 150px;
+      visibility: visible;
+    }
+
+    &.close > .panel-collapse {
+      opacity: 0;
+      max-height: 0;
+      visibility: hidden;
+    }
+    
+    &+& {
+      margin-top: 5px;
+    }
+  }
+
+  &-heading {
+    border: 1px solid $color-light-2;
+    padding: .5rem;
+  }
+
+  &-title {
+    position: relative;
+    
+    & > a {
+      display: block;
+      color: inherit;
+      line-height: 4.5rem;
+      padding: 0 1rem;
+      cursor: pointer;
+    }
+    
+    .fas {
+      cursor: pointer;
+      z-index: -1;
+      
+      &.left {
+        position: relative;
+        margin-right: 15px;
+        color: $color-alt;
+        font-size: 3rem;
+        vertical-align: middle;
+      }
+
+      &.right {
+        position: absolute;
+        color: $color-grey-l1;
+        font-size: 2.4rem;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &-collapse {
+    transition: all .5s ease;
+    will-change: auto;
+  }
+
+  &-body {
+    border: 1px solid #e5e5e5;
+    border-top: 0;
+    max-height: 150px;
+    overflow-y: scroll;
+
+    & > p {
+      font-style: italic;
+      padding: 1.6rem;
+    }
+  }
+}
+
+.accordion-pic {
+  display: none;
+  will-change: auto;
+
+  &.in {
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+}
