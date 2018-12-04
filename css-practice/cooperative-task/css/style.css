@@ -162,7 +162,7 @@ input:disabled {
   background-color: #282828;
 }
 
-.btn-video.play::before {
+.btn-video.pause::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -173,7 +173,7 @@ input:disabled {
   border-left: 20px solid #f5f6f8;
 }
 
-.btn-video.pause::before {
+.btn-video.play::before {
   content: "";
   position: absolute;
   top: 50%;

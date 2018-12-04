@@ -1,5 +1,5 @@
 'use strict';
-/* global document alert */
+/* global document */
 (function() {
   // Background video playback
   const playBtn = document.querySelector('.btn-video');
@@ -7,14 +7,15 @@
 
   const playState = (evt) => {
     evt.preventDefault();
-    if (playBtn.classList.contains('play')) {
+    if (playBtn.classList.contains('pause')) {
       bgVideo.play();
     } else {
       bgVideo.pause();
     }
-    playBtn.classList.toggle('pause');
     playBtn.classList.toggle('play');
+    playBtn.classList.toggle('pause');
   };
+
   playBtn.addEventListener('click', playState);
 
   // Form validation
@@ -27,14 +28,18 @@
 
   const checkUserInput = (input) => {
     const value = input.value;
-    const pattern = new RegExp(input.getAttribute('data-pattern'));
-    const isValid = pattern.test(value);
-    if (isValid) {
-      input.classList.add('valid');
-      input.classList.remove('invalid');
+    if (value.length !== 0) {
+      const pattern = new RegExp(input.getAttribute('data-pattern'));
+      const isValid = pattern.test(value);
+      if (isValid) {
+        input.classList.add('valid');
+        input.classList.remove('invalid');
+      } else {
+        input.classList.remove('valid');
+        input.classList.add('invalid');
+      }
     } else {
-      input.classList.remove('valid');
-      input.classList.add('invalid');
+      input.classList.remove('valid', 'invalid');
     }
   };
 
