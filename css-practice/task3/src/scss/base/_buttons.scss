@@ -43,4 +43,22 @@
       background-size: 30%;
     }
   }
+
+  &-close {
+    position: absolute;
+    top: 0;
+    right: -10%;
+    font-size: 5rem;
+    color: $color-light-2;
+    transition: color .3s;
+    z-index: 3;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: $color-second;
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
 }

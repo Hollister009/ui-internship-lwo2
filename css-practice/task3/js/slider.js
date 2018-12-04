@@ -28,22 +28,15 @@
       e.preventDefault();
       if (e.target.classList.contains('btn-slide')) {
         const btnOfSlide = e.target;
-        if (btnOfSlide.classList.contains('next')) {
-          if (currSlide < slidesLen - 1) {
-            nextSlide();
-          } else {
-            prevSlide();
-            prevSlide();
-          }
+
+        if (btnOfSlide.classList.contains('next')
+          && (currSlide < slidesLen - 1)) {
+          nextSlide();
         }
 
-        if (btnOfSlide.classList.contains('prev')) {
-          if (currSlide > 0) {
-            prevSlide();
-          } else {
-            nextSlide();
-            nextSlide();
-          }
+        if (btnOfSlide.classList.contains('prev')
+          && (currSlide > 0)) {
+          prevSlide();
         }
       }
     };

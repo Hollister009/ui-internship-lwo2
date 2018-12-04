@@ -17,11 +17,15 @@
   }
 
   &__window {
-    position: relative;
-    max-height: 80vh;
     box-shadow: 0 0 10px rgba($color-dark, 0.7);
-    border-radius: 7px;
-    overflow-y: hidden;
+    border-radius: 3px;
     z-index: 3;
+    @include abs-center;
+    
+    & > figure {
+      max-height: 80vh;
+      overflow: hidden;
+      border-radius: 3px;
+    }
   }
 }

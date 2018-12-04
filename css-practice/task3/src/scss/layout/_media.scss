@@ -1,13 +1,17 @@
 // 1199px
 @media screen and (max-width: $screen-xl) {
-  // Quote slide
+  // Slider
+  .slider {
+    max-width: 100%;
+  }
+
   .slide-quote {
 
     & > blockquote {
       max-width: 75%;
     }
   }
-  .quote > .slide-quote {
+  .quote .slide-quote {
 
     & > figure {
       width: 125px;
@@ -27,6 +31,11 @@
 }
 // 1024px
 @media screen and (max-width: $screen-lg) {
+  // Slider
+  .quote .slide-quote > figure {
+    margin: 0;
+  }
+
   // Footer
   .footer {
 
@@ -303,7 +312,7 @@
   }
   // Modal Window
   .modal__window {
-    max-width: 75%;
+    width: 75%;
   }
 }
 

@@ -304,6 +304,20 @@ h4 {
   .btn-slide:hover {
     background-size: 30%; }
 
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: -10%;
+  font-size: 5rem;
+  color: #e5e5e5;
+  transition: color .3s;
+  z-index: 3; }
+  .btn-close:hover, .btn-close:focus {
+    outline: none;
+    color: #fce38a;
+    cursor: pointer;
+    transform: scale(1.2); }
+
 .header {
   min-height: 4.3em; }
   .header__nav {
@@ -438,25 +452,37 @@ h4 {
     animation-duration: 1s;
     animation-fill-mode: both; }
 
+.slider {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row; }
+
 .slides-holder {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  margin: 0 20px; }
 
 .slide-quote {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  transition: transform 1s ease; }
+  transition: transform .6s ease-out; }
   .slide-quote.current {
-    position: static; }
+    position: static;
+    opacity: 1;
+    transition: transform .6s ease-out; }
   .slide-quote.prev {
     position: absolute;
     top: 0;
-    transform: translate3d(-100%, 0, 0); }
+    animation: fadeIn .3s both reverse;
+    transform: translate3d(-105%, 0, 0); }
   .slide-quote.next {
     position: absolute;
     top: 0;
-    transform: translate3d(100%, 0, 0); }
+    animation: fadeIn .3s both reverse;
+    transform: translate3d(105%, 0, 0); }
   .slide-quote > blockquote {
     max-width: 31.96em;
     color: #999;
@@ -469,36 +495,30 @@ h4 {
       margin-bottom: 11px; }
 
 .quote {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
   background-color: #f8f8f8; }
   .quote .slide-quote {
-    padding: 7rem 5rem 6.2rem;
+    padding: 7rem 0 6.2rem;
     flex-grow: 1; }
     .quote .slide-quote > figure {
+      position: relative;
       width: 150px;
       height: 150px;
       border: 3px solid #95e1d3;
-      position: relative; }
+      margin-right: 35px; }
     .quote .slide-quote img {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
 
-.testimonial {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row; }
-  .testimonial .slide-quote {
-    padding: 10rem 0 13rem; }
-    .testimonial .slide-quote > figure {
-      align-self: center;
-      margin-right: 2.429em; }
-    .testimonial .slide-quote > blockquote {
-      margin-right: 1.333em;
-      margin-top: 1.250em; }
+.testimonial .slide-quote {
+  padding: 10rem 0 13rem; }
+  .testimonial .slide-quote > figure {
+    align-self: center;
+    margin-right: 2.429em; }
+  .testimonial .slide-quote > blockquote {
+    margin-right: 1.333em;
+    margin-top: 1.250em; }
 
 .modal {
   position: fixed;
@@ -516,12 +536,17 @@ h4 {
     background: rgba(51, 51, 51, 0.7);
     z-index: 2; }
   .modal__window {
-    position: relative;
-    max-height: 80vh;
     box-shadow: 0 0 10px rgba(51, 51, 51, 0.7);
-    border-radius: 7px;
-    overflow-y: hidden;
-    z-index: 3; }
+    border-radius: 3px;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .modal__window > figure {
+      max-height: 80vh;
+      overflow: hidden;
+      border-radius: 3px; }
 
 .banner {
   background-color: #f38181;
@@ -1054,9 +1079,11 @@ h4 {
     margin-bottom: 3%; } }
 
 @media screen and (max-width: 1199px) {
+  .slider {
+    max-width: 100%; }
   .slide-quote > blockquote {
     max-width: 75%; }
-  .quote > .slide-quote > figure {
+  .quote .slide-quote > figure {
     width: 125px;
     height: 125px; }
   .testimonial > .slide-quote {
@@ -1065,6 +1092,8 @@ h4 {
     margin: 0 2%; } }
 
 @media screen and (max-width: 1024px) {
+  .quote .slide-quote > figure {
+    margin: 0; }
   .footer__sections {
     flex-wrap: wrap; }
   .footer__subscribe {
@@ -1229,7 +1258,7 @@ h4 {
     max-width: 100%;
     margin-bottom: .5em; }
   .modal__window {
-    max-width: 75%; } }
+    width: 75%; } }
 
 /*!
  * animate.css -http://daneden.me/animate

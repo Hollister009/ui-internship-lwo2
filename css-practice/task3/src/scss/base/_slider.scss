@@ -1,27 +1,39 @@
 // Slider
+.slider {
+  margin: 0 auto;
+  max-width: $max-width;
+  @include d-flex();
+}
+
 .slides-holder {
   position: relative;
   overflow: hidden;
+  margin: 0 20px;
 }
 
 .slide-quote {
   @include d-flex();
-  transition: transform 1s ease;
+  // opacity: 0;
+  transition: transform .6s ease-out;
   
   &.current {
     position: static;
+    opacity: 1;
+    transition: transform .6s ease-out;
   }
 
   &.prev {
     position: absolute;
     top: 0;
-    transform: translate3d(-100%, 0, 0);
+    animation: fadeIn .3s both reverse;
+    transform: translate3d(-105%, 0, 0);
   }
-
+  
   &.next {
     position: absolute;
     top: 0;
-    transform: translate3d(100%, 0, 0);
+    animation: fadeIn .3s both reverse;
+    transform: translate3d(105%, 0, 0);
   }
 
   & > blockquote {
@@ -40,7 +52,6 @@
 }
 
 .quote {
-  @include d-flex();
   background-color: $color-light-1;
 
   .slide-quote {
@@ -48,10 +59,11 @@
     flex-grow: 1;
 
     & > figure {
+      position: relative;
       width: 150px;
       height: 150px;
       border: 3px solid $color-alt;
-      position: relative;
+      margin-right: 35px;
     }
     
     img {
@@ -61,7 +73,6 @@
 }
 
 .testimonial {
-  @include d-flex();
   
   .slide-quote {
     padding: $padding-testimonial;
