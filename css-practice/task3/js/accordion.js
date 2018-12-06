@@ -7,11 +7,12 @@
   const imagesArr = Array.from(document.querySelectorAll('.accordion-pic'));
 
   const switchHandler = (e) => {
-    e.preventDefault();
     const actionBtn = e.target;
     const iconChev = actionBtn.children[1];
     const activePanel = actionBtn.parentNode.parentNode.parentNode;
-    const openState = activePanel.classList.contains('open') ? true : false;
+    const openState = activePanel.classList.contains('open');
+
+    e.preventDefault();
     displayPanelImage(activePanel);
     closeAllPanels();
     togglePanel(activePanel, openState, iconChev);
@@ -40,8 +41,8 @@
     });
   };
 
-  const togglePanel = (panel, state, icon) => {
-    if (!state) {
+  const togglePanel = (panel, openState, icon) => {
+    if (!openState) {
       panel.classList.remove('close');
       panel.classList.add('open');
       icon.classList.remove('fa-chevron-down');

@@ -18,32 +18,33 @@ section.service2
         img.accordion-pic(src="img/web_design.png", alt="Web Design")
       .col-1-of-2
         include accordion.pug
-section.quote.slider
-  a.btn-slide.prev(href="#", title="Previous slide")
-  .slides-holder
-    .slide-quote.prev
-      figure
-        img(src="img/icons/speech_icon.svg", alt="Speech Icon")
-      blockquote
-        p: i.
-          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation.”
-        cite.quote__author Jon Doe
-    .slide-quote.current
-      figure
-        img(src="img/icons/speech_icon.svg", alt="Speech Icon")
-      blockquote
-        p: i.
-          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation.”
-        cite.quote__author Jon Doe
-    .slide-quote.next
-      figure
-        img(src="img/icons/speech_icon.svg", alt="Speech Icon")
-      blockquote
-        p: i.
-          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation.”
-        cite.quote__author Jon Doe
-  a.btn-slide.next(href="#", title="Next slide")
+section.quote
+  .slider
+    a.btn-slide.prev(href="#", title="Previous slide")
+    .slides-holder
+      .slide-quote.prev
+        figure
+          img(src="img/icons/speech_icon.svg", alt="Speech Icon")
+        blockquote
+          p: i.
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation.”
+          cite.quote__author Jon Doe
+      .slide-quote.current
+        figure
+          img(src="img/icons/speech_icon.svg", alt="Speech Icon")
+        blockquote
+          p: i.
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation.”
+          cite.quote__author Jon Doe
+      .slide-quote.next
+        figure
+          img(src="img/icons/speech_icon.svg", alt="Speech Icon")
+        blockquote
+          p: i.
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation.”
+          cite.quote__author Jon Doe
+    a.btn-slide.next(href="#", title="Next slide")
 

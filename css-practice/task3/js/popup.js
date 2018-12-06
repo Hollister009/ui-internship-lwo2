@@ -22,11 +22,15 @@
     modal.innerHTML = modalTemplate;
     gallery.append(modal);
 
+    gallery.removeEventListener('click', popupShow);
+    handleModalEvents(modal);
+  };
+
+  const handleModalEvents = (modal) => {
     // Select modal__overlay & btn-close
     const modOverlay = modal.querySelector('.modal__overlay');
     const btnClose = modal.querySelector('.btn-close');
-    // Event Listeners in modal-view
-    gallery.removeEventListener('click', popupShow);
+
     modOverlay.addEventListener('click', removeModal.bind(null, modal));
     btnClose.addEventListener('click', removeModal.bind(null, modal));
     btnClose.addEventListener('keyup', (e) => {
