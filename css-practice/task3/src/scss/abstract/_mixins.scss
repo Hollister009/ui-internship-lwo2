@@ -21,6 +21,12 @@
   }
 }
 
+@mixin text-clip {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 @mixin icon-bg($path) {
   background: $path no-repeat 50% 50%;
 }

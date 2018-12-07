@@ -14,7 +14,8 @@
   }
 }
 
-[class^='col-']:not(:last-child) {
+.col-1-of-2:not(:nth-child(2n)),
+.col-1-of-3:not(:nth-child(3n)) {
   margin-right: $column-gap;
   @media screen and (max-width: $screen-md) {
     margin-right: 0;
@@ -24,7 +25,7 @@
 .col-1-of-2 { width: 49%; }
 
 .col-1-of-3 {
-  width: calc((100% - #{$column-gap}) / 3);
+  width: calc((100% - #{$column-gap * 2}) / 3);
 }
 
 .col-2-of-3 {

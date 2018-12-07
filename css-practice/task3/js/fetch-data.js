@@ -70,30 +70,32 @@ const renderLatestBlogs = (array) => {
   // Creating a new itemPost
   function _createNewItem(obj) {
     const itemPost = document.createElement('DIV');
-    itemPost.classList.add('item-post', 'col-1-of-3');
+    itemPost.classList.add('col-1-of-3', 'item-post');
     itemPost.innerHTML = _getInnerTemplate(obj);
     return itemPost;
   }
 
   function _getInnerTemplate(info) {
-    const {month, day} = info.date;
+    const {date, title, describe, preview, watched, comments} = info;
+    const {month, day} = date;
     const tmpl = `
       <figure>
-        <img src="${info.preview}" alt="">
+        <img src="${preview}" alt="">
         <span class="item-post__date">
-          <b>${day}</b>${month}
+          <b>${day}</b><br/>
+          ${month}
         </span>
       </figure>
-      <h4 class="base-title">${info.title}</h4>
+      <h4 class="base-title">${title}</h4>
       <p class="item-post__text">
-        ${info.describe}
+        ${describe}
       </p>
       <hr/>
       <span class="item-post__icon">
-        <i class="fas fa-eye"></i>${info.watched}
+        <i class="fas fa-eye"></i> ${watched}
       </span>
       <span class="item-post__icon">
-        <i class="fas fa-comment"></i>${info.comments}
+        <i class="fas fa-comment"></i> ${comments}
       </span>
     `;
     return tmpl;
@@ -117,13 +119,13 @@ const renderFooterBlogs = (array) => {
     return item;
   }
 
-  function _getInnerTemplate(info) {
-    const {year, month, day} = info.date;
+  function _getInnerTemplate({date, title, preview}) {
+    const {year, month, day} = date;
     const tmpl = `
-        <img src=${info.preview} alt="">
+        <img src=${preview} alt="">
         <div class="footer__blogs-describe">
-          <p class="base-title">${info.title}</p>
-          <span class="date">${day} ${month}, ${year}</span>
+          <p class="base-title">${title}</p>
+          <span class="date">${month} ${day}, ${year}</span>
         </div>
     `;
     return tmpl;

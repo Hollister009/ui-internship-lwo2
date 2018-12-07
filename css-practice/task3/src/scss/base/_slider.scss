@@ -13,7 +13,7 @@
 
 .slide-quote {
   @include d-flex();
-  // opacity: 0;
+  opacity: 0;
   transition: transform .6s ease-out;
   
   &.current {
@@ -39,7 +39,7 @@
   & > blockquote {
     max-width: 31.96em;
     color: $color-grey-l2;
-    font-family: $font-second;
+    font-family: $font-roboto;
     font-size: 2.4rem;
     padding-top: .3rem;
     letter-spacing: -0.4px;

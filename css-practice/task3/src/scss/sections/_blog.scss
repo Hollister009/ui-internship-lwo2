@@ -3,17 +3,32 @@
   padding: $padding-blog;
 
   .latest-posts {
-    @include d-flex();
     margin-top: 3.572em;
+    @include d-flex(flex-start) {
+      flex-wrap: wrap;
+    };
     @media screen and (max-width: $screen-md) {
       flex-direction: column;
     }
   }
 
   .item-post {
-    max-width: 27.143em;
+    margin-top: 2em;
+
+    &__text {
+      height: 72px;
+      overflow-y: auto;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-height: inherit;
+    }
     
     & > figure {
+      min-height: 240px;
+      height: 20vw;
       position: relative;
     }
 
@@ -31,7 +46,7 @@
 
     &__icon {
       color: $color-grey-l2;
-      font-family: $font-open_sans;
+      font-family: $font-roboto;
       font-weight: 300;
       font-style: italic;
       font-size: 1.5rem;

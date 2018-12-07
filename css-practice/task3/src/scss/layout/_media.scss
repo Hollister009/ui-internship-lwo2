@@ -253,6 +253,7 @@
   .blog {
 
     .item-post {
+      max-width: 27.143em;
       width: fit-content;
       margin-left: auto;
       margin-right: auto;
@@ -292,6 +293,23 @@
   // Feature
   .feature {
     min-height: 47.5em;
+  }
+  // Blog
+  .blog {
+    .item-post {
+      max-width: 100%;
+      width: auto;
+      margin: 0;
+
+      & > figure {
+        min-height: auto;
+        height: 50vw;
+      }
+
+      &__text {
+        height: 7em;
+      }
+    }
   }
   // Footer
   .footer {

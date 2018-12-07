@@ -6,12 +6,12 @@
     "test": "jest",
     "lint": "./node_modules/.bin/eslint tasks/**/*.js",
     "tdd": "jest --watch",
-    "watch:sass": "node-sass -w css-practice/task2/src/scss/ -o css-practice/task2/css/",
-    "compile:sass": "node-sass css-practice/task2/src/scss/ -o css-practice/task2/css/",
-    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css-practice/task2/css/*.css -o css-practice/task2/css/style.pre.css",
-    "compress:css":"node-sass css-practice/task2/css/style.pre.css css-practice/task2/css/style.min.css --output-style compressed",
+    "watch:sass": "node-sass -w css-practice/task3/src/scss/ -o css-practice/task3/css/",
+    "compile:sass": "node-sass css-practice/task3/src/scss/ -o css-practice/task3/css/",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css-practice/task3/css/*.css -o css-practice/task3/css/style.pre.css",
+    "compress:css":"node-sass css-practice/task3/css/style.pre.css css-practice/task3/css/style.min.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
-    "pugtohtml": "pug css-practice/task2/src/pug/index.pug -o css-practice/task2/ -P"
+    "pugtohtml": "pug css-practice/task3/src/pug/index.pug -o css-practice/task3/ -P"
   },
   "husky": {
     "hooks": {
