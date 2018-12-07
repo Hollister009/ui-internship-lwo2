@@ -1,8 +1,7 @@
 /* global fetch, window, document */
+const blogs = 'http://localhost:3000/api/blogs';
 
-const getDataFromServer = (() => {
-  const urlBlogs = 'http://localhost:3000/api/blogs';
-
+const getDataFromServer = (url) => {
   function validateResponse(response) {
     if (!response.ok) {
       throw Error(response.statusText);
@@ -10,63 +9,129 @@ const getDataFromServer = (() => {
     return response;
   }
 
-  function getData(data) {
-    return data;
+  function fetchData(url) {
+    return fetch(url)
+        .then(validateResponse)
+        .then((res) => res.json());
   }
 
-  const fetchData = (url) => {
-    fetch(url)
-        .then(validateResponse)
-        .then((res) => res.json())
-        .then(getData);
-  };
-
-  return {
-    init: () => {
-      window.addEventListener('load', fetchData.bind(null, urlBlogs));
-    },
-  };
-})();
-
-getDataFromServer.init();
-
-const renderLatestBlogs = () => {
-  // blogItem constructor
-  // const date = new Date();
+  return fetchData(url);
 };
 
-renderLatestBlogs();
+const splitResponseData = (res) => {
+  const latestIds = res.latest;
+  const latestItems = res.blogs.filter((item) => latestIds.includes(item.id));
+  const otherItems = res.blogs.filter((item) => !latestIds.includes(item.id));
+  renderLatestBlogs(latestItems);
+  renderFooterBlogs(otherItems);
+};
 
-//   const blogItem = (title, watch, comments, date) => {
-//     this.title = title;
-//     this.watch = watch;
-//     this.comments = comments;
-//     this.date = date;
-//   };
+// Parsing json blogs
+const getDataFromObj = (obj) => {
+  const {published, previewImg, description, title, watched, comments} = obj;
+  const date = _formatDate(published);
 
-//   const latestTmpl = `
-//     <figure>
-//       <img src="img/post1.png" alt="Post 1">
-//       <span class="item-post__date">
-//         <b>${date.day}</b>${date.month}
-//       </span>
-//     </figure>
-//     <h4 class="base-title">${title}</h4>
-//     <p class="item-post__text">
-//       Consectetur adipiscing elit, sed do eiusmod tempor
-//       incididunt ut labore et dolore aliqua.
-//     </p>
-//     <hr/>
-//     <span class="item-post__icon">
-//       <i class="fas fa-eye"></i>${watch}
-//     </span>
-//     <span class="item-post__icon">
-//       <i class="fas fa-comment"></i>${comments}
-//     </span>
-//   `;
-// };
+  // Retriving month & date
+  function _formatDate(dateISO) {
+    const date = new Date(dateISO);
+    const calendar = [
+      'Jan', 'Feb', 'Mar', 'Apr',
+      'May', 'Jun', 'Jul', 'Aug',
+      'Sep', 'Oct', 'Nov', 'Dec',
+    ];
+    return {
+      year: date.getFullYear(),
+      month: calendar[date.getMonth()],
+      day: date.getDate(),
+    };
+  }
 
-// document.body.append(itemPost);
+  // Return new object
+  return {
+    date: date,
+    title: title,
+    describe: description,
+    preview: previewImg,
+    watched: watched,
+    comments: comments,
+  };
+};
 
-const itemPost = document.createElement('DIV');
-itemPost.classList.add('item-post', 'col-1-of-3');
+// Render Latest Blogs
+const renderLatestBlogs = (array) => {
+  const latestPost = document.querySelector('.latest-posts');
+  latestPost.innerHTML = '';
+
+  array.forEach((el) => {
+    const blog = getDataFromObj(el);
+    latestPost.append(_createNewItem(blog));
+  });
+
+  // Creating a new itemPost
+  function _createNewItem(obj) {
+    const itemPost = document.createElement('DIV');
+    itemPost.classList.add('item-post', 'col-1-of-3');
+    itemPost.innerHTML = _getInnerTemplate(obj);
+    return itemPost;
+  }
+
+  function _getInnerTemplate(info) {
+    const {month, day} = info.date;
+    const tmpl = `
+      <figure>
+        <img src="${info.preview}" alt="">
+        <span class="item-post__date">
+          <b>${day}</b>${month}
+        </span>
+      </figure>
+      <h4 class="base-title">${info.title}</h4>
+      <p class="item-post__text">
+        ${info.describe}
+      </p>
+      <hr/>
+      <span class="item-post__icon">
+        <i class="fas fa-eye"></i>${info.watched}
+      </span>
+      <span class="item-post__icon">
+        <i class="fas fa-comment"></i>${info.comments}
+      </span>
+    `;
+    return tmpl;
+  }
+};
+
+// Render Footer Blogs
+const renderFooterBlogs = (array) => {
+  const footerBlogs = document.querySelector('.footer__blogs');
+  footerBlogs.innerHTML = '';
+
+  array.forEach((el) => {
+    const blog = getDataFromObj(el);
+    footerBlogs.append(_createNewItem(blog));
+  });
+
+  function _createNewItem(obj) {
+    const item = document.createElement('DIV');
+    item.classList.add('footer__blogs-item');
+    item.innerHTML = _getInnerTemplate(obj);
+    return item;
+  }
+
+  function _getInnerTemplate(info) {
+    const {year, month, day} = info.date;
+    const tmpl = `
+        <img src=${info.preview} alt="">
+        <div class="footer__blogs-describe">
+          <p class="base-title">${info.title}</p>
+          <span class="date">${day} ${month}, ${year}</span>
+        </div>
+    `;
+    return tmpl;
+  }
+};
+
+// Get data from api + call the functions
+window.addEventListener('load', () => {
+  const data = getDataFromServer(blogs);
+  data.then(splitResponseData);
+});
