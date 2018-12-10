@@ -1,5 +1,5 @@
 /* global fetch, window, document */
-const blogs = 'http://localhost:3000/api/blogs';
+const BLOGS_API_URL = 'http://localhost:3000/api/blogs';
 
 const getDataFromServer = (url) => {
   function validateResponse(response) {
@@ -20,14 +20,18 @@ const getDataFromServer = (url) => {
 
 const splitResponseData = (res) => {
   const latestIds = res.latest;
-  const latestItems = res.blogs.filter((item) => latestIds.includes(item.id));
-  const otherItems = res.blogs.filter((item) => !latestIds.includes(item.id));
+  const latestItems = [];
+  const otherItems = [];
+  res.blogs.forEach((item) => {
+    if (latestIds.includes(item.id)) latestItems.push(item);
+    else otherItems.push(item);
+  });
   renderLatestBlogs(latestItems);
   renderFooterBlogs(otherItems);
 };
 
 // Parsing json blogs
-const getDataFromObj = (obj) => {
+const prepareBlogModel = (obj) => {
   const {published, previewImg, description, title, watched, comments} = obj;
   const date = _formatDate(published);
 
@@ -57,18 +61,21 @@ const getDataFromObj = (obj) => {
   };
 };
 
+const renderBlogs = (blogs, container, factory) => {
+  container.innerHTML = '';
+  blogs.forEach((el) => {
+    const blog = prepareBlogModel(el);
+    container.append(factory(blog));
+  });
+};
+
 // Render Latest Blogs
 const renderLatestBlogs = (array) => {
   const latestPost = document.querySelector('.latest-posts');
-  latestPost.innerHTML = '';
-
-  array.forEach((el) => {
-    const blog = getDataFromObj(el);
-    latestPost.append(_createNewItem(blog));
-  });
+  renderBlogs(array, latestPost, _createLatestBlogItem);
 
   // Creating a new itemPost
-  function _createNewItem(obj) {
+  function _createLatestBlogItem(obj) {
     const itemPost = document.createElement('DIV');
     itemPost.classList.add('col-1-of-3', 'item-post');
     itemPost.innerHTML = _getInnerTemplate(obj);
@@ -105,14 +112,9 @@ const renderLatestBlogs = (array) => {
 // Render Footer Blogs
 const renderFooterBlogs = (array) => {
   const footerBlogs = document.querySelector('.footer__blogs');
-  footerBlogs.innerHTML = '';
+  renderBlogs(array, footerBlogs, _createFooterBlogItem);
 
-  array.forEach((el) => {
-    const blog = getDataFromObj(el);
-    footerBlogs.append(_createNewItem(blog));
-  });
-
-  function _createNewItem(obj) {
+  function _createFooterBlogItem(obj) {
     const item = document.createElement('DIV');
     item.classList.add('footer__blogs-item');
     item.innerHTML = _getInnerTemplate(obj);
@@ -134,6 +136,6 @@ const renderFooterBlogs = (array) => {
 
 // Get data from api + call the functions
 window.addEventListener('load', () => {
-  const data = getDataFromServer(blogs);
+  const data = getDataFromServer(BLOGS_API_URL);
   data.then(splitResponseData);
 });
