@@ -1,28 +1,43 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { increaseNum } from './redux/actions';
+
 import logo from './logo.svg';
 import './App.css';
 
+const num = 5;
 class App extends Component {
+  increase = () => {
+    this.props.increaseNum(num);
+  };
+
   render() {
+    console.log(this.props.count);
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <button 
+            className="App-btn" 
+            onClick={this.increase}>Increase Test</button>
         </header>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    count: state.count,
+  };
+};
+const mapDispatchToProps = dispatch => {
+  return {
+    increaseNum: num => dispatch(increaseNum(num)),
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(App);
